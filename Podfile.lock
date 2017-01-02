@@ -1,0 +1,12 @@
+PODS:
+  - OpinionzAlertView (0.3.1)
+
+DEPENDENCIES:
+  - OpinionzAlertView
+
+SPEC CHECKSUMS:
+  OpinionzAlertView: 213cf7fa544091962ebd9526ff2e7e120b13c149
+
+PODFILE CHECKSUM: e490bfa4b306c004b68e1b0aa41112f3dbeaf313
+
+COCOAPODS: 1.0.1

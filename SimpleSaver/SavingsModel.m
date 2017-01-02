@@ -65,6 +65,19 @@ NSString * const kProfile = @"ss-user-profile";
     }
 }
 
+-(NSInteger) indexForGoal:(Goal *)goal
+{
+    for (NSInteger i = 0; i < self.goals.count; i++)
+    {
+        if ([[self.goals objectAtIndex:i] isEqual:goal])
+        {
+            return i;
+        }
+    }
+    
+    return -1;
+}
+
 -(NSArray *) getGoals
 {
     return self.goals;

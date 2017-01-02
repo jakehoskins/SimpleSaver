@@ -10,4 +10,7 @@
 
 @interface Helpers : NSObject
 +(NSString *) formatTimeInterval:(NSDateComponents *) components;
++(NSString *) formatCurrency:(NSString *)currency forAmount:(NSNumber *)amount;
++(BOOL) containsOnlyNumericals:(NSString *) str;
+
 @end

@@ -23,4 +23,7 @@ extern NSString * const kProfile;
 -(NSArray *) getGoals;
 
 -(void) writeToUserDefaults;
+
+-(NSInteger) indexForGoal:(Goal *)goal;
+
 @end

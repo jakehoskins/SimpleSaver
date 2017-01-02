@@ -59,4 +59,13 @@
     
     return formatted;
 }
+
++(BOOL) containsOnlyNumericals:(NSString *) str {    
+    NSScanner *scanner = [NSScanner scannerWithString:str];
+    
+    return ([scanner scanFloat:NULL] && [scanner isAtEnd]);
+}
+
+
+
 @end

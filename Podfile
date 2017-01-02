@@ -6,6 +6,7 @@ target 'SimpleSaver' do
   # use_frameworks!
 
   # Pods for SimpleSaver
+  pod 'OpinionzAlertView'
 
   target 'SimpleSaverTests' do
     inherit! :search_paths
