@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		7A2471401E1942BA00C99780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24713F1E1942BA00C99780 /* main.m */; };
 		7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471421E1942BA00C99780 /* AppDelegate.m */; };
-		7A2471461E1942BA00C99780 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* ViewController.m */; };
+		7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
 		7A2471491E1942BA00C99780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2471471E1942BA00C99780 /* Main.storyboard */; };
 		7A24714B1E1942BA00C99780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714A1E1942BA00C99780 /* Assets.xcassets */; };
 		7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */; };
-		7A2471591E1942BA00C99780 /* SimpleSaverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471581E1942BA00C99780 /* SimpleSaverTests.m */; };
+		7A2471651E1943C300C99780 /* SavingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471641E1943C300C99780 /* SavingsModel.m */; };
+		7A2471681E19440E00C99780 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471671E19440E00C99780 /* Goal.m */; };
+		7A24716B1E19449800C99780 /* GoalContribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716A1E19449800C99780 /* GoalContribution.m */; };
+		7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716C1E194D4F00C99780 /* GoalTest.m */; };
+		7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716E1E19532800C99780 /* SavingsModelTest.m */; };
+		7A577BC31E19DEF70091C28F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC21E19DEF70091C28F /* Helpers.m */; };
+		7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +37,27 @@
 		7A24713F1E1942BA00C99780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2471411E1942BA00C99780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A2471421E1942BA00C99780 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A2471441E1942BA00C99780 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A2471451E1942BA00C99780 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7A2471441E1942BA00C99780 /* CreateGoalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateGoalViewController.h; sourceTree = "<group>"; };
+		7A2471451E1942BA00C99780 /* CreateGoalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateGoalViewController.m; sourceTree = "<group>"; };
 		7A2471481E1942BA00C99780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A24714A1E1942BA00C99780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A24714D1E1942BA00C99780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A24714F1E1942BA00C99780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A2471541E1942BA00C99780 /* SimpleSaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSaverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A2471581E1942BA00C99780 /* SimpleSaverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSaverTests.m; sourceTree = "<group>"; };
 		7A24715A1E1942BA00C99780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A2471631E1943C300C99780 /* SavingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingsModel.h; sourceTree = "<group>"; };
+		7A2471641E1943C300C99780 /* SavingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModel.m; sourceTree = "<group>"; };
+		7A2471661E19440E00C99780 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		7A2471671E19440E00C99780 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		7A2471691E19449800C99780 /* GoalContribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContribution.h; sourceTree = "<group>"; };
+		7A24716A1E19449800C99780 /* GoalContribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContribution.m; sourceTree = "<group>"; };
+		7A24716C1E194D4F00C99780 /* GoalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTest.m; sourceTree = "<group>"; };
+		7A24716E1E19532800C99780 /* SavingsModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModelTest.m; sourceTree = "<group>"; };
+		7A577BC11E19DEF70091C28F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		7A577BC21E19DEF70091C28F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleSaver.entitlements; sourceTree = "<group>"; };
+		7A577BC51E1A74770091C28F /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		7A577BC61E1A74770091C28F /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +99,11 @@
 		7A24713D1E1942BA00C99780 /* SimpleSaver */ = {
 			isa = PBXGroup;
 			children = (
+				7A577BC91E1A79CB0091C28F /* View Controller */,
+				7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */,
+				7A577BC81E1A79B10091C28F /* Model */,
 				7A2471411E1942BA00C99780 /* AppDelegate.h */,
 				7A2471421E1942BA00C99780 /* AppDelegate.m */,
-				7A2471441E1942BA00C99780 /* ViewController.h */,
-				7A2471451E1942BA00C99780 /* ViewController.m */,
 				7A2471471E1942BA00C99780 /* Main.storyboard */,
 				7A24714A1E1942BA00C99780 /* Assets.xcassets */,
 				7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */,
@@ -97,6 +116,10 @@
 		7A24713E1E1942BA00C99780 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7A577BC51E1A74770091C28F /* MKiCloudSync.h */,
+				7A577BC61E1A74770091C28F /* MKiCloudSync.m */,
+				7A577BC11E19DEF70091C28F /* Helpers.h */,
+				7A577BC21E19DEF70091C28F /* Helpers.m */,
 				7A24713F1E1942BA00C99780 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -105,10 +128,33 @@
 		7A2471571E1942BA00C99780 /* SimpleSaverTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A2471581E1942BA00C99780 /* SimpleSaverTests.m */,
 				7A24715A1E1942BA00C99780 /* Info.plist */,
+				7A24716C1E194D4F00C99780 /* GoalTest.m */,
+				7A24716E1E19532800C99780 /* SavingsModelTest.m */,
 			);
 			path = SimpleSaverTests;
+			sourceTree = "<group>";
+		};
+		7A577BC81E1A79B10091C28F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A2471631E1943C300C99780 /* SavingsModel.h */,
+				7A2471641E1943C300C99780 /* SavingsModel.m */,
+				7A2471661E19440E00C99780 /* Goal.h */,
+				7A2471671E19440E00C99780 /* Goal.m */,
+				7A2471691E19449800C99780 /* GoalContribution.h */,
+				7A24716A1E19449800C99780 /* GoalContribution.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7A577BC91E1A79CB0091C28F /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A2471441E1942BA00C99780 /* CreateGoalViewController.h */,
+				7A2471451E1942BA00C99780 /* CreateGoalViewController.m */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +208,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 2L29NL2BW9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					7A2471531E1942BA00C99780 = {
 						CreatedOnToolsVersion = 8.2;
@@ -215,8 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2471461E1942BA00C99780 /* ViewController.m in Sources */,
+				7A2471681E19440E00C99780 /* Goal.m in Sources */,
+				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
+				7A2471651E1943C300C99780 /* SavingsModel.m in Sources */,
 				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
+				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
+				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
+				7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */,
 				7A2471401E1942BA00C99780 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2471591E1942BA00C99780 /* SimpleSaverTests.m in Sources */,
+				7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */,
+				7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
 				DEVELOPMENT_TEAM = 2L29NL2BW9;
 				INFOPLIST_FILE = SimpleSaver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
 				DEVELOPMENT_TEAM = 2L29NL2BW9;
 				INFOPLIST_FILE = SimpleSaver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -418,6 +477,7 @@
 				7A24715F1E1942BA00C99780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A2471601E1942BA00C99780 /* Build configuration list for PBXNativeTarget "SimpleSaverTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +486,7 @@
 				7A2471621E1942BA00C99780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
