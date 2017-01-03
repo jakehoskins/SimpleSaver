@@ -13,5 +13,7 @@
 +(NSString *) formatCurrency:(NSString *)currency forAmount:(NSNumber *)amount;
 +(BOOL) containsOnlyNumericals:(NSString *) str;
 +(BOOL) isIpad;
++ (NSNumber *)randomNumberBetween:(float)smallNumber and:(float)bigNumber;
++(NSDate *)addDaysToDate:(NSDate *)date increaseBy:(NSInteger)days;
 
 @end

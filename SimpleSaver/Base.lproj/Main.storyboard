@@ -64,7 +64,7 @@
                                     <!--2017-01-02 11:55:18 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxk-ad-vWB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxk-ad-vWB">
                                 <rect key="frame" x="16" y="629" width="343" height="30"/>
                                 <state key="normal" title="Create Goal"/>
                             </button>
@@ -128,18 +128,59 @@
                     <view key="view" contentMode="scaleToFill" id="IBX-wL-ock">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJE-lI-liC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="goals-cell" rowHeight="90" id="5xN-DN-Riy">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5xN-DN-Riy" id="P8q-Qk-UNS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KNb-wM-92f">
+                                                    <rect key="frame" x="8" y="17" width="55" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="II6-PF-Cf6">
+                                                    <rect key="frame" x="71" y="17" width="288" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="II6-PF-Cf6" firstAttribute="trailing" secondItem="P8q-Qk-UNS" secondAttribute="trailingMargin" constant="-8" id="fe1-yO-uZE"/>
+                                                <constraint firstItem="II6-PF-Cf6" firstAttribute="leading" secondItem="P8q-Qk-UNS" secondAttribute="leadingMargin" constant="63" id="fk6-fx-FHo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="II6-PF-Cf6" secondAttribute="bottom" constant="42" id="mAs-vI-ePL"/>
+                                                <constraint firstItem="II6-PF-Cf6" firstAttribute="top" secondItem="P8q-Qk-UNS" secondAttribute="topMargin" constant="9" id="xbj-dl-nFy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qJE-lI-liC" secondAttribute="trailing" id="0eu-7V-omH"/>
+                            <constraint firstItem="qJE-lI-liC" firstAttribute="leading" secondItem="IBX-wL-ock" secondAttribute="leading" id="Jvc-AP-dFO"/>
+                            <constraint firstItem="ChI-zb-VQu" firstAttribute="top" secondItem="qJE-lI-liC" secondAttribute="bottom" id="W7v-8m-eLg"/>
+                            <constraint firstItem="qJE-lI-liC" firstAttribute="top" secondItem="mI9-Oa-COR" secondAttribute="bottom" id="clq-Jt-kbC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WZz-d2-5QK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rTX-zk-BQW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="rTX-zk-BQW"/>
                     </navigationItem>
                     <connections>
                         <outlet property="createGoal" destination="rTX-zk-BQW" id="67c-Qq-Nhv"/>
+                        <outlet property="tableView" destination="qJE-lI-liC" id="Bzq-vX-Orh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lb-DJ-pnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="-868"/>
+            <point key="canvasLocation" x="-290.39999999999998" y="-868.51574212893559"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zn4-Cd-hJn">

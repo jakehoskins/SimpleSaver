@@ -19,18 +19,14 @@
 - (void)setUp
 {
     [super setUp];
-    
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[SavingsModel getInstance] resetUserDefaults];
 }
 
 - (void)tearDown
 {
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     [super tearDown];
+    
+    [[SavingsModel getInstance] resetUserDefaults];
 }
 
 - (void)testAddGoal

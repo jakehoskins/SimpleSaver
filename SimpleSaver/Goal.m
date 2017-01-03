@@ -62,6 +62,7 @@ NSString * const kEnd = @"end";
     return self;
 }
 
+// @TODO: Need to fix issue where we cant have duplicate objectives
 -(BOOL) isEqual:(id)object
 {
     if ([object isKindOfClass:[Goal class]])

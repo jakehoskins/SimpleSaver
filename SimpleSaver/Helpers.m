@@ -6,6 +6,7 @@
 //  Copyright © 2017 Jake Hoskins. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+#import <stdlib.h>
 
 #import "Helpers.h"
 @implementation Helpers
@@ -72,5 +73,18 @@
     return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
 }
 
++ (NSNumber *)randomNumberBetween:(float)smallNumber and:(float)bigNumber
+{
+    float diff = bigNumber - smallNumber;
+    return [NSNumber numberWithFloat:(((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + smallNumber];
+}
+
++(NSDate *)addDaysToDate:(NSDate *)date increaseBy:(NSInteger)days
+{
+    NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+    NSCalendar *theCalendar = [NSCalendar currentCalendar];
+    dayComponent.day = days;
+    return [theCalendar dateByAddingComponents:dayComponent toDate:date options:0];
+}
 
 @end

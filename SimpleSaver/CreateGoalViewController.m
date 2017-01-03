@@ -30,14 +30,12 @@ int const SC_END_DATE_INDEX = 1;
 {
     [super viewDidLoad];
     [self.tfCurrency setDelegate:self];
-    [self.btnCreateGoal setEnabled:true];
     [self.dpDateSelector addTarget:self action:@selector(handleNewDateSelected) forControlEvents:UIControlEventValueChanged];
     [self.scDateContext addTarget:self action:@selector(handleSegmentedChange) forControlEvents:UIControlEventValueChanged];
     UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissViewController)];
     self.navigationItem.leftBarButtonItem = closeButton;
     self.state = CreateState;
 }
-
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -47,7 +45,7 @@ int const SC_END_DATE_INDEX = 1;
 
 -(void) setGoal:(Goal *)goal
 {
-    self.goal = goal;
+    _goal = goal;
     self.state = EditState;
     [self setupForState:self.state];
 }
@@ -64,7 +62,7 @@ int const SC_END_DATE_INDEX = 1;
 {
     switch (state) {
         case CreateState:
-            [self.btnCreateGoal setTitle:@"Create" forState:UIControlStateNormal];
+            [self.btnCreateGoal setTitle:@"Create Goal" forState:UIControlStateNormal];
             [self.btnCreateGoal addTarget:self action:@selector(createNewGoal) forControlEvents:UIControlEventTouchUpInside];
             [self.dpDateSelector setMinimumDate:[NSDate date]];
             break;
@@ -73,7 +71,7 @@ int const SC_END_DATE_INDEX = 1;
             [self.tfGoalName setText:[self.goal getName]];
             self.startDate = [self.goal getStartDate];
             self.endDate = [self.goal getEndDate];
-            [self.btnCreateGoal setTitle:@"Save" forState:UIControlStateNormal];
+            [self.btnCreateGoal setTitle:@"Save Goal" forState:UIControlStateNormal];
             [self.btnCreateGoal addTarget:self action:@selector(editGoal) forControlEvents:UIControlEventTouchUpInside];
             [self resetDatePicker];
             break;
@@ -141,10 +139,10 @@ int const SC_END_DATE_INDEX = 1;
     {
         SavingsModel *model = [SavingsModel getInstance];
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-        
         Goal *newGoal = [[Goal alloc] initWithName:self.tfGoalName.text savingsTarget:[numberFormatter numberFromString:self.tfGoalTarget.text] forStartDate:self.startDate andEndDate:self.endDate];
         
         [model editGoalAtIndex:[model indexForGoal:self.goal] forGoal:newGoal];
+        [model writeToUserDefaults];
     }
     else
     {
@@ -158,17 +156,32 @@ int const SC_END_DATE_INDEX = 1;
     
     if ([result getCode] == CODE_OK)
     {
+        SavingsModel *model = [SavingsModel getInstance];
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
         
         self.goal = [[Goal alloc] initWithName:self.tfGoalName.text savingsTarget:[numberFormatter numberFromString:self.tfGoalTarget.text] forStartDate:self.startDate andEndDate:self.endDate];
         
-        [[SavingsModel getInstance] addGoal:self.goal];
-        [[SavingsModel getInstance] writeToUserDefaults];
+        [model addGoal:self.goal];
+        [model writeToUserDefaults];
+        [self showSuccessMessage];
     }
     else
     {
         [self showErrorWithMessage:[result description]];
     }
+}
+
+-(void) showSuccessMessage
+{
+    OpinionzAlertView *alert = [[OpinionzAlertView alloc] initWithTitle:@"Goal Created!"
+                                                                message:@"Goal has been created succesfully"
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil
+                                                usingBlockWhenTapButton:^(OpinionzAlertView *alertView, NSInteger buttonIndex) {
+                                                    [self dismissViewControllerAnimated:true completion:nil];
+                                                      }];
+    alert.iconType = OpinionzAlertIconSuccess;
+    [alert show];
 }
 
 -(void) showErrorWithMessage:(NSString *)message
@@ -197,7 +210,6 @@ int const SC_END_DATE_INDEX = 1;
     
     return [[ValidationResult alloc] initWithValidationCode:CODE_OK];
 }
-
 #pragma UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

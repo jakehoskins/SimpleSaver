@@ -10,5 +10,6 @@
 
 @interface GoalsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *createGoal;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

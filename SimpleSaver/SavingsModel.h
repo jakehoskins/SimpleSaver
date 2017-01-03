@@ -18,11 +18,15 @@ extern NSString * const kProfile;
 
 -(void) addGoal:(Goal *) goal;
 
+-(void) removeGoal:(Goal *)goal;
+
 -(void) editGoalAtIndex:(NSInteger)index forGoal:(Goal *)goal;
 
 -(NSArray *) getGoals;
 
 -(void) writeToUserDefaults;
+
+-(void) resetUserDefaults;
 
 -(NSInteger) indexForGoal:(Goal *)goal;
 

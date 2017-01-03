@@ -17,6 +17,7 @@ NSString * const kProfile = @"ss-user-profile";
 
 @implementation SavingsModel
 
+// @TODO: We must ensure we listen to notifications from iCloud to force re-initialisation
 + (id)getInstance{
     static SavingsModel *sharedMyManager = nil;
     static dispatch_once_t onceToken;
@@ -32,26 +33,37 @@ NSString * const kProfile = @"ss-user-profile";
     
     if (self)
     {
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:kProfile])
-        {
-            NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kProfile];
-            self.goals = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
-        }
-        else
-        {
-            self.goals = [NSMutableArray array];
-        }
+        [self assertContext];
     }
     
     return self;
 }
 
+-(void) assertContext
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kProfile])
+    {
+        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kProfile];
+        self.goals = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
+    }
+    else
+    {
+        self.goals = [NSMutableArray array];
+    }
+}
+
 -(void) addGoal:(Goal *) goal
 {
-
     NSLog(@"Adding Goal: %@", [goal description]);
     
     [self.goals addObject:goal];
+}
+
+-(void) removeGoal:(Goal *)goal
+{
+    NSLog(@"Removing Goal: %@", [goal description]);
+ 
+    [self.goals removeObject:goal];
 }
 
 -(void) editGoalAtIndex:(NSInteger)index forGoal:(Goal *)goal
@@ -88,6 +100,17 @@ NSString * const kProfile = @"ss-user-profile";
     if (self.goals.count == 0) return;
     
     [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:self.goals] forKey:kProfile];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void) resetUserDefaults
+{
+    // Should re-init our self to update our context
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self assertContext];
 }
 
 @end
