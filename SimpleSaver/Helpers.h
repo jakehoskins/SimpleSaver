@@ -12,5 +12,6 @@
 +(NSString *) formatTimeInterval:(NSDateComponents *) components;
 +(NSString *) formatCurrency:(NSString *)currency forAmount:(NSNumber *)amount;
 +(BOOL) containsOnlyNumericals:(NSString *) str;
++(BOOL) isIpad;
 
 @end

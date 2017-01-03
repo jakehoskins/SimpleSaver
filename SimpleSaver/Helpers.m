@@ -5,9 +5,9 @@
 //  Created by Jake Hoskins on 02/01/2017.
 //  Copyright © 2017 Jake Hoskins. All rights reserved.
 //
+#import <UIKit/UIKit.h>
 
 #import "Helpers.h"
-
 @implementation Helpers
 
 +(NSString *) formatTimeInterval:(NSDateComponents *) components {
@@ -66,6 +66,11 @@
     return ([scanner scanFloat:NULL] && [scanner isAtEnd]);
 }
 
++(BOOL) isIpad
+{
+    
+    return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+}
 
 
 @end

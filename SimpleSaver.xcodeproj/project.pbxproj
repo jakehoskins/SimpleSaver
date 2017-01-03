@@ -1,1434 +1,643 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>049F9FB38BBA82F25E3597BC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EE172F5FEDCA6616B32E2FAF</string>
-				<string>6C686847D9999796A9396DFB</string>
-				<string>21BCA3BCB39F8D4FD125F66A</string>
-				<string>B78B75277E9BE817B5829CB5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0C7C4550859F8FE89CE179E9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1884C4EB7E1B9EC48725B01B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>18D5837E7AEEDDE9A73E7DA1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-SimpleSaver.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>21BCA3BCB39F8D4FD125F66A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-SimpleSaverTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>30257991FFD64BB8A731366D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>4758C1B9D072A667755324B7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18D5837E7AEEDDE9A73E7DA1</string>
-				<string>C812DF45963BC891CBA87764</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CD1D4FC255609380BCAA37B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6C686847D9999796A9396DFB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-SimpleSaver.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471321E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A24713D1E1942BA00C99780</string>
-				<string>7A2471571E1942BA00C99780</string>
-				<string>7A24713C1E1942BA00C99780</string>
-				<string>049F9FB38BBA82F25E3597BC</string>
-				<string>4758C1B9D072A667755324B7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471331E1942BA00C99780</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0820</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Jake Hoskins</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>7A24713A1E1942BA00C99780</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.2</string>
-						<key>DevelopmentTeam</key>
-						<string>2L29NL2BW9</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.iCloud</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>7A2471531E1942BA00C99780</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.2</string>
-						<key>DevelopmentTeam</key>
-						<string>2L29NL2BW9</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>7A24713A1E1942BA00C99780</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>7A2471361E1942BA00C99780</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7A2471321E1942BA00C99780</string>
-			<key>productRefGroup</key>
-			<string>7A24713C1E1942BA00C99780</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>7A24713A1E1942BA00C99780</string>
-				<string>7A2471531E1942BA00C99780</string>
-			</array>
-		</dict>
-		<key>7A2471361E1942BA00C99780</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7A24715B1E1942BA00C99780</string>
-				<string>7A24715C1E1942BA00C99780</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7A2471371E1942BA00C99780</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7A2471681E19440E00C99780</string>
-				<string>7A2471461E1942BA00C99780</string>
-				<string>7A2471651E1943C300C99780</string>
-				<string>7A2471431E1942BA00C99780</string>
-				<string>7A577BC31E19DEF70091C28F</string>
-				<string>7A24716B1E19449800C99780</string>
-				<string>7A577BC71E1A74770091C28F</string>
-				<string>7A2471401E1942BA00C99780</string>
-				<string>7A577BCC1E1A7E510091C28F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A2471381E1942BA00C99780</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>ED6D280FD3531EDEF3121390</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A2471391E1942BA00C99780</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7A24714E1E1942BA00C99780</string>
-				<string>7A24714B1E1942BA00C99780</string>
-				<string>7A2471491E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A24713A1E1942BA00C99780</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7A24715D1E1942BA00C99780</string>
-			<key>buildPhases</key>
-			<array>
-				<string>1884C4EB7E1B9EC48725B01B</string>
-				<string>7A2471371E1942BA00C99780</string>
-				<string>7A2471381E1942BA00C99780</string>
-				<string>7A2471391E1942BA00C99780</string>
-				<string>86E34D475F4F76A28848D800</string>
-				<string>FEDAD7EC868C274BC891E366</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SimpleSaver</string>
-			<key>productName</key>
-			<string>SimpleSaver</string>
-			<key>productReference</key>
-			<string>7A24713B1E1942BA00C99780</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>7A24713B1E1942BA00C99780</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SimpleSaver.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7A24713C1E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A24713B1E1942BA00C99780</string>
-				<string>7A2471541E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24713D1E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A577BC91E1A79CB0091C28F</string>
-				<string>7A577BC41E1A72A70091C28F</string>
-				<string>7A577BC81E1A79B10091C28F</string>
-				<string>7A2471411E1942BA00C99780</string>
-				<string>7A2471421E1942BA00C99780</string>
-				<string>7A2471471E1942BA00C99780</string>
-				<string>7A24714A1E1942BA00C99780</string>
-				<string>7A24714C1E1942BA00C99780</string>
-				<string>7A24714F1E1942BA00C99780</string>
-				<string>7A24713E1E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SimpleSaver</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24713E1E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A577BC51E1A74770091C28F</string>
-				<string>7A577BC61E1A74770091C28F</string>
-				<string>7A577BC11E19DEF70091C28F</string>
-				<string>7A577BC21E19DEF70091C28F</string>
-				<string>7A24713F1E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24713F1E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471401E1942BA00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A24713F1E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A2471411E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471421E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471431E1942BA00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A2471421E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A2471441E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CreateGoalViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471451E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CreateGoalViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471461E1942BA00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A2471451E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A2471471E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A2471481E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471481E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471491E1942BA00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A2471471E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A24714A1E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24714B1E1942BA00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A24714A1E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A24714C1E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A24714D1E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24714D1E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24714E1E1942BA00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A24714C1E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A24714F1E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471501E1942BA00C99780</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7A24716D1E194D4F00C99780</string>
-				<string>7A24716F1E19532800C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A2471511E1942BA00C99780</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7431DF0A3192F5CCE2D464E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A2471521E1942BA00C99780</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A2471531E1942BA00C99780</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7A2471601E1942BA00C99780</string>
-			<key>buildPhases</key>
-			<array>
-				<string>30257991FFD64BB8A731366D</string>
-				<string>7A2471501E1942BA00C99780</string>
-				<string>7A2471511E1942BA00C99780</string>
-				<string>7A2471521E1942BA00C99780</string>
-				<string>0C7C4550859F8FE89CE179E9</string>
-				<string>4CD1D4FC255609380BCAA37B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>7A2471561E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SimpleSaverTests</string>
-			<key>productName</key>
-			<string>SimpleSaverTests</string>
-			<key>productReference</key>
-			<string>7A2471541E1942BA00C99780</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>7A2471541E1942BA00C99780</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SimpleSaverTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7A2471551E1942BA00C99780</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>7A2471331E1942BA00C99780</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7A24713A1E1942BA00C99780</string>
-			<key>remoteInfo</key>
-			<string>SimpleSaver</string>
-		</dict>
-		<key>7A2471561E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>7A24713A1E1942BA00C99780</string>
-			<key>targetProxy</key>
-			<string>7A2471551E1942BA00C99780</string>
-		</dict>
-		<key>7A2471571E1942BA00C99780</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A24715A1E1942BA00C99780</string>
-				<string>7A24716C1E194D4F00C99780</string>
-				<string>7A24716E1E19532800C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SimpleSaverTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24715A1E1942BA00C99780</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24715B1E1942BA00C99780</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7A24715C1E1942BA00C99780</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7A24715D1E1942BA00C99780</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7A24715E1E1942BA00C99780</string>
-				<string>7A24715F1E1942BA00C99780</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7A24715E1E1942BA00C99780</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EE172F5FEDCA6616B32E2FAF</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>SimpleSaver/SimpleSaver.entitlements</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>2L29NL2BW9</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SimpleSaver/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jakehoskins.SimpleSaver</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7A24715F1E1942BA00C99780</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6C686847D9999796A9396DFB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>SimpleSaver/SimpleSaver.entitlements</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>2L29NL2BW9</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SimpleSaver/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jakehoskins.SimpleSaver</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7A2471601E1942BA00C99780</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7A2471611E1942BA00C99780</string>
-				<string>7A2471621E1942BA00C99780</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7A2471611E1942BA00C99780</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>21BCA3BCB39F8D4FD125F66A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>2L29NL2BW9</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SimpleSaverTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jakehoskins.SimpleSaverTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/SimpleSaver.app/SimpleSaver</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7A2471621E1942BA00C99780</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B78B75277E9BE817B5829CB5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>2L29NL2BW9</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SimpleSaverTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jakehoskins.SimpleSaverTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/SimpleSaver.app/SimpleSaver</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7A2471631E1943C300C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SavingsModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471641E1943C300C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SavingsModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471651E1943C300C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A2471641E1943C300C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A2471661E19440E00C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Goal.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471671E19440E00C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Goal.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A2471681E19440E00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A2471671E19440E00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A2471691E19449800C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GoalContribution.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24716A1E19449800C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GoalContribution.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24716B1E19449800C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A24716A1E19449800C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A24716C1E194D4F00C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GoalTest.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24716D1E194D4F00C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A24716C1E194D4F00C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A24716E1E19532800C99780</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SavingsModelTest.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A24716F1E19532800C99780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A24716E1E19532800C99780</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A577BC11E19DEF70091C28F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Helpers.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BC21E19DEF70091C28F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Helpers.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BC31E19DEF70091C28F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A577BC21E19DEF70091C28F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A577BC41E1A72A70091C28F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.entitlements</string>
-			<key>path</key>
-			<string>SimpleSaver.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BC51E1A74770091C28F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MKiCloudSync.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BC61E1A74770091C28F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MKiCloudSync.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BC71E1A74770091C28F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A577BC61E1A74770091C28F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A577BC81E1A79B10091C28F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A577BCA1E1A7E510091C28F</string>
-				<string>7A577BCB1E1A7E510091C28F</string>
-				<string>7A2471631E1943C300C99780</string>
-				<string>7A2471641E1943C300C99780</string>
-				<string>7A2471661E19440E00C99780</string>
-				<string>7A2471671E19440E00C99780</string>
-				<string>7A2471691E19449800C99780</string>
-				<string>7A24716A1E19449800C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BC91E1A79CB0091C28F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A2471441E1942BA00C99780</string>
-				<string>7A2471451E1942BA00C99780</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>View Controller</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BCA1E1A7E510091C28F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ValidationResult.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BCB1E1A7E510091C28F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ValidationResult.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A577BCC1E1A7E510091C28F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7A577BCB1E1A7E510091C28F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>86E34D475F4F76A28848D800</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B78B75277E9BE817B5829CB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-SimpleSaverTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7431DF0A3192F5CCE2D464E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C812DF45963BC891CBA87764</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C812DF45963BC891CBA87764</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-SimpleSaverTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>ED6D280FD3531EDEF3121390</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18D5837E7AEEDDE9A73E7DA1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EE172F5FEDCA6616B32E2FAF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-SimpleSaver.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEDAD7EC868C274BC891E366</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>7A2471331E1942BA00C99780</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A2471401E1942BA00C99780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24713F1E1942BA00C99780 /* main.m */; };
+		7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471421E1942BA00C99780 /* AppDelegate.m */; };
+		7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
+		7A2471491E1942BA00C99780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2471471E1942BA00C99780 /* Main.storyboard */; };
+		7A24714B1E1942BA00C99780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714A1E1942BA00C99780 /* Assets.xcassets */; };
+		7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */; };
+		7A2471651E1943C300C99780 /* SavingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471641E1943C300C99780 /* SavingsModel.m */; };
+		7A2471681E19440E00C99780 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471671E19440E00C99780 /* Goal.m */; };
+		7A24716B1E19449800C99780 /* GoalContribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716A1E19449800C99780 /* GoalContribution.m */; };
+		7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716C1E194D4F00C99780 /* GoalTest.m */; };
+		7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716E1E19532800C99780 /* SavingsModelTest.m */; };
+		7A577BC31E19DEF70091C28F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC21E19DEF70091C28F /* Helpers.m */; };
+		7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
+		7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
+		7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */; };
+		C7431DF0A3192F5CCE2D464E /* libPods-SimpleSaverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C812DF45963BC891CBA87764 /* libPods-SimpleSaverTests.a */; };
+		ED6D280FD3531EDEF3121390 /* libPods-SimpleSaver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D5837E7AEEDDE9A73E7DA1 /* libPods-SimpleSaver.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A2471551E1942BA00C99780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A2471331E1942BA00C99780 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A24713A1E1942BA00C99780;
+			remoteInfo = SimpleSaver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18D5837E7AEEDDE9A73E7DA1 /* libPods-SimpleSaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleSaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21BCA3BCB39F8D4FD125F66A /* Pods-SimpleSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.release.xcconfig"; sourceTree = "<group>"; };
+		7A24713B1E1942BA00C99780 /* SimpleSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A24713F1E1942BA00C99780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A2471411E1942BA00C99780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7A2471421E1942BA00C99780 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A2471441E1942BA00C99780 /* CreateGoalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateGoalViewController.h; sourceTree = "<group>"; };
+		7A2471451E1942BA00C99780 /* CreateGoalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateGoalViewController.m; sourceTree = "<group>"; };
+		7A2471481E1942BA00C99780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A24714A1E1942BA00C99780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A24714D1E1942BA00C99780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A24714F1E1942BA00C99780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A2471541E1942BA00C99780 /* SimpleSaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSaverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A24715A1E1942BA00C99780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A2471631E1943C300C99780 /* SavingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingsModel.h; sourceTree = "<group>"; };
+		7A2471641E1943C300C99780 /* SavingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModel.m; sourceTree = "<group>"; };
+		7A2471661E19440E00C99780 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		7A2471671E19440E00C99780 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		7A2471691E19449800C99780 /* GoalContribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContribution.h; sourceTree = "<group>"; };
+		7A24716A1E19449800C99780 /* GoalContribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContribution.m; sourceTree = "<group>"; };
+		7A24716C1E194D4F00C99780 /* GoalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTest.m; sourceTree = "<group>"; };
+		7A24716E1E19532800C99780 /* SavingsModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModelTest.m; sourceTree = "<group>"; };
+		7A577BC11E19DEF70091C28F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		7A577BC21E19DEF70091C28F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleSaver.entitlements; sourceTree = "<group>"; };
+		7A577BC51E1A74770091C28F /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		7A577BC61E1A74770091C28F /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
+		7A577BCA1E1A7E510091C28F /* ValidationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationResult.h; sourceTree = "<group>"; };
+		7A577BCB1E1A7E510091C28F /* ValidationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationResult.m; sourceTree = "<group>"; };
+		7A853B5C1E1B11E7000CCF8A /* GoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsViewController.h; sourceTree = "<group>"; };
+		7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsViewController.m; sourceTree = "<group>"; };
+		B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.release.xcconfig"; sourceTree = "<group>"; };
+		C812DF45963BC891CBA87764 /* libPods-SimpleSaverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleSaverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A2471381E1942BA00C99780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6D280FD3531EDEF3121390 /* libPods-SimpleSaver.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A2471511E1942BA00C99780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7431DF0A3192F5CCE2D464E /* libPods-SimpleSaverTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		049F9FB38BBA82F25E3597BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */,
+				6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */,
+				21BCA3BCB39F8D4FD125F66A /* Pods-SimpleSaverTests.debug.xcconfig */,
+				B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4758C1B9D072A667755324B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18D5837E7AEEDDE9A73E7DA1 /* libPods-SimpleSaver.a */,
+				C812DF45963BC891CBA87764 /* libPods-SimpleSaverTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A2471321E1942BA00C99780 = {
+			isa = PBXGroup;
+			children = (
+				7A24713D1E1942BA00C99780 /* SimpleSaver */,
+				7A2471571E1942BA00C99780 /* SimpleSaverTests */,
+				7A24713C1E1942BA00C99780 /* Products */,
+				049F9FB38BBA82F25E3597BC /* Pods */,
+				4758C1B9D072A667755324B7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A24713C1E1942BA00C99780 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A24713B1E1942BA00C99780 /* SimpleSaver.app */,
+				7A2471541E1942BA00C99780 /* SimpleSaverTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A24713D1E1942BA00C99780 /* SimpleSaver */ = {
+			isa = PBXGroup;
+			children = (
+				7A577BC91E1A79CB0091C28F /* View Controller */,
+				7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */,
+				7A577BC81E1A79B10091C28F /* Model */,
+				7A2471411E1942BA00C99780 /* AppDelegate.h */,
+				7A2471421E1942BA00C99780 /* AppDelegate.m */,
+				7A2471471E1942BA00C99780 /* Main.storyboard */,
+				7A24714A1E1942BA00C99780 /* Assets.xcassets */,
+				7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */,
+				7A24714F1E1942BA00C99780 /* Info.plist */,
+				7A24713E1E1942BA00C99780 /* Supporting Files */,
+			);
+			path = SimpleSaver;
+			sourceTree = "<group>";
+		};
+		7A24713E1E1942BA00C99780 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A577BC51E1A74770091C28F /* MKiCloudSync.h */,
+				7A577BC61E1A74770091C28F /* MKiCloudSync.m */,
+				7A577BC11E19DEF70091C28F /* Helpers.h */,
+				7A577BC21E19DEF70091C28F /* Helpers.m */,
+				7A24713F1E1942BA00C99780 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A2471571E1942BA00C99780 /* SimpleSaverTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A24715A1E1942BA00C99780 /* Info.plist */,
+				7A24716C1E194D4F00C99780 /* GoalTest.m */,
+				7A24716E1E19532800C99780 /* SavingsModelTest.m */,
+			);
+			path = SimpleSaverTests;
+			sourceTree = "<group>";
+		};
+		7A577BC81E1A79B10091C28F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A577BCA1E1A7E510091C28F /* ValidationResult.h */,
+				7A577BCB1E1A7E510091C28F /* ValidationResult.m */,
+				7A2471631E1943C300C99780 /* SavingsModel.h */,
+				7A2471641E1943C300C99780 /* SavingsModel.m */,
+				7A2471661E19440E00C99780 /* Goal.h */,
+				7A2471671E19440E00C99780 /* Goal.m */,
+				7A2471691E19449800C99780 /* GoalContribution.h */,
+				7A24716A1E19449800C99780 /* GoalContribution.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7A577BC91E1A79CB0091C28F /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A853B5C1E1B11E7000CCF8A /* GoalsViewController.h */,
+				7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */,
+				7A2471441E1942BA00C99780 /* CreateGoalViewController.h */,
+				7A2471451E1942BA00C99780 /* CreateGoalViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A24713A1E1942BA00C99780 /* SimpleSaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A24715D1E1942BA00C99780 /* Build configuration list for PBXNativeTarget "SimpleSaver" */;
+			buildPhases = (
+				1884C4EB7E1B9EC48725B01B /* [CP] Check Pods Manifest.lock */,
+				7A2471371E1942BA00C99780 /* Sources */,
+				7A2471381E1942BA00C99780 /* Frameworks */,
+				7A2471391E1942BA00C99780 /* Resources */,
+				86E34D475F4F76A28848D800 /* [CP] Embed Pods Frameworks */,
+				FEDAD7EC868C274BC891E366 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSaver;
+			productName = SimpleSaver;
+			productReference = 7A24713B1E1942BA00C99780 /* SimpleSaver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A2471531E1942BA00C99780 /* SimpleSaverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A2471601E1942BA00C99780 /* Build configuration list for PBXNativeTarget "SimpleSaverTests" */;
+			buildPhases = (
+				30257991FFD64BB8A731366D /* [CP] Check Pods Manifest.lock */,
+				7A2471501E1942BA00C99780 /* Sources */,
+				7A2471511E1942BA00C99780 /* Frameworks */,
+				7A2471521E1942BA00C99780 /* Resources */,
+				0C7C4550859F8FE89CE179E9 /* [CP] Embed Pods Frameworks */,
+				4CD1D4FC255609380BCAA37B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A2471561E1942BA00C99780 /* PBXTargetDependency */,
+			);
+			name = SimpleSaverTests;
+			productName = SimpleSaverTests;
+			productReference = 7A2471541E1942BA00C99780 /* SimpleSaverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A2471331E1942BA00C99780 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Jake Hoskins";
+				TargetAttributes = {
+					7A24713A1E1942BA00C99780 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 2L29NL2BW9;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					7A2471531E1942BA00C99780 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 2L29NL2BW9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7A24713A1E1942BA00C99780;
+					};
+				};
+			};
+			buildConfigurationList = 7A2471361E1942BA00C99780 /* Build configuration list for PBXProject "SimpleSaver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A2471321E1942BA00C99780;
+			productRefGroup = 7A24713C1E1942BA00C99780 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A24713A1E1942BA00C99780 /* SimpleSaver */,
+				7A2471531E1942BA00C99780 /* SimpleSaverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A2471391E1942BA00C99780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */,
+				7A24714B1E1942BA00C99780 /* Assets.xcassets in Resources */,
+				7A2471491E1942BA00C99780 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A2471521E1942BA00C99780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C7C4550859F8FE89CE179E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1884C4EB7E1B9EC48725B01B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		30257991FFD64BB8A731366D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4CD1D4FC255609380BCAA37B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E34D475F4F76A28848D800 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEDAD7EC868C274BC891E366 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A2471371E1942BA00C99780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2471681E19440E00C99780 /* Goal.m in Sources */,
+				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
+				7A2471651E1943C300C99780 /* SavingsModel.m in Sources */,
+				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
+				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
+				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
+				7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */,
+				7A2471401E1942BA00C99780 /* main.m in Sources */,
+				7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */,
+				7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A2471501E1942BA00C99780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */,
+				7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A2471561E1942BA00C99780 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A24713A1E1942BA00C99780 /* SimpleSaver */;
+			targetProxy = 7A2471551E1942BA00C99780 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A2471471E1942BA00C99780 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A2471481E1942BA00C99780 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A24714D1E1942BA00C99780 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A24715B1E1942BA00C99780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A24715C1E1942BA00C99780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A24715E1E1942BA00C99780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
+				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				INFOPLIST_FILE = SimpleSaver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehoskins.SimpleSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A24715F1E1942BA00C99780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
+				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				INFOPLIST_FILE = SimpleSaver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehoskins.SimpleSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7A2471611E1942BA00C99780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21BCA3BCB39F8D4FD125F66A /* Pods-SimpleSaverTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				INFOPLIST_FILE = SimpleSaverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehoskins.SimpleSaverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSaver.app/SimpleSaver";
+			};
+			name = Debug;
+		};
+		7A2471621E1942BA00C99780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				INFOPLIST_FILE = SimpleSaverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehoskins.SimpleSaverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSaver.app/SimpleSaver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A2471361E1942BA00C99780 /* Build configuration list for PBXProject "SimpleSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A24715B1E1942BA00C99780 /* Debug */,
+				7A24715C1E1942BA00C99780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A24715D1E1942BA00C99780 /* Build configuration list for PBXNativeTarget "SimpleSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A24715E1E1942BA00C99780 /* Debug */,
+				7A24715F1E1942BA00C99780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A2471601E1942BA00C99780 /* Build configuration list for PBXNativeTarget "SimpleSaverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A2471611E1942BA00C99780 /* Debug */,
+				7A2471621E1942BA00C99780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A2471331E1942BA00C99780 /* Project object */;
+}

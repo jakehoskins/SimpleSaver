@@ -33,6 +33,8 @@ int const SC_END_DATE_INDEX = 1;
     [self.btnCreateGoal setEnabled:true];
     [self.dpDateSelector addTarget:self action:@selector(handleNewDateSelected) forControlEvents:UIControlEventValueChanged];
     [self.scDateContext addTarget:self action:@selector(handleSegmentedChange) forControlEvents:UIControlEventValueChanged];
+    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissViewController)];
+    self.navigationItem.leftBarButtonItem = closeButton;
     self.state = CreateState;
 }
 
@@ -40,6 +42,22 @@ int const SC_END_DATE_INDEX = 1;
 -(void)viewDidAppear:(BOOL)animated
 {
     [self setupForState:(self.state) ? self.state : CreateState];
+}
+
+
+-(void) setGoal:(Goal *)goal
+{
+    self.goal = goal;
+    self.state = EditState;
+    [self setupForState:self.state];
+}
+
+#pragma Private Methods
+
+
+-(void) dismissViewController
+{
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 -(void) setupForState:(State)state
@@ -63,16 +81,6 @@ int const SC_END_DATE_INDEX = 1;
             break;
     }
 }
-
-
--(void) setGoal:(Goal *)goal
-{
-    self.goal = goal;
-    self.state = EditState;
-    [self setupForState:self.state];
-}
-
-#pragma Private Methods
 
 -(void) resetDatePicker
 {

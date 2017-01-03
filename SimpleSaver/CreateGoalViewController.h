@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, State) {
 
 -(void) setGoal:(Goal *)goal;   // For Editing //
 
+
 @property (weak, nonatomic) IBOutlet UITextField *tfGoalName;
 @property (weak, nonatomic) IBOutlet UITextField *tfGoalTarget;
 @property (weak, nonatomic) IBOutlet UITextField *tfCurrency;
