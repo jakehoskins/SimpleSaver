@@ -82,3 +82,20 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Colours/Colours.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/NZCircularImageView/NZCircularImageView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpinionzAlertView/OpinionzAlertView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UIActivityIndicator-for-SDWebImage/UIActivityIndicator_for_SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/YLProgressBar/YLProgressBar.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Colours/Colours.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/NZCircularImageView/NZCircularImageView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpinionzAlertView/OpinionzAlertView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UIActivityIndicator-for-SDWebImage/UIActivityIndicator_for_SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/YLProgressBar/YLProgressBar.framework"
+fi

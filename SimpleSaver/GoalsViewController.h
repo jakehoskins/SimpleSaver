@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface GoalsViewController : UIViewController
+
+typedef NS_ENUM(NSInteger, ProgressIndicator)
+{
+    ProgressContributedVsTotal,
+    ProgressDaysVsDaysRemaining
+};
+
+@property (nonatomic, strong) UIColor *backgroundColour;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *createGoal;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

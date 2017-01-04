@@ -3,10 +3,13 @@
 
 target 'SimpleSaver' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for SimpleSaver
   pod 'OpinionzAlertView'
+  pod 'YLProgressBar', '~> 3.10.0'
+  pod 'Colours'
+  pod "NZCircularImageView"
 
   target 'SimpleSaverTests' do
     inherit! :search_paths

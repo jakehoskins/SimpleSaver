@@ -1,12 +1,31 @@
 PODS:
+  - Colours (5.13.0):
+    - Colours/ObjC (= 5.13.0)
+  - Colours/ObjC (5.13.0)
+  - NZCircularImageView (0.0.5):
+    - UIActivityIndicator-for-SDWebImage (~> 1.2)
   - OpinionzAlertView (0.3.1)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - UIActivityIndicator-for-SDWebImage (1.2):
+    - SDWebImage (~> 3.7)
+  - YLProgressBar (3.10.0)
 
 DEPENDENCIES:
+  - Colours
+  - NZCircularImageView
   - OpinionzAlertView
+  - YLProgressBar (~> 3.10.0)
 
 SPEC CHECKSUMS:
+  Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+  NZCircularImageView: cc64eae9a0dd42800b4902dc483b0b37591c3a3d
   OpinionzAlertView: 213cf7fa544091962ebd9526ff2e7e120b13c149
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
+  YLProgressBar: 40a0627522dc1b536e02bf082a1b1ce3085b4668
 
-PODFILE CHECKSUM: e490bfa4b306c004b68e1b0aa41112f3dbeaf313
+PODFILE CHECKSUM: 48624be2250c7c2637df673c46ac74a40471505f
 
 COCOAPODS: 1.0.1

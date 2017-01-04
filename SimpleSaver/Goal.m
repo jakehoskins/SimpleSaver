@@ -13,6 +13,7 @@ NSString * const kSavingsTarget = @"savingsTarget";
 NSString * const kContributions = @"contributions";
 NSString * const kStart = @"start";
 NSString * const kEnd = @"end";
+NSString * const kIconUrl = @"iconUrl";
 
 @interface Goal ()
 @property (nonatomic, strong) NSString *name;
@@ -20,9 +21,11 @@ NSString * const kEnd = @"end";
 @property (nonatomic, strong) NSMutableArray<GoalContribution *> *contributions;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
+
 @end
 
 @implementation Goal
+
 
 -(id) initWithName:(NSString *)name savingsTarget:(NSNumber *)target forStartDate:(NSDate *)start andEndDate:(NSDate *)end
 {
@@ -40,6 +43,22 @@ NSString * const kEnd = @"end";
     return self;
 }
 
+
+-(id) initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    
+    if (self)
+    {
+        
+    }
+    
+    return self;
+}
+
+/** 
+ @discussion ensure new keys are encoded
+*/
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.name forKey:kName];
@@ -47,6 +66,7 @@ NSString * const kEnd = @"end";
     [aCoder encodeObject:self.contributions forKey:kContributions];
     [aCoder encodeObject:self.startDate forKey:kStart];
     [aCoder encodeObject:self.endDate forKey:kEnd];
+    [aCoder encodeObject:self.iconUrl forKey:kIconUrl];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -58,6 +78,7 @@ NSString * const kEnd = @"end";
         self.contributions = [aDecoder decodeObjectForKey:kContributions];
         self.startDate = [aDecoder decodeObjectForKey:kStart];
         self.endDate = [aDecoder decodeObjectForKey:kEnd];
+        self.iconUrl = [aDecoder decodeObjectForKey:kIconUrl];
     }
     return self;
 }
@@ -72,7 +93,8 @@ NSString * const kEnd = @"end";
         if ([[self getName] isEqualToString: [goal getName]] &&
             [[self getContributions] isEqual:[goal getContributions]] &&
             [[self getStartDate] isEqual:[goal getStartDate]] &&
-            [[self getEndDate] isEqual:[goal getEndDate]])
+            [[self getEndDate] isEqual:[goal getEndDate]] &&
+            [[self getIconUrl] isEqual:[goal iconUrl]])
         {
             return true;
         }
@@ -80,6 +102,7 @@ NSString * const kEnd = @"end";
     
     return false;
 }
+
 
 -(NSString *) getName
 {
@@ -98,6 +121,7 @@ NSString * const kEnd = @"end";
     return self.endDate;
 }
 
+// Add caching
 -(NSNumber *) totalContributed
 {
     double total = 0;
@@ -110,6 +134,24 @@ NSString * const kEnd = @"end";
     return @(total);
 }
 
+-(NSNumber *) completionPercentage
+{
+    double totalContributed = [self totalContributed].doubleValue;
+    
+    if (totalContributed <= 0) return @(0);
+    
+    return @((totalContributed / self.savingsTarget.doubleValue));
+}
+
+-(NSNumber *) daysRemainingPercentage
+{
+    double daysPast = [self daysPast].doubleValue;
+    double totalDays = [self totalDays].doubleValue;
+    
+    if (daysPast <= 0) return @(0);
+    
+    return @((daysPast / totalDays));
+}
 
 -(NSArray *) getContributions
 {
@@ -123,6 +165,26 @@ NSString * const kEnd = @"end";
 -(void) contribute:(GoalContribution *)contribution
 {
     [self.contributions addObject:contribution];
+}
+
+-(void) setIconUrl:(NSString *)url;
+{
+    _iconUrl = url;
+}
+
+-(NSString *)getIconUrl;
+{
+    return self.iconUrl;
+}
+
+-(NSNumber *) daysPast
+{
+    if (!self.startDate) return nil;
+    
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorianCalendar components: (NSCalendarUnitDay)fromDate:[NSDate date] toDate:self.startDate options:0];
+    
+    return @([components day]);
 }
 
 -(NSNumber *) daysRemaining
@@ -140,7 +202,7 @@ NSString * const kEnd = @"end";
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components;
     
-    if (!self.endDate)
+    if (self.endDate)
     {
         components = [gregorianCalendar components: (NSCalendarUnitDay)fromDate:self.startDate toDate:self.endDate options:0];
     }

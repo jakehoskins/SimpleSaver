@@ -70,16 +70,16 @@ NSString * const kNotes = @"notes";
 
 -(NSNumber *) amount
 {
-    return self.amount;
+    return _amount;
 }
 
 -(NSString *) notes
 {
-    return self.notes;
+    return _notes;
 }
 
 -(NSDate *) contributionDate
 {
-    return self.contributionDate;
+    return _contributionDate;
 }
 @end
