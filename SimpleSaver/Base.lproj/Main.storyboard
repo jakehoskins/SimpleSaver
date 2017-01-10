@@ -137,7 +137,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5xN-DN-Riy" id="P8q-Qk-UNS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="II6-PF-Cf6">
@@ -205,10 +205,26 @@
             </objects>
             <point key="canvasLocation" x="-290.39999999999998" y="-868.51574212893559"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="OeB-TO-ovf">
+            <objects>
+                <navigationController id="zku-FK-Vec" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nyd-XM-tLH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ugu-NB-ine" kind="relationship" relationship="rootViewController" id="69w-UF-Enh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMu-md-NzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="-206"/>
+        </scene>
+        <!--Goal Detail View Controller-->
         <scene sceneID="Zn4-Cd-hJn">
             <objects>
-                <viewController id="Ugu-NB-ine" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detail" id="Ugu-NB-ine" customClass="GoalDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GBF-H6-vut"/>
                         <viewControllerLayoutGuide type="bottom" id="Qbo-zL-uqq"/>
@@ -216,12 +232,53 @@
                     <view key="view" contentMode="scaleToFill" id="gwD-uR-NiM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-Lf-6gt" customClass="GoalContributedView">
+                                <rect key="frame" x="16" y="80" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aBQ-P4-oeB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3n-Qd-R5e">
+                                <rect key="frame" x="0.0" y="188" width="375" height="30"/>
+                                <state key="normal" title="Add Funds"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-OP-cBV">
+                                <rect key="frame" x="0.0" y="248" width="375" height="30"/>
+                                <state key="normal" title="View Contributions"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBC-Rw-pFO">
+                                <rect key="frame" x="0.0" y="218" width="375" height="30"/>
+                                <state key="normal" title="Remove Funds"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="aBC-Rw-pFO" secondAttribute="trailing" id="9mi-98-4dN"/>
+                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="trailing" secondItem="gwD-uR-NiM" secondAttribute="trailingMargin" id="D0b-ls-p5n"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="leading" secondItem="bkj-OP-cBV" secondAttribute="leading" id="I2z-Sw-hbH"/>
+                            <constraint firstItem="bkj-OP-cBV" firstAttribute="top" secondItem="aBC-Rw-pFO" secondAttribute="bottom" id="Lna-oP-DDz"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="top" secondItem="bWM-Lf-6gt" secondAttribute="bottom" constant="8" id="Nbp-zV-uix"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="centerX" secondItem="bWM-Lf-6gt" secondAttribute="centerX" id="QyP-Ah-A6w"/>
+                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="top" secondItem="gwD-uR-NiM" secondAttribute="topMargin" constant="80" id="WlF-sk-ocL"/>
+                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leadingMargin" id="cUf-1n-cVa"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="trailing" secondItem="bkj-OP-cBV" secondAttribute="trailing" id="d8A-dP-Gz8"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="top" secondItem="K3n-Qd-R5e" secondAttribute="bottom" id="dhB-Bd-Abn"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="aBC-Rw-pFO" secondAttribute="leading" id="egt-Xb-4lC"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leading" id="f7S-Ki-fij"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ovp-F3-hgz"/>
+                    <connections>
+                        <outlet property="btnAddFunds" destination="K3n-Qd-R5e" id="srU-X0-ru4"/>
+                        <outlet property="btnRemoveFunds" destination="aBC-Rw-pFO" id="rri-NH-G8x"/>
+                        <outlet property="btnViewContributions" destination="bkj-OP-cBV" id="FoU-do-doe"/>
+                        <outlet property="gcv" destination="bWM-Lf-6gt" id="1Tt-GO-B5z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpN-s4-CYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-969" y="-211"/>
+            <point key="canvasLocation" x="-290" y="-206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnN-O3-ArG">
@@ -244,8 +301,8 @@
             <objects>
                 <splitViewController id="Esf-kC-tOJ" customClass="SimpleSaverSplitViewController" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="Ugu-NB-ine" kind="relationship" relationship="detailViewController" id="Cme-Kc-2nU"/>
                         <segue destination="l6d-Vx-qRL" kind="relationship" relationship="masterViewController" id="06E-wM-gVQ"/>
+                        <segue destination="zku-FK-Vec" kind="relationship" relationship="detailViewController" id="dLf-o7-uAw"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyE-og-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>

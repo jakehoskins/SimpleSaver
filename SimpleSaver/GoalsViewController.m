@@ -9,6 +9,7 @@
 // View Controllers
 #import "GoalsViewController.h"
 #import "CreateGoalViewController.h"
+#import "GoalDetailViewController.h"
 
 // Views
 #import "YLProgressBar.h"
@@ -50,6 +51,19 @@
     }
     self.title = @"SimpleSaver";
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+    
+    if ([Helpers isIpad])
+    {
+        [self.tableView selectRowAtIndexPath:indexPath animated:animated  scrollPosition:UITableViewScrollPositionTop];
+        [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+    }
+}
+
 
 #pragma mark private
 
@@ -127,6 +141,16 @@
 }
 
 
+-(UIViewController *) detailViewController
+{
+    UIViewController *detailVC = nil;
+    if (self.splitViewController.viewControllers.count > 1) {
+        detailVC = self.splitViewController.viewControllers[1];
+    }
+    
+    return detailVC;
+}
+
 #pragma mark TableView
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -136,8 +160,39 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // @TODO: implement
+    id detail = [self detailViewController];
+    
+    if ([detail isKindOfClass:[UINavigationController class]])
+    {
+        UINavigationController *nav = (UINavigationController *) detail;
+        
+        detail = [nav.viewControllers firstObject];
+    }
+    
+    // iPhone wont have the vc loaded so load it
+    if (![Helpers isIpad])
+    {
+        detail = [self.storyboard instantiateViewControllerWithIdentifier:@"detail"];
+    }
+    
+    // Set some important properties for GoalDetailViewController
+    if ([detail isKindOfClass:[GoalDetailViewController class]])
+    {
+        self.delegate = detail;
+        
+        [self.delegate goalSelected:[[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row]];
+        
+        // On iPhone we need to push the vc 
+        if (![Helpers isIpad])
+        {
+            [self.navigationController pushViewController:detail animated:true];
+        }
+    }
+    
+    
+     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;

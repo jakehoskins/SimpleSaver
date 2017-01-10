@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-// We subclass to overide some default pushing 
+@class GoalContributedView;
+
 @interface GoalDetailViewController : UIViewController
+
+typedef NS_ENUM(NSInteger, GoalContributedViewTouchState)
+{
+    TotalContribution,
+    TotalRemaining
+};
+
+@property (weak, nonatomic) IBOutlet GoalContributedView *gcv;
+@property (weak, nonatomic) IBOutlet UIButton *btnAddFunds;
+@property (weak, nonatomic) IBOutlet UIButton *btnRemoveFunds;
+@property (weak, nonatomic) IBOutlet UIButton *btnViewContributions;
 
 @end
