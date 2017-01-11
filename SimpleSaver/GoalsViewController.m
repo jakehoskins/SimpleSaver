@@ -49,7 +49,8 @@
     {
         [self setupMockDataForSize:5];
     }
-    self.title = @"SimpleSaver";
+    
+    [self setupNavigationBarImage];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -66,6 +67,15 @@
 
 
 #pragma mark private
+
+-(void)setupNavigationBarImage
+{
+    UIImage *image = [UIImage imageNamed:@"simplesaver"];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.image = image;
+    self.navigationItem.titleView = imageView;
+}
 
 - (void) setupMockDataForSize:(NSInteger)numFakes
 {
