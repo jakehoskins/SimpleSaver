@@ -24,6 +24,7 @@
     {
         self.lblParent.text = [self.delegate textForParent:self];
         self.lblChild.text = [self.delegate textForChild:self];
+        [self.delegate didCallDelegates:self];
     }
 }
 

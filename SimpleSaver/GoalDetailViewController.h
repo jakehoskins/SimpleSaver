@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, GoalContributedViewTouchState)
     TotalRemaining
 };
 
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet GoalContributedView *gcv;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddFunds;
 @property (weak, nonatomic) IBOutlet UIButton *btnRemoveFunds;

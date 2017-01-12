@@ -137,7 +137,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5xN-DN-Riy" id="P8q-Qk-UNS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="II6-PF-Cf6">
@@ -240,32 +240,44 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3n-Qd-R5e">
-                                <rect key="frame" x="0.0" y="188" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="577" width="375" height="30"/>
                                 <state key="normal" title="Add Funds"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-OP-cBV">
-                                <rect key="frame" x="0.0" y="248" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <state key="normal" title="View Contributions"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBC-Rw-pFO">
-                                <rect key="frame" x="0.0" y="218" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="30"/>
                                 <state key="normal" title="Remove Funds"/>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-0Z-2OF">
+                                <rect key="frame" x="16" y="188" width="343" height="339"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XS3-fV-PKf">
+                                <rect key="frame" x="168" y="535" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="aBC-Rw-pFO" secondAttribute="trailing" id="9mi-98-4dN"/>
+                            <constraint firstItem="XS3-fV-PKf" firstAttribute="centerX" secondItem="K3n-Qd-R5e" secondAttribute="centerX" id="0Ip-F8-LRx"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="leading" secondItem="bWM-Lf-6gt" secondAttribute="leading" id="A9m-P9-RyS"/>
+                            <constraint firstItem="XS3-fV-PKf" firstAttribute="top" secondItem="eQ4-0Z-2OF" secondAttribute="bottom" constant="8" id="C7p-qp-7wm"/>
                             <constraint firstItem="bWM-Lf-6gt" firstAttribute="trailing" secondItem="gwD-uR-NiM" secondAttribute="trailingMargin" id="D0b-ls-p5n"/>
-                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="leading" secondItem="bkj-OP-cBV" secondAttribute="leading" id="I2z-Sw-hbH"/>
-                            <constraint firstItem="bkj-OP-cBV" firstAttribute="top" secondItem="aBC-Rw-pFO" secondAttribute="bottom" id="Lna-oP-DDz"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="top" secondItem="bWM-Lf-6gt" secondAttribute="bottom" constant="8" id="Nbp-zV-uix"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="centerX" secondItem="bWM-Lf-6gt" secondAttribute="centerX" id="QyP-Ah-A6w"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leading" id="JEX-fa-HiQ"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="top" secondItem="eQ4-0Z-2OF" secondAttribute="bottom" constant="50" id="Ldr-Cn-x8T"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="top" secondItem="K3n-Qd-R5e" secondAttribute="bottom" id="Lng-jR-SGl"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="centerX" secondItem="bWM-Lf-6gt" secondAttribute="centerX" id="Mr1-md-0k6"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="top" secondItem="bWM-Lf-6gt" secondAttribute="bottom" constant="8" symbolic="YES" id="Oa9-9Y-KEn"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="bkj-OP-cBV" secondAttribute="trailing" id="UBl-Pf-aFV"/>
                             <constraint firstItem="bWM-Lf-6gt" firstAttribute="top" secondItem="gwD-uR-NiM" secondAttribute="topMargin" constant="80" id="WlF-sk-ocL"/>
+                            <constraint firstItem="bkj-OP-cBV" firstAttribute="top" secondItem="aBC-Rw-pFO" secondAttribute="bottom" id="bdn-iJ-S1d"/>
                             <constraint firstItem="bWM-Lf-6gt" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leadingMargin" id="cUf-1n-cVa"/>
-                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="trailing" secondItem="bkj-OP-cBV" secondAttribute="trailing" id="d8A-dP-Gz8"/>
-                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="top" secondItem="K3n-Qd-R5e" secondAttribute="bottom" id="dhB-Bd-Abn"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="aBC-Rw-pFO" secondAttribute="leading" id="egt-Xb-4lC"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leading" id="f7S-Ki-fij"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="aBC-Rw-pFO" secondAttribute="leading" id="clv-b9-iyD"/>
+                            <constraint firstAttribute="bottom" secondItem="K3n-Qd-R5e" secondAttribute="bottom" constant="60" id="jS7-PW-PvA"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="aBC-Rw-pFO" secondAttribute="trailing" id="nsH-0j-PEP"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="trailing" secondItem="bWM-Lf-6gt" secondAttribute="trailing" id="qTJ-S8-k5w"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="bkj-OP-cBV" secondAttribute="leading" id="xWH-5v-iA3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ovp-F3-hgz"/>
@@ -274,11 +286,13 @@
                         <outlet property="btnRemoveFunds" destination="aBC-Rw-pFO" id="rri-NH-G8x"/>
                         <outlet property="btnViewContributions" destination="bkj-OP-cBV" id="FoU-do-doe"/>
                         <outlet property="gcv" destination="bWM-Lf-6gt" id="1Tt-GO-B5z"/>
+                        <outlet property="pageControl" destination="XS3-fV-PKf" id="HEW-3w-URn"/>
+                        <outlet property="scrollView" destination="eQ4-0Z-2OF" id="dLW-S8-7M7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpN-s4-CYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="-206"/>
+            <point key="canvasLocation" x="-290.39999999999998" y="-206.44677661169416"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnN-O3-ArG">

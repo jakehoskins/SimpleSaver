@@ -10,6 +10,7 @@ target 'SimpleSaver' do
   pod 'YLProgressBar', '~> 3.10.0'
   pod 'Colours'
   pod "NZCircularImageView"
+  pod "MBCircularProgressBar"
 
   target 'SimpleSaverTests' do
     inherit! :search_paths

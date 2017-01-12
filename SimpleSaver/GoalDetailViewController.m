@@ -18,12 +18,14 @@
 // Util
 #import "Colours.h"
 #import "Helpers.h"
+#import "ChartsBuilder.h"
 
 #define PARENT_TOTAL_CONTRIBUTED @"%@"
 #define CHILD_TOTAL_CONTRIBUTED ""
 
-@interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection>
+@interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate>
 @property (nonatomic, strong) Goal *goal;
+@property NSInteger numberOfCharts;
 @property GoalContributedViewTouchState state;
 @end
 
@@ -33,16 +35,61 @@
 {
     [super viewDidLoad];
     self.state = TotalContribution;
-    self.gcv.delegate = self;
-    [self setupUi];
+    [self initUi];
+    [self refreshUi];
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+    [self refreshScrollView];
+}
+
+-(void)initUi
+{
+    self.gcv.delegate = self;
+    self.numberOfCharts = 3; //  may need to move elsewhere
+    self.scrollView.showsVerticalScrollIndicator = false;
+    self.scrollView.showsHorizontalScrollIndicator = false;
+    self.scrollView.pagingEnabled = true;
+    self.scrollView.delegate = self;
+}
+
+-(void)refreshScrollView
+{
+    
+    [self removeAllSubviewsFromView:self.scrollView];
+    self.pageControl.backgroundColor = [UIColor lightGrayColor];
+    self.pageControl.numberOfPages = self.numberOfCharts;
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*self.numberOfCharts, self.scrollView.frame.size.height)];
+    
+    CGFloat x = 0.0f;
+    for (int i = 0; i < self.numberOfCharts; i++)
+    {
+        // Have a build chart for state and goal factory function
+        UIView *view = [ChartsBuilder buildTotalContributedViewForGoal:self.goal];
+        
+        view.frame = CGRectMake(x, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
+        x+=view.frame.size.width;
+
+        [self.scrollView addSubview:view];
+    }
+}
+
+-(void) removeAllSubviewsFromView:(UIView *)view
+{
+    for (UIView *subview in view.subviews)
+    {
+        [subview removeFromSuperview];
+    }
+    
+}
 -(void) setGoal:(Goal *)goal
 {
     _goal = goal;
 }
 
--(void) setupUi
+// Probably needs to be `reloadForGoalContributedEventChange`
+-(void) refreshUi
 {
     [self.btnAddFunds addTarget:self action:@selector(presentAddFundsView) forControlEvents:UIControlEventTouchUpInside];
     [self.btnRemoveFunds addTarget:self action:@selector(presentAddFundsView) forControlEvents:UIControlEventTouchUpInside];
@@ -106,6 +153,30 @@
     }
 }
 
+-(GoalContributedViewTouchState) rotateState
+{
+    switch (self.state)
+    {
+        case TotalContribution:
+            return TotalRemaining;
+            break;
+        case TotalRemaining:
+            return TotalContribution;
+            break;
+        default:
+            return TotalContribution;
+            break;
+    }
+}
+
+#pragma mark ScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat pageWidth = scrollView.bounds.size.width;
+    NSInteger pageNumber = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    self.pageControl.currentPage = pageNumber;
+}
 
 #pragma mark GoalContributedViewEvent
 
@@ -113,25 +184,26 @@
 {
     NSString *parentText = [self getParentTextForState:self.state];
     
-    // CYCLE THE STATE
-    
     return parentText;
 }
 - (NSString *) textForChild:(id)sender;
 {
     NSString *childText = [self getChildTextForState:self.state];;
     
-    // CYCLE THE STATE
-    
     return childText;
 }
 
+
+-(void) didCallDelegates:(id)sender
+{
+    self.state = [self rotateState];
+}
 #pragma GoalSelection
 
 - (void) goalSelected:(Goal *)goal
 {
     [self setGoal:goal];
-    
-    [self setupUi];
+    [self refreshScrollView];
+    [self refreshUi];
 }
 @end

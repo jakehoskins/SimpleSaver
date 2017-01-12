@@ -29,6 +29,7 @@
 		7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */; };
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
 		7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
+		7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		7AAF11951E25703A00A27733 /* GoalContributedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalContributedView.xib; sourceTree = "<group>"; };
 		7AAF11971E25709000A27733 /* GoalContributedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContributedView.h; sourceTree = "<group>"; };
 		7AAF11981E25709000A27733 /* GoalContributedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributedView.m; sourceTree = "<group>"; };
+		7AAF3AFD1E282644001B3F11 /* ChartsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsBuilder.h; sourceTree = "<group>"; };
+		7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsBuilder.m; sourceTree = "<group>"; };
 		B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8FC6F41981832F2A3F5A8BC /* Pods_SimpleSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,14 +196,16 @@
 		7A577BC81E1A79B10091C28F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7A577BCA1E1A7E510091C28F /* ValidationResult.h */,
-				7A577BCB1E1A7E510091C28F /* ValidationResult.m */,
 				7A2471631E1943C300C99780 /* SavingsModel.h */,
 				7A2471641E1943C300C99780 /* SavingsModel.m */,
 				7A2471661E19440E00C99780 /* Goal.h */,
 				7A2471671E19440E00C99780 /* Goal.m */,
+				7A577BCA1E1A7E510091C28F /* ValidationResult.h */,
+				7A577BCB1E1A7E510091C28F /* ValidationResult.m */,
 				7A2471691E19449800C99780 /* GoalContribution.h */,
 				7A24716A1E19449800C99780 /* GoalContribution.m */,
+				7AAF3AFD1E282644001B3F11 /* ChartsBuilder.h */,
+				7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
 				7A6F70A11E22FA680008AA7A /* Constants.m in Sources */,
 				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
+				7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */,
 				7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */,
 				7A2471401E1942BA00C99780 /* main.m in Sources */,
 				7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */,

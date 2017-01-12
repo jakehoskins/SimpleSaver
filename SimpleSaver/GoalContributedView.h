@@ -14,7 +14,7 @@
 - (NSString *) textForParent:(id)sender;
 - (NSString *) textForChild:(id)sender;
 @optional
--(void) userDidTouchView:(id)sender;
+- (void) didCallDelegates:(id) sender;
 @end
 
 
