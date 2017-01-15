@@ -61,6 +61,17 @@
     return formatted;
 }
 
++(NSString *) formatAmount:(NSNumber *)amount
+{
+    NSNumberFormatter * formatter = [NSNumberFormatter new];
+    
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setMaximumFractionDigits: 2];
+    
+    return [formatter stringFromNumber:amount];;
+}
+
+
 +(BOOL) containsOnlyNumericals:(NSString *) str {    
     NSScanner *scanner = [NSScanner scannerWithString:str];
     

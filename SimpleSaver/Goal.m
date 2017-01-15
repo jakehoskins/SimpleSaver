@@ -56,9 +56,9 @@ NSString * const kIconUrl = @"iconUrl";
     return self;
 }
 
-/** 
+/**
  @discussion ensure new keys are encoded
-*/
+ */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.name forKey:kName];
@@ -134,6 +134,17 @@ NSString * const kIconUrl = @"iconUrl";
     return @(total);
 }
 
++(NSNumber *) sumArray:(NSArray<NSNumber *> *)array
+{
+    double total = 0;
+    
+    for (NSNumber *item in array)
+    {
+        total += item.doubleValue;
+    }
+    
+    return @(total);
+}
 -(NSNumber *) completionPercentage
 {
     double totalContributed = [self totalContributed].doubleValue;
@@ -221,6 +232,16 @@ NSString * const kIconUrl = @"iconUrl";
 -(NSString *)description
 {
     return [NSString stringWithFormat:@"%@ Target: %.2f Contributed: %.2f Contributions: %li", self.name, self.getSavingsTarget.doubleValue, [self totalContributed].doubleValue ,[self.contributions count]];
+}
+
++(NSArray *) months
+{
+    return @[
+             @"Jan", @"Feb", @"Mar",
+             @"Apr", @"May", @"Jun",
+             @"Jul", @"Aug", @"Sep",
+             @"Oct", @"Nov", @"Dec"
+             ];
 }
 
 @end

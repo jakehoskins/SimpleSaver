@@ -27,6 +27,7 @@
 		7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */; };
 		7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B601E1C4195000CCF8A /* GoalDetailViewController.m */; };
 		7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */; };
+		7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */; };
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
 		7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
 		7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */; };
@@ -81,6 +82,8 @@
 		7A853B601E1C4195000CCF8A /* GoalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailViewController.m; sourceTree = "<group>"; };
 		7A853B621E1C4428000CCF8A /* SimpleSaverSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSaverSplitViewController.h; sourceTree = "<group>"; };
 		7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSaverSplitViewController.m; sourceTree = "<group>"; };
+		7AAE7F281E2AE076009C8561 /* XAxisMonthFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAxisMonthFormatter.h; sourceTree = "<group>"; };
+		7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAxisMonthFormatter.m; sourceTree = "<group>"; };
 		7AAF11951E25703A00A27733 /* GoalContributedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalContributedView.xib; sourceTree = "<group>"; };
 		7AAF11971E25709000A27733 /* GoalContributedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContributedView.h; sourceTree = "<group>"; };
 		7AAF11981E25709000A27733 /* GoalContributedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributedView.m; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				7A24716A1E19449800C99780 /* GoalContribution.m */,
 				7AAF3AFD1E282644001B3F11 /* ChartsBuilder.h */,
 				7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */,
+				7AAE7F281E2AE076009C8561 /* XAxisMonthFormatter.h */,
+				7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -374,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		30257991FFD64BB8A731366D /* [CP] Check Pods Manifest.lock */ = {
@@ -389,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4CD1D4FC255609380BCAA37B /* [CP] Copy Pods Resources */ = {
@@ -451,6 +456,7 @@
 				7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */,
 				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
 				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
+				7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */,
 				7A6F70A11E22FA680008AA7A /* Constants.m in Sources */,
 				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
 				7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */,
@@ -595,7 +601,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
 				DEVELOPMENT_TEAM = 2L29NL2BW9;
@@ -611,7 +616,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
 				DEVELOPMENT_TEAM = 2L29NL2BW9;

@@ -8,9 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <MBCircularProgressBar/MBCircularProgressBarView.h>
-
+@import Charts;
 @class Goal;
 
 @interface ChartsBuilder : NSObject
+
+typedef NS_ENUM(NSInteger, ChartType)
+{
+    ChartCircularContribution,
+    ChartContributed
+};
+
++(UIView *) buildChart:(ChartType)chart forGoal:(Goal *)goal;
+
 +(MBCircularProgressBarView *) buildTotalContributedViewForGoal:(Goal *)goal;
+
++(LineChartView *) combinedChartViewForGoal:(Goal *)goal;
+
+
 @end

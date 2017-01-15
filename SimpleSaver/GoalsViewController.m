@@ -85,7 +85,7 @@
         NSString *name = [NSString stringWithFormat:@"Goal %i", i + 1];
         NSNumber *savingsTarget = [Helpers randomNumberBetween:0.00f and:9999999.00f];
         NSInteger numContributions = [Helpers randomNumberBetween:0.0f and:100.0f].integerValue;
-        NSDate *startDate = [NSDate date];
+        NSDate *startDate = [Helpers addDaysToDate:[NSDate date] increaseBy:[Helpers randomNumberBetween:-1.0f and:-2880.0f].integerValue];
         NSDate *endDate = [Helpers addDaysToDate:startDate increaseBy:[Helpers randomNumberBetween:1.0f and:2880.0f].integerValue];
         Goal *goal = [[Goal alloc] initWithName:name savingsTarget:savingsTarget forStartDate:startDate andEndDate:endDate];
         
@@ -114,7 +114,7 @@
     for (NSInteger i = 0; i < numContributions; i++)
     {
         NSNumber *amount = [Helpers randomNumberBetween:0.00f and:10000];
-        GoalContribution *contribution = [[GoalContribution alloc] initWithAmount:amount forDate:[NSDate date] withNotes:notes];
+        GoalContribution *contribution = [[GoalContribution alloc] initWithAmount:amount forDate:[Helpers addDaysToDate:[goal getStartDate] increaseBy:5*i] withNotes:notes];
         
         [goal contribute:contribution];
     }

@@ -25,8 +25,8 @@
 
 @interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate>
 @property (nonatomic, strong) Goal *goal;
-@property NSInteger numberOfCharts;
 @property GoalContributedViewTouchState state;
+@property NSArray *availableCharts;
 @end
 
 @implementation GoalDetailViewController
@@ -47,7 +47,6 @@
 -(void)initUi
 {
     self.gcv.delegate = self;
-    self.numberOfCharts = 3; //  may need to move elsewhere
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;
     self.scrollView.pagingEnabled = true;
@@ -59,14 +58,13 @@
     
     [self removeAllSubviewsFromView:self.scrollView];
     self.pageControl.backgroundColor = [UIColor lightGrayColor];
-    self.pageControl.numberOfPages = self.numberOfCharts;
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*self.numberOfCharts, self.scrollView.frame.size.height)];
+    self.pageControl.numberOfPages = self.availableCharts.count;
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*self.availableCharts.count, self.scrollView.frame.size.height)];
     
     CGFloat x = 0.0f;
-    for (int i = 0; i < self.numberOfCharts; i++)
+    for (int i = 0; i < self.availableCharts.count; i++)
     {
-        // Have a build chart for state and goal factory function
-        UIView *view = [ChartsBuilder buildTotalContributedViewForGoal:self.goal];
+        UIView *view = [ChartsBuilder buildChart:[[self.availableCharts objectAtIndex:i] integerValue] forGoal:self.goal];
         
         view.frame = CGRectMake(x, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
         x+=view.frame.size.width;
@@ -86,6 +84,13 @@
 -(void) setGoal:(Goal *)goal
 {
     _goal = goal;
+    
+    self.availableCharts = [self declareAvailableCharts];
+}
+
+-(NSArray *) declareAvailableCharts
+{
+    return [NSArray arrayWithObjects:@(ChartCircularContribution),@(ChartContributed), nil];
 }
 
 // Probably needs to be `reloadForGoalContributedEventChange`
