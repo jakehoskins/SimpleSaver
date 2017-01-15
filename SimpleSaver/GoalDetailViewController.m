@@ -8,10 +8,11 @@
 
 #import "GoalDetailViewController.h"
 #import "GoalsViewController.h"
+#import "GoalContributionViewController.h"
 
 // Model
 #import "SavingsModel.h"
-
+#import "GoalContribution.h"
 // Views
 #import "GoalContributedView.h"
 
@@ -23,7 +24,7 @@
 #define PARENT_TOTAL_CONTRIBUTED @"%@"
 #define CHILD_TOTAL_CONTRIBUTED ""
 
-@interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate>
+@interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent>
 @property (nonatomic, strong) Goal *goal;
 @property GoalContributedViewTouchState state;
 @property NSArray *availableCharts;
@@ -34,9 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.state = TotalContribution;
     [self initUi];
-    [self refreshUi];
+    [self reloadForGoalChange];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -112,10 +112,11 @@
 }
 
 // Probably needs to be `reloadForGoalContributedEventChange`
--(void) refreshUi
+-(void) reloadForGoalChange
 {
+    self.state = TotalContribution;
     [self.btnAddFunds addTarget:self action:@selector(presentAddFundsView) forControlEvents:UIControlEventTouchUpInside];
-    [self.btnRemoveFunds addTarget:self action:@selector(presentAddFundsView) forControlEvents:UIControlEventTouchUpInside];
+    [self.btnRemoveFunds addTarget:self action:@selector(presentRemoveFundsView) forControlEvents:UIControlEventTouchUpInside];
     [self.btnViewContributions addTarget:self action:@selector(presentViewContributionsView) forControlEvents:UIControlEventTouchUpInside];
     
     [self.btnAddFunds setBackgroundColor:[UIColor seafoamColor]];
@@ -138,15 +139,42 @@
 
 -(void) presentAddFundsView
 {
-    return;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GoalContributionViewController *vc = (GoalContributionViewController *)[storyboard instantiateViewControllerWithIdentifier:@"GoalContributionViewController"];
+    [vc setType:ContributionTypeCreateAddFunds];
+    [vc setDelegate:self];
+    [self presentViewController:vc];
 }
+
 -(void) presentRemoveFundsView
 {
-    return;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GoalContributionViewController *vc = (GoalContributionViewController *)[storyboard instantiateViewControllerWithIdentifier:@"GoalContributionViewController"];
+    [vc setType:ContributionTypeCreateRemoveFunds];
+    [vc setDelegate:self];
+    [self presentViewController:vc];
 }
+
 -(void) presentViewContributionsView
 {
     return;
+}
+
+-(void) presentViewController:(UIViewController *)viewController
+{
+    if (![Helpers isIpad])
+    {
+        [self.navigationController pushViewController:viewController animated:true];
+    }
+    else
+    {
+        UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
+        [popOverController setPopoverContentSize:CGSizeMake(viewController.view.frame.size.width, viewController.view.frame.size.width)];
+        
+        [popOverController presentPopoverFromRect:self.btnAddFunds.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
+    }
 }
 
 -(GoalContributedViewTouchState) rotateState
@@ -270,13 +298,73 @@
 {
     self.state = [self rotateState];
 }
-#pragma GoalSelection
+
+// Used when goal contribution view controller needs dismissing
+-(void) dismissCurrentViewController
+{
+    if(![Helpers isIpad])
+    {
+        [self.navigationController popViewControllerAnimated:true];
+    } else
+    {
+        [self.navigationController.presentedViewController dismissViewControllerAnimated:true completion:nil];
+    }
+    
+}
+
+-(void) addPositiveContribution:(NSNumber *) amount withNotes:(NSString *)notes
+{
+    GoalContribution *contribution = [[GoalContribution alloc] initWithAmount:amount forDate:[NSDate date] withNotes:notes];
+    
+    [self.goal contribute:contribution];
+    [[SavingsModel getInstance] writeToUserDefaults];
+    
+    [self reloadForGoalChange];
+    
+    // @TODO::: Notify the left vc to update
+}
+
+-(void) addNegativeContribution:(NSNumber *) amount withNotes:(NSString *)notes
+{
+    GoalContribution *contribution = [[GoalContribution alloc] initWithAmount:@(-amount.doubleValue) forDate:[NSDate date] withNotes:notes];
+    
+    [self.goal contribute:contribution];
+    [[SavingsModel getInstance] writeToUserDefaults];
+    
+    [self reloadForGoalChange];
+    
+    // @TODO::: Notify the left vc to update
+}
+
+#pragma mark GoalSelection
 
 - (void) goalSelected:(Goal *)goal
 {
     [self setGoal:goal];
     [self refreshScrollView];
-    [self refreshUi];
+    [self reloadForGoalChange];
+}
+
+#pragma mark ContributionEvent
+- (void) contributionWasMade:(ContributionType)contributionType forAmount:(NSNumber *)amount andNotes:(NSString *)notes
+{
+    switch (contributionType)
+    {
+        case ContributionTypeNormal:
+            break;
+        case ContributionTypeCreateAddFunds:
+            [self dismissCurrentViewController];
+            [self addPositiveContribution:amount withNotes:notes];
+            break;
+        case ContributionTypeCreateRemoveFunds:
+            [self dismissCurrentViewController];
+            [self addNegativeContribution:amount withNotes:notes];
+            break;
+        case ContributionTypeCreateAmmendContribution:
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma Rotation

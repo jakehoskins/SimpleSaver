@@ -70,6 +70,19 @@
     
     return [formatter stringFromNumber:amount];;
 }
++(NSString *) formatCurrentAmountWithZeroDecimal:(NSString *) currency forAmount:(NSNumber *)amount
+{
+    NSNumberFormatter * formatter = [NSNumberFormatter new];
+    NSString *formatted = [NSString stringWithFormat:@""];
+    
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setMaximumFractionDigits: 2];
+    [formatter setMinimumFractionDigits:1];
+    
+    formatted = [formatted stringByAppendingString:[NSString stringWithFormat:@"%@%@", currency,[formatter stringFromNumber:amount]]];
+    
+    return formatted;
+}
 
 
 +(BOOL) containsOnlyNumericals:(NSString *) str {    

@@ -293,6 +293,68 @@
             </objects>
             <point key="canvasLocation" x="-290.39999999999998" y="-206.44677661169416"/>
         </scene>
+        <!--Goal Contribution View Controller-->
+        <scene sceneID="zVn-uC-fKG">
+            <objects>
+                <viewController storyboardIdentifier="GoalContributionViewController" id="gV8-Il-mhl" customClass="GoalContributionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zbe-aY-HSS"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZCc-uO-yFi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z1e-WJ-VVj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIt-mu-NML">
+                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="YJO-gy-3Mv"/>
+                                </constraints>
+                                <state key="normal" title="Add Contribution"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jDn-aL-aeh">
+                                <rect key="frame" x="0.0" y="269" width="375" height="351"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="351" id="EwG-TO-OKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7O-mI-3LY" customClass="AmountView">
+                                <rect key="frame" x="16" y="64" width="343" height="124"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="v5W-TD-XQw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7O-mI-3LY" firstAttribute="leading" secondItem="Z1e-WJ-VVj" secondAttribute="leadingMargin" id="33Y-Rg-sLU"/>
+                            <constraint firstItem="jDn-aL-aeh" firstAttribute="leading" secondItem="aIt-mu-NML" secondAttribute="leading" id="8xs-vF-hfw"/>
+                            <constraint firstAttribute="trailing" secondItem="aIt-mu-NML" secondAttribute="trailing" id="U5a-u8-nk5"/>
+                            <constraint firstItem="aIt-mu-NML" firstAttribute="leading" secondItem="Z1e-WJ-VVj" secondAttribute="leading" id="XvQ-ow-g1h"/>
+                            <constraint firstItem="ZCc-uO-yFi" firstAttribute="top" secondItem="aIt-mu-NML" secondAttribute="bottom" id="iSw-qb-sU2"/>
+                            <constraint firstItem="ZCc-uO-yFi" firstAttribute="top" secondItem="jDn-aL-aeh" secondAttribute="bottom" constant="47" id="irj-C4-rZB"/>
+                            <constraint firstItem="T7O-mI-3LY" firstAttribute="trailing" secondItem="Z1e-WJ-VVj" secondAttribute="trailingMargin" id="jg1-eP-xlR"/>
+                            <constraint firstItem="T7O-mI-3LY" firstAttribute="top" secondItem="Zbe-aY-HSS" secondAttribute="bottom" id="pTs-v6-OZp"/>
+                            <constraint firstItem="jDn-aL-aeh" firstAttribute="trailing" secondItem="aIt-mu-NML" secondAttribute="trailing" id="tK6-xA-UVg"/>
+                            <constraint firstItem="T7O-mI-3LY" firstAttribute="top" secondItem="Z1e-WJ-VVj" secondAttribute="topMargin" constant="64" id="z9c-QZ-zi5"/>
+                            <constraint firstItem="jDn-aL-aeh" firstAttribute="top" secondItem="T7O-mI-3LY" secondAttribute="bottom" constant="81" id="zVg-Cf-HdJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="av" destination="T7O-mI-3LY" id="NL3-yh-BJO"/>
+                        <outlet property="btnContribute" destination="aIt-mu-NML" id="4tH-a4-Sgp"/>
+                        <outlet property="tv" destination="jDn-aL-aeh" id="82u-Zb-wMG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLL-4V-ESs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341.60000000000002" y="-201.04947526236884"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnN-O3-ArG">
             <objects>

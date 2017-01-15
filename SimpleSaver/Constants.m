@@ -15,7 +15,7 @@ NSString * const BACKGROUND_IMAGE = @"background";
 
 +(NSArray *)getGoalIconURLSet
 {
-    NSArray * const goalIcons = @[@"car", @"debt", @"education", @"holiday",@"item",@"restaurent", @"retirement", @"savings", @"stocks", @"transport"];
+    NSArray * const goalIcons = @[@"car",@"cash", @"debt", @"education", @"holiday",@"item",@"restaurent", @"retirement", @"savings", @"stocks", @"transport"];
     
     return goalIcons;
 }

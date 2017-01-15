@@ -31,6 +31,9 @@
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
 		7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
 		7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */; };
+		7AE8EE351E2C11D50048DEDE /* GoalContributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */; };
+		7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE371E2C27A30048DEDE /* AmountView.m */; };
+		7AE8EE3A1E2C27C80048DEDE /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8EE391E2C27C80048DEDE /* AmountView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,11 @@
 		7AAF11981E25709000A27733 /* GoalContributedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributedView.m; sourceTree = "<group>"; };
 		7AAF3AFD1E282644001B3F11 /* ChartsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsBuilder.h; sourceTree = "<group>"; };
 		7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsBuilder.m; sourceTree = "<group>"; };
+		7AE8EE331E2C11D50048DEDE /* GoalContributionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContributionViewController.h; sourceTree = "<group>"; };
+		7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributionViewController.m; sourceTree = "<group>"; };
+		7AE8EE361E2C27A30048DEDE /* AmountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
+		7AE8EE371E2C27A30048DEDE /* AmountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
+		7AE8EE391E2C27C80048DEDE /* AmountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmountView.xib; sourceTree = "<group>"; };
 		B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8FC6F41981832F2A3F5A8BC /* Pods_SimpleSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +234,8 @@
 				7A2471451E1942BA00C99780 /* CreateGoalViewController.m */,
 				7A853B621E1C4428000CCF8A /* SimpleSaverSplitViewController.h */,
 				7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */,
+				7AE8EE331E2C11D50048DEDE /* GoalContributionViewController.h */,
+				7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -236,6 +246,9 @@
 				7AAF11971E25709000A27733 /* GoalContributedView.h */,
 				7AAF11981E25709000A27733 /* GoalContributedView.m */,
 				7AAF11951E25703A00A27733 /* GoalContributedView.xib */,
+				7AE8EE361E2C27A30048DEDE /* AmountView.h */,
+				7AE8EE371E2C27A30048DEDE /* AmountView.m */,
+				7AE8EE391E2C27C80048DEDE /* AmountView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -337,6 +350,7 @@
 			files = (
 				7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */,
 				7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */,
+				7AE8EE3A1E2C27C80048DEDE /* AmountView.xib in Resources */,
 				7A24714B1E1942BA00C99780 /* Assets.xcassets in Resources */,
 				7A2471491E1942BA00C99780 /* Main.storyboard in Resources */,
 			);
@@ -451,9 +465,11 @@
 			files = (
 				7A2471681E19440E00C99780 /* Goal.m in Sources */,
 				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
+				7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */,
 				7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */,
 				7A2471651E1943C300C99780 /* SavingsModel.m in Sources */,
 				7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */,
+				7AE8EE351E2C11D50048DEDE /* GoalContributionViewController.m in Sources */,
 				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
 				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
 				7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */,

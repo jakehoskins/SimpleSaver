@@ -92,7 +92,6 @@
     view.xAxis.axisMinimum = data.xMin;
     view.leftAxis.maxWidth = 50.f;
     view.leftAxis.drawGridLinesEnabled = NO;
-    view.leftAxis.axisMinimum = 0.0;
     view.rightAxis.enabled = false;
     view.data = data;
 }
