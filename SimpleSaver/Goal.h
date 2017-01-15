@@ -36,6 +36,8 @@
 -(NSNumber *) completionPercentage;
 -(NSNumber *) daysRemainingPercentage;
 -(BOOL) hasDeadline;
+-(BOOL) isOverdue;
+-(BOOL) hasTarget;
 
 -(NSString *)description;
 

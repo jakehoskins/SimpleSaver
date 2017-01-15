@@ -235,9 +235,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-Lf-6gt" customClass="GoalContributedView">
                                 <rect key="frame" x="16" y="80" width="343" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="aBQ-P4-oeB"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3n-Qd-R5e">
                                 <rect key="frame" x="0.0" y="577" width="375" height="30"/>
@@ -252,32 +249,34 @@
                                 <state key="normal" title="Remove Funds"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-0Z-2OF">
-                                <rect key="frame" x="16" y="188" width="343" height="339"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="361"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XS3-fV-PKf">
-                                <rect key="frame" x="168" y="535" width="39" height="37"/>
+                                <rect key="frame" x="167" y="549" width="39" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XS3-fV-PKf" firstAttribute="centerX" secondItem="K3n-Qd-R5e" secondAttribute="centerX" id="0Ip-F8-LRx"/>
-                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="leading" secondItem="bWM-Lf-6gt" secondAttribute="leading" id="A9m-P9-RyS"/>
-                            <constraint firstItem="XS3-fV-PKf" firstAttribute="top" secondItem="eQ4-0Z-2OF" secondAttribute="bottom" constant="8" id="C7p-qp-7wm"/>
-                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="trailing" secondItem="gwD-uR-NiM" secondAttribute="trailingMargin" id="D0b-ls-p5n"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leading" id="JEX-fa-HiQ"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="top" secondItem="eQ4-0Z-2OF" secondAttribute="bottom" constant="50" id="Ldr-Cn-x8T"/>
-                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="top" secondItem="K3n-Qd-R5e" secondAttribute="bottom" id="Lng-jR-SGl"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="centerX" secondItem="bWM-Lf-6gt" secondAttribute="centerX" id="Mr1-md-0k6"/>
-                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="top" secondItem="bWM-Lf-6gt" secondAttribute="bottom" constant="8" symbolic="YES" id="Oa9-9Y-KEn"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="bkj-OP-cBV" secondAttribute="trailing" id="UBl-Pf-aFV"/>
-                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="top" secondItem="gwD-uR-NiM" secondAttribute="topMargin" constant="80" id="WlF-sk-ocL"/>
-                            <constraint firstItem="bkj-OP-cBV" firstAttribute="top" secondItem="aBC-Rw-pFO" secondAttribute="bottom" id="bdn-iJ-S1d"/>
-                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leadingMargin" id="cUf-1n-cVa"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="aBC-Rw-pFO" secondAttribute="leading" id="clv-b9-iyD"/>
-                            <constraint firstAttribute="bottom" secondItem="K3n-Qd-R5e" secondAttribute="bottom" constant="60" id="jS7-PW-PvA"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="aBC-Rw-pFO" secondAttribute="trailing" id="nsH-0j-PEP"/>
-                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="trailing" secondItem="bWM-Lf-6gt" secondAttribute="trailing" id="qTJ-S8-k5w"/>
-                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="bkj-OP-cBV" secondAttribute="leading" id="xWH-5v-iA3"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leading" id="1pf-Qn-Yrh"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leading" id="4rG-OI-M4N"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="trailing" secondItem="bkj-OP-cBV" secondAttribute="trailing" id="7K5-9N-KO0"/>
+                            <constraint firstItem="bkj-OP-cBV" firstAttribute="top" secondItem="aBC-Rw-pFO" secondAttribute="bottom" id="98k-dV-N4k"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="top" secondItem="gwD-uR-NiM" secondAttribute="top" constant="188" id="CEW-Va-4Io"/>
+                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="top" secondItem="GBF-H6-vut" secondAttribute="bottom" constant="16" id="D2Q-Bj-3Ju"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="top" secondItem="K3n-Qd-R5e" secondAttribute="bottom" id="O4i-KC-O6Z"/>
+                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="trailing" secondItem="gwD-uR-NiM" secondAttribute="trailingMargin" id="R8f-Ji-Xoh"/>
+                            <constraint firstItem="aBC-Rw-pFO" firstAttribute="leading" secondItem="bkj-OP-cBV" secondAttribute="leading" id="Rjo-W2-V5h"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="centerX" secondItem="XS3-fV-PKf" secondAttribute="centerX" constant="1" id="SD1-5c-XqH"/>
+                            <constraint firstAttribute="trailing" secondItem="eQ4-0Z-2OF" secondAttribute="trailing" id="VYe-tV-2zg"/>
+                            <constraint firstItem="XS3-fV-PKf" firstAttribute="top" secondItem="eQ4-0Z-2OF" secondAttribute="bottom" id="b5X-3u-eOe"/>
+                            <constraint firstItem="bWM-Lf-6gt" firstAttribute="leading" secondItem="gwD-uR-NiM" secondAttribute="leadingMargin" id="fZT-oE-vmp"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="leading" secondItem="aBC-Rw-pFO" secondAttribute="leading" id="i0d-1i-xqI"/>
+                            <constraint firstItem="bkj-OP-cBV" firstAttribute="bottom" secondItem="Qbo-zL-uqq" secondAttribute="top" id="maZ-Xp-0PY"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="centerX" secondItem="gwD-uR-NiM" secondAttribute="centerX" id="oEd-LJ-NTu"/>
+                            <constraint firstItem="eQ4-0Z-2OF" firstAttribute="top" secondItem="bWM-Lf-6gt" secondAttribute="bottom" constant="8" id="rsc-7T-l1Q"/>
+                            <constraint firstItem="XS3-fV-PKf" firstAttribute="centerX" secondItem="K3n-Qd-R5e" secondAttribute="centerX" constant="-1" id="wvi-vC-CFC"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="trailing" secondItem="aBC-Rw-pFO" secondAttribute="trailing" id="xp9-ov-7dK"/>
+                            <constraint firstItem="K3n-Qd-R5e" firstAttribute="top" secondItem="XS3-fV-PKf" secondAttribute="bottom" constant="-9" id="yre-44-RxI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ovp-F3-hgz"/>

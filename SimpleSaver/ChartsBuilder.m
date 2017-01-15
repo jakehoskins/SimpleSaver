@@ -13,8 +13,9 @@
 #import "GoalContribution.h"
 #import "XAxisMonthFormatter.h"
 
-// Unit
+// Util
 #import "Helpers.h"
+#import "Colours.h"
 
 // Views
 #import "MBCircularProgressBarView.h"
@@ -29,7 +30,10 @@
             return [ChartsBuilder buildTotalContributedViewForGoal:goal];
             break;
         case ChartContributed:
-            return [ChartsBuilder lineChartForContributions:goal];
+            return [ChartsBuilder lineChartForContributionsForGoal:goal];
+            break;
+        case ChartBurndown:
+            return [ChartsBuilder lineChartForBurndown:goal];
             break;
         default:
             return nil;
@@ -40,14 +44,18 @@
 +(MBCircularProgressBarView *) buildTotalContributedViewForGoal:(Goal *)goal
 {
     MBCircularProgressBarView *circular = [[MBCircularProgressBarView alloc] init];
-    
+    double completion = [goal completionPercentage].doubleValue * 100;
     circular.backgroundColor = [UIColor clearColor];
-    circular.value = [goal completionPercentage].floatValue * 100;
+    circular.progressColor = [UIColor seafoamColor];
+    circular.progressStrokeColor = [UIColor seafoamColor];
+    circular.emptyLineColor = [UIColor easterPinkColor];
+    circular.emptyLineStrokeColor = [UIColor easterPinkColor];
+    circular.value = (completion > 100.0f) ? 100.0f : completion;
     
     return circular;
 }
 
-+(LineChartView *) lineChartForContributions:(Goal *)goal
++(LineChartView *) lineChartForContributionsForGoal:(Goal *)goal
 {
     
     LineChartView *chartView = [[LineChartView alloc] init];
@@ -55,8 +63,22 @@
     [ChartsBuilder setChartDataForContributionsChart:chartView forGoal:goal];
     chartView.scaleYEnabled = false;
     chartView.xAxis.valueFormatter = [[XAxisMonthFormatter alloc] init];
-    [chartView setGridBackgroundColor:[UIColor blackColor]];
+    chartView.gridBackgroundColor = [UIColor blackColor];
     chartView.descriptionText = @"Total Contributions";
+
+    return chartView;
+}
+
++(LineChartView *) lineChartForBurndown:(Goal *)goal
+{
+    LineChartView *chartView = [[LineChartView alloc] init];
+    
+    [ChartsBuilder setChartDataForBurndownChart:chartView forGoal:goal];
+    chartView.scaleYEnabled = false;
+    chartView.xAxis.valueFormatter = [[XAxisMonthFormatter alloc] init];
+    chartView.gridBackgroundColor = [UIColor blackColor];
+    chartView.descriptionText = @"Contribution Burndown";
+    
     return chartView;
 }
 
@@ -69,12 +91,25 @@
     view.xAxis.axisMaximum = data.xMax;
     view.xAxis.axisMinimum = data.xMin;
     view.leftAxis.maxWidth = 50.f;
-    
     view.leftAxis.drawGridLinesEnabled = NO;
-    view.leftAxis.axisMinimum = 0.0; // this replaces startAtZero = YES
+    view.leftAxis.axisMinimum = 0.0;
     view.rightAxis.enabled = false;
-    
     view.data = data;
+}
+
++(void)setChartDataForBurndownChart:(LineChartView *)view forGoal:(Goal *)goal
+{
+    LineChartData *data;
+    
+    data = [ChartsBuilder generateLineDataForBurndownWithGoal:goal];
+    view.xAxis.axisMaximum = data.xMax;
+    view.xAxis.axisMinimum = data.xMin;
+    view.leftAxis.maxWidth = 50.f;
+    view.leftAxis.drawGridLinesEnabled = NO;
+    view.leftAxis.axisMinimum = 0.0;
+    view.rightAxis.enabled = false;
+    view.data = data;
+    
 }
 
 +(LineChartData *) generateLineDataForTotalContributionsWithGoal:(Goal *)goal
@@ -84,19 +119,70 @@
     
     for (GoalContribution *contribution in [goal getContributions])
     {
-        NSLog(@"%f",[contribution amount].doubleValue);
         [entries addObject:[[ChartDataEntry alloc] initWithX:[contribution contributionDate].timeIntervalSince1970 y:[contribution amount].doubleValue]];
     }
     
     LineChartDataSet *set = [[LineChartDataSet alloc] initWithValues:entries label:@"Contributions"];
+    NSArray *gradientColors = @[
+                                (id)[UIColor seafoamColor].CGColor,
+                                (id)[UIColor honeydewColor].CGColor
+                                ];
+    CGGradientRef gradient = CGGradientCreateWithColors(nil, (CFArrayRef)gradientColors, nil);
     
+    set.circleColors = [NSArray arrayWithObjects:[UIColor cactusGreenColor], nil];
+    set.circleHoleColor = [UIColor cactusGreenColor];
     set.circleRadius = 2;
     set.circleHoleRadius = 1;
     set.drawValuesEnabled = false;
     set.highlightColor = [UIColor clearColor];
+
+    set.drawFilledEnabled = true;
+    set.fill = [ChartFill fillWithLinearGradient:gradient angle:90.f];
+    set.fillAlpha = 1.f;
     set.axisDependency = AxisDependencyLeft;
     
     [lineChartData addDataSet:set];
+    return lineChartData;
+}
+
++(LineChartData *) generateLineDataForBurndownWithGoal:(Goal *)goal
+{
+    // Take each contribution from savings target and thats our data point
+    LineChartData *lineChartData = [[LineChartData alloc] init];
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+    double movingContributed = 0.0f;
+    // Add a contribution for the initial setup so that we have data point as savings target
+    [entries addObject:[[ChartDataEntry alloc] initWithX:[goal getStartDate].timeIntervalSince1970 y:[goal getSavingsTarget].doubleValue]];
+    for (GoalContribution *contribution in [goal getContributions])
+    {
+        movingContributed += [contribution amount].doubleValue;
+        
+        [entries addObject:[[ChartDataEntry alloc] initWithX:[contribution contributionDate].timeIntervalSince1970 y:[goal getSavingsTarget].doubleValue - movingContributed]];
+        
+    }
+    LineChartDataSet *set = [[LineChartDataSet alloc] initWithValues:entries label:@"Contributions"];
+    NSArray *gradientColors = @[
+                                (id)[UIColor strawberryColor].CGColor,
+                                (id)[UIColor easterPinkColor].CGColor
+                                ];
+    CGGradientRef gradient = CGGradientCreateWithColors(nil, (CFArrayRef)gradientColors, nil);
+    
+    set.circleColors = [NSArray arrayWithObjects:[UIColor grapefruitColor], nil];
+    set.circleHoleColor = [UIColor grapefruitColor];
+    set.circleRadius = 2;
+    set.circleHoleRadius = 1;
+    set.drawValuesEnabled = false;
+    set.highlightColor = [UIColor clearColor];
+    set.circleRadius = 2;
+    set.circleHoleRadius = 1;
+    set.drawValuesEnabled = false;
+    set.highlightColor = [UIColor clearColor];
+    set.drawFilledEnabled = true;
+    set.fillAlpha = 1.f;
+    set.fill = [ChartFill fillWithLinearGradient:gradient angle:90.f];
+    
+    [lineChartData addDataSet:set];
+    
     return lineChartData;
 }
 

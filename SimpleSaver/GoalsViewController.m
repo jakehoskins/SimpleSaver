@@ -28,7 +28,7 @@
 #import "GoalContribution.h"
 
 @interface GoalsViewController () <UITableViewDelegate, UITableViewDataSource>
-
+@property (nonatomic, strong) Goal *lastSelectedGoal;
 @end
 
 @implementation GoalsViewController
@@ -171,7 +171,9 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id detail = [self detailViewController];
+    BOOL willPush = false;
     
+    self.lastSelectedGoal = [[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row];
     if ([detail isKindOfClass:[UINavigationController class]])
     {
         UINavigationController *nav = (UINavigationController *) detail;
@@ -179,8 +181,10 @@
         detail = [nav.viewControllers firstObject];
     }
     
+    willPush = (!detail);
+    
     // iPhone wont have the vc loaded so load it
-    if (![Helpers isIpad])
+    if (willPush)
     {
         detail = [self.storyboard instantiateViewControllerWithIdentifier:@"detail"];
     }
@@ -193,7 +197,7 @@
         [self.delegate goalSelected:[[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row]];
         
         // On iPhone we need to push the vc 
-        if (![Helpers isIpad])
+        if (willPush)
         {
             [self.navigationController pushViewController:detail animated:true];
         }
@@ -334,6 +338,17 @@
     } else
     {
         return [UIColor successColor];
+    }
+}
+
+#pragma Rotation
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.view setNeedsLayout];
+    
+    if(self.lastSelectedGoal && self.delegate)
+    {
+        [self.delegate goalSelected:self.lastSelectedGoal];
     }
 }
 

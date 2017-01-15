@@ -23,7 +23,10 @@
     if (self.delegate)
     {
         self.lblParent.text = [self.delegate textForParent:self];
-        self.lblChild.text = [self.delegate textForChild:self];
+        self.lblBottomChild.text = [self.delegate textForBottomChild:self];
+        self.lblTopChild.text = [self.delegate textForTopChild:self];
+        self.lblParentInfo.text = [self.delegate textForParentInfo:self];
+        
         [self.delegate didCallDelegates:self];
     }
 }

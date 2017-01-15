@@ -80,8 +80,7 @@
 
 +(BOOL) isIpad
 {
-    
-    return [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad);
 }
 
 + (NSNumber *)randomNumberBetween:(float)smallNumber and:(float)bigNumber

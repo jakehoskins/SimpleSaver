@@ -16,14 +16,15 @@
 typedef NS_ENUM(NSInteger, ChartType)
 {
     ChartCircularContribution,
-    ChartContributed
+    ChartContributed,
+    ChartBurndown
 };
 
 +(UIView *) buildChart:(ChartType)chart forGoal:(Goal *)goal;
 
 +(MBCircularProgressBarView *) buildTotalContributedViewForGoal:(Goal *)goal;
 
-+(LineChartView *) combinedChartViewForGoal:(Goal *)goal;
++(LineChartView *) lineChartForContributionsForGoal:(Goal *)goal;
 
 
 @end

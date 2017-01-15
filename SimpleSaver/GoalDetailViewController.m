@@ -46,6 +46,7 @@
 
 -(void)initUi
 {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
     self.gcv.delegate = self;
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;
@@ -57,10 +58,10 @@
 {
     
     [self removeAllSubviewsFromView:self.scrollView];
-    self.pageControl.backgroundColor = [UIColor lightGrayColor];
+    self.pageControl.backgroundColor = [UIColor clearColor];
     self.pageControl.numberOfPages = self.availableCharts.count;
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width*self.availableCharts.count, self.scrollView.frame.size.height)];
-    
+    [self.pageControl addTarget:self action:@selector(changePageManually:) forControlEvents:UIControlEventTouchUpInside];
     CGFloat x = 0.0f;
     for (int i = 0; i < self.availableCharts.count; i++)
     {
@@ -71,6 +72,16 @@
 
         [self.scrollView addSubview:view];
     }
+}
+
+-(void) changePageManually:(id) sender
+{
+    UIPageControl *pager=sender;
+    NSInteger page = pager.currentPage;
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = frame.size.width * page;
+    frame.origin.y = 0;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
 }
 
 -(void) removeAllSubviewsFromView:(UIView *)view
@@ -90,7 +101,14 @@
 
 -(NSArray *) declareAvailableCharts
 {
-    return [NSArray arrayWithObjects:@(ChartCircularContribution),@(ChartContributed), nil];
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@(ChartCircularContribution), @(ChartContributed), nil];
+    
+    if (self.goal.hasTarget)
+    {
+        [array addObject:@(ChartBurndown)];
+    }
+    
+    return [NSArray arrayWithArray:array];
 }
 
 // Probably needs to be `reloadForGoalContributedEventChange`
@@ -113,6 +131,9 @@
         [self.gcv reload];
         self.title = [self.goal getName];
     }
+    
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
 }
 
 -(void) presentAddFundsView
@@ -126,36 +147,6 @@
 -(void) presentViewContributionsView
 {
     return;
-}
-
--(NSString *) getParentTextForState:(GoalContributedViewTouchState)state
-{
-    switch (state)
-    {
-        case TotalContribution:
-            return [Helpers formatCurrency:@"#" forAmount:[self.goal totalContributed]];
-            break;
-        case TotalRemaining:
-            return [NSString stringWithFormat:@"TODO"];
-            break;
-        default:
-            break;
-    }
-}
-
--(NSString *) getChildTextForState:(GoalContributedViewTouchState)state
-{
-    switch (state)
-    {
-        case TotalContribution:
-            return [NSString stringWithFormat:@"%li days remaining",[self.goal daysRemaining].integerValue];
-            break;
-        case TotalRemaining:
-            return [NSString stringWithFormat:@"TODO"];
-            break;
-        default:
-            break;
-    }
 }
 
 -(GoalContributedViewTouchState) rotateState
@@ -174,6 +165,28 @@
     }
 }
 
+-(NSString *) getTotalContributedString
+{
+    return [Helpers formatCurrency:@"#" forAmount:[self.goal totalContributed]];
+}
+
+-(NSString *) getTotalRemainingString
+{
+    return [Helpers formatCurrency:@"#" forAmount:@([self.goal getSavingsTarget].doubleValue - [self.goal totalContributed].doubleValue)];
+}
+
+-(NSString *) getTotalElapsedTimeString
+{
+    if (![self.goal isOverdue])
+    {
+        return [NSString stringWithFormat:@"%li days remaining",[self.goal daysRemaining].integerValue];
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"%i days overdue",abs([self.goal daysRemaining].intValue)];
+    }
+}
+
 #pragma mark ScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -187,17 +200,71 @@
 
 - (NSString *) textForParent:(id)sender
 {
-    NSString *parentText = [self getParentTextForState:self.state];
+    switch (self.state)
+    {
+        case TotalContribution:
+            return [self getTotalContributedString];
+            break;
+        case TotalRemaining:
+            if ([self.goal hasTarget])
+            {
+                return [self getTotalRemainingString];
+            }
+            break;
+        default:
+            break;
+    }
     
-    return parentText;
+    return ((GoalContributedView *)sender).lblParent.text;
 }
-- (NSString *) textForChild:(id)sender;
+- (NSString *) textForBottomChild:(id)sender;
 {
-    NSString *childText = [self getChildTextForState:self.state];;
+    switch (self.state)
+    {
+        case TotalContribution:
+            if ([self.goal hasDeadline])
+            {
+                return [self getTotalElapsedTimeString];
+            }
+            break;
+        case TotalRemaining:
+            break;
+        default:
+            break;
+    }
     
-    return childText;
+    return ((GoalContributedView *)sender).lblBottomChild.text;
 }
 
+- (NSString *) textForTopChild:(id)sender
+{
+    if ([self.goal hasTarget])
+    {
+        return [Helpers formatCurrency:@"Savings Target: #" forAmount:[self.goal getSavingsTarget]];
+    }
+    
+    return ((GoalContributedView *)sender).lblTopChild.text;
+}
+
+-(NSString *) textForParentInfo:(id)sender
+{
+    switch (self.state)
+    {
+        case TotalContribution:
+            return @"total saved";
+            break;
+        case TotalRemaining:
+            if ([self.goal hasTarget])
+            {
+                return @"total remaining";
+            }
+            break;
+        default:
+            break;
+    }
+    
+    return ((GoalContributedView *)sender).lblParentInfo.text;
+}
 
 -(void) didCallDelegates:(id)sender
 {
@@ -210,5 +277,11 @@
     [self setGoal:goal];
     [self refreshScrollView];
     [self refreshUi];
+}
+
+#pragma Rotation
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.view setNeedsLayout];
 }
 @end

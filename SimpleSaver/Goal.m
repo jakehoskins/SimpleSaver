@@ -173,6 +173,21 @@ NSString * const kIconUrl = @"iconUrl";
     return (self.endDate);
 }
 
+-(BOOL) hasTarget
+{
+    return (self.savingsTarget);
+}
+
+-(BOOL) isOverdue
+{
+    if ([self hasDeadline])
+    {
+        return ([[NSDate date] timeIntervalSinceDate:self.endDate] > 0);
+    }
+    
+    return false;
+}
+
 -(void) contribute:(GoalContribution *)contribution
 {
     [self.contributions addObject:contribution];

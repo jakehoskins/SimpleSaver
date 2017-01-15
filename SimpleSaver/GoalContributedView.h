@@ -12,7 +12,9 @@
 @protocol GoalContributedViewEvent <NSObject>
 @required
 - (NSString *) textForParent:(id)sender;
-- (NSString *) textForChild:(id)sender;
+- (NSString *) textForBottomChild:(id)sender;
+- (NSString *) textForTopChild:(id)sender;
+- (NSString *) textForParentInfo:(id)sender;
 @optional
 - (void) didCallDelegates:(id) sender;
 @end
@@ -21,9 +23,10 @@
 @interface GoalContributedView : UIView
 
 -(void) reload;
-
+@property (weak, nonatomic) IBOutlet UILabel *lblParentInfo;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *lblParent;
-@property (weak, nonatomic) IBOutlet UILabel *lblChild;
+@property (weak, nonatomic) IBOutlet UILabel *lblTopChild;
+@property (weak, nonatomic) IBOutlet UILabel *lblBottomChild;
 @property (nonatomic, weak, readwrite) id <GoalContributedViewEvent> delegate;
 @end
