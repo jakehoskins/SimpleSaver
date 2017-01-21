@@ -21,8 +21,6 @@
 #import "Helpers.h"
 #import "ChartsBuilder.h"
 
-#define PARENT_TOTAL_CONTRIBUTED @"%@"
-#define CHILD_TOTAL_CONTRIBUTED ""
 
 @interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent>
 @property (nonatomic, strong) Goal *goal;
@@ -185,8 +183,10 @@
             return TotalRemaining;
             break;
         case TotalRemaining:
-            return TotalContribution;
+            return TotalContributions;
             break;
+        case TotalContributions:
+            return TotalContribution;
         default:
             return TotalContribution;
             break;
@@ -215,6 +215,11 @@
     }
 }
 
+-(NSString *) getNumberOfContributions
+{
+    return [NSString stringWithFormat:@"%i", self.goal.numberOfContributions.intValue];
+}
+
 #pragma mark ScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -239,6 +244,8 @@
                 return [self getTotalRemainingString];
             }
             break;
+        case TotalContributions:
+            return [self getNumberOfContributions];
         default:
             break;
     }
@@ -256,6 +263,8 @@
             }
             break;
         case TotalRemaining:
+            break;
+        case TotalContributions:
             break;
         default:
             break;
@@ -287,6 +296,8 @@
                 return @"total remaining";
             }
             break;
+        case TotalContributions:
+            return @"contributions";
         default:
             break;
     }

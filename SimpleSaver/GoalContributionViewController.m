@@ -40,7 +40,6 @@
 {
     NSNumber *amount = [self.av getAmount];
     
-    // Need to also check non zero values
     if (self.delegate && amount.doubleValue != 0)
     {
         [self.delegate contributionWasMade:self.type forAmount:amount andNotes:self.tv.text];

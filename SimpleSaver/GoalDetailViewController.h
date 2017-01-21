@@ -15,7 +15,8 @@
 typedef NS_ENUM(NSInteger, GoalContributedViewTouchState)
 {
     TotalContribution,
-    TotalRemaining
+    TotalRemaining,
+    TotalContributions
 };
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
