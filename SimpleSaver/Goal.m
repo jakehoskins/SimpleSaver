@@ -193,6 +193,14 @@ NSString * const kIconUrl = @"iconUrl";
     [self.contributions addObject:contribution];
 }
 
+-(void) ammendContributionAtIndex:(NSInteger)index newContrbution:(GoalContribution *)newContribution
+{
+    [self.contributions replaceObjectAtIndex:index withObject:newContribution];
+}
+-(void) removeContributionAtIndex:(NSInteger)index
+{
+    [self.contributions removeObjectAtIndex:index];
+}
 -(void) setIconUrl:(NSString *)url;
 {
     _iconUrl = url;

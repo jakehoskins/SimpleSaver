@@ -11,6 +11,8 @@
 #import "Colours.h"
 #import "GoalContribution.h"
 #import "AmountView.h"
+#import "Helpers.h"
+
 @interface GoalContributionViewController () <AmountViewDatasource>
 
 @end
@@ -22,15 +24,28 @@
     [super viewDidLoad];
     
      [self updateUi];
-    [self.av setShadowColour:[self shadowColour]];
+    [self.av setShadowColour:[self themeColour]];
     [self.av setCurrency:@"#"];
     self.av.delegate = self;
     [self.av reload];
-    self.tv.layer.borderColor = [UIColor blackColor].CGColor;
+    self.tv.layer.borderColor = [self themeColour].CGColor;
     self.tv.layer.borderWidth = 3.0f;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
     [self.btnContribute addTarget:self action:@selector(confirmContribution) forControlEvents:UIControlEventTouchUpInside];
     [self.btnContribute setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    if (self.type == ContributionTypeNormal)
+    {
+        [self.av.tfAmount setText:[Helpers formatCurrency:@"#" forAmount:self.contribution.amount]];
+        [self.av.tfAmount setEnabled:false];
+        [self.tv setText:self.contribution.notes];
+        [self.tv setEditable:false];
+    }
+    else if(self.type == ContributionTypeCreateAmmendContribution)
+    {
+        [self.av.tfAmount setText:[Helpers formatCurrency:@"#" forAmount:self.contribution.amount]];
+        [self.tv setText:self.contribution.notes];
+    }
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
@@ -42,7 +57,19 @@
     
     if (self.delegate && amount.doubleValue != 0)
     {
-        [self.delegate contributionWasMade:self.type forAmount:amount andNotes:self.tv.text];
+        switch (self.type)
+        {
+            case ContributionTypeCreateAddFunds:
+                [self.delegate contributionWasMade:self.type forAmount:amount andNotes:self.tv.text];
+                break;
+            case ContributionTypeCreateRemoveFunds:
+                [self.delegate contributionWasMade:self.type forAmount:amount andNotes:self.tv.text];
+                break;
+            case ContributionTypeCreateAmmendContribution:
+                [self.delegate ammendmentWasMade:self.ammendmentType forAmount:amount andNotes:self.tv.text];
+            default:
+                break;
+        }
     }
     else
     {
@@ -51,7 +78,7 @@
 }
 
 
--(UIColor *) shadowColour
+-(UIColor *) themeColour
 {
     switch (self.type)
     {
@@ -62,10 +89,10 @@
             return [UIColor salmonColor];
             break;
         case ContributionTypeCreateAmmendContribution:
-            [self.btnContribute setBackgroundColor:[UIColor cornflowerColor]];
+            return [UIColor cornflowerColor];
             break;
         case ContributionTypeNormal:
-            break;
+            return [UIColor goldColor];
         default:
             break;
     }
@@ -101,24 +128,24 @@
         case ContributionTypeCreateAddFunds:
             [self updateTitle];
             [self.btnContribute setTitle:@"Add Funds" forState:UIControlStateNormal];
-            [self.btnContribute setBackgroundColor:[UIColor seafoamColor]];
             break;
         case ContributionTypeCreateRemoveFunds:
             [self updateTitle];
             [self.btnContribute setTitle:@"Remove Funds" forState:UIControlStateNormal];
-            [self.btnContribute setBackgroundColor:[UIColor salmonColor]];
             break;
         case ContributionTypeCreateAmmendContribution:
             [self updateTitle];
             [self.btnContribute setTitle:@"Ammend" forState:UIControlStateNormal];
-            [self.btnContribute setBackgroundColor:[UIColor cornflowerColor]];
             break;
         case ContributionTypeNormal:
             [self updateTitle];
+            [self.btnContribute setHidden:true];
             break;
         default:
             break;
     }
+    
+    [self.btnContribute setBackgroundColor:[self themeColour]];
 }
 
 -(void) dismissKeyboard
@@ -134,8 +161,27 @@
 -(void) setType:(ContributionType)type
 {
     _type = type;
+    
+    [self setAmmendmentType];
 }
-
+// Must set contribution before.
+-(void) setAmmendmentType
+{
+    if (!self.contribution)
+    {
+        self.ammendmentType = AmmendmentTypeNone;
+        return;
+    }
+    
+    if (self.contribution.amount.doubleValue < 0)
+    {
+        self.ammendmentType = AmmendmentTypeNegative;
+    }
+    else
+    {
+        self.ammendmentType = AmmendmentTypePositive;
+    }
+}
 -(void) showErrorWithMessage:(NSString *)message
 {
     OpinionzAlertView *alert = [[OpinionzAlertView alloc] initWithTitle:@"Error"

@@ -11,6 +11,12 @@
 @class GoalContribution;
 @class AmountView;
 
+typedef NS_ENUM(NSInteger, AmmendmentType) {
+    AmmendmentTypePositive,
+    AmmendmentTypeNegative,
+    AmmendmentTypeNone
+};
+
 typedef NS_ENUM(NSInteger, ContributionType) {
     ContributionTypeCreateAddFunds,
     ContributionTypeCreateRemoveFunds,
@@ -18,13 +24,15 @@ typedef NS_ENUM(NSInteger, ContributionType) {
     ContributionTypeNormal
 };
 @protocol ContributionEvent <NSObject>
-@required
+@optional
 - (void) contributionWasMade:(ContributionType)contributionType forAmount:(NSNumber *)amount andNotes:(NSString *)notes;
+- (void) ammendmentWasMade:(AmmendmentType)ammendmentType forAmount:(NSNumber *)amount andNotes:(NSString *)notes;
 @end
 
 @interface GoalContributionViewController : UIViewController
 
 @property (nonatomic) ContributionType type;
+@property (nonatomic) AmmendmentType ammendmentType;
 @property (nonatomic, strong) GoalContribution *contribution;
 @property (weak, nonatomic) IBOutlet UIButton *btnContribute;
 @property (weak, nonatomic) IBOutlet AmountView *av;

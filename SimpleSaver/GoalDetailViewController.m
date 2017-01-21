@@ -9,6 +9,7 @@
 #import "GoalDetailViewController.h"
 #import "GoalsViewController.h"
 #import "GoalContributionViewController.h"
+#import "GoalContributionsTableViewController.h"
 
 // Model
 #import "SavingsModel.h"
@@ -42,6 +43,10 @@
     [self refreshScrollView];
 }
 
+-(void) viewDidAppear:(BOOL)animated
+{
+    [self reloadForGoalChange];
+}
 -(void)initUi
 {
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
@@ -157,7 +162,12 @@
 
 -(void) presentViewContributionsView
 {
-    return;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GoalContributionsTableViewController *vc = (GoalContributionsTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"GoalContributionsTableViewController"];
+
+    [vc setGoal:self.goal];
+    
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 -(void) presentViewController:(UIViewController *)viewController
@@ -361,8 +371,6 @@
 {
     switch (contributionType)
     {
-        case ContributionTypeNormal:
-            break;
         case ContributionTypeCreateAddFunds:
             [self dismissCurrentViewController];
             [self addPositiveContribution:amount withNotes:notes];
@@ -370,8 +378,6 @@
         case ContributionTypeCreateRemoveFunds:
             [self dismissCurrentViewController];
             [self addNegativeContribution:amount withNotes:notes];
-            break;
-        case ContributionTypeCreateAmmendContribution:
             break;
         default:
             break;

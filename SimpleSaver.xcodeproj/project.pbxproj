@@ -31,6 +31,7 @@
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
 		7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
 		7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */; };
+		7AD016781E3362E500E3F68A /* GoalContributionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */; };
 		7AE8EE351E2C11D50048DEDE /* GoalContributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */; };
 		7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE371E2C27A30048DEDE /* AmountView.m */; };
 		7AE8EE3A1E2C27C80048DEDE /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8EE391E2C27C80048DEDE /* AmountView.xib */; };
@@ -92,6 +93,8 @@
 		7AAF11981E25709000A27733 /* GoalContributedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributedView.m; sourceTree = "<group>"; };
 		7AAF3AFD1E282644001B3F11 /* ChartsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartsBuilder.h; sourceTree = "<group>"; };
 		7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartsBuilder.m; sourceTree = "<group>"; };
+		7AD016761E3362E500E3F68A /* GoalContributionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContributionsTableViewController.h; sourceTree = "<group>"; };
+		7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributionsTableViewController.m; sourceTree = "<group>"; };
 		7AE8EE331E2C11D50048DEDE /* GoalContributionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContributionViewController.h; sourceTree = "<group>"; };
 		7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributionViewController.m; sourceTree = "<group>"; };
 		7AE8EE361E2C27A30048DEDE /* AmountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */,
 				7AE8EE331E2C11D50048DEDE /* GoalContributionViewController.h */,
 				7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */,
+				7AD016761E3362E500E3F68A /* GoalContributionsTableViewController.h */,
+				7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD016781E3362E500E3F68A /* GoalContributionsTableViewController.m in Sources */,
 				7A2471681E19440E00C99780 /* Goal.m in Sources */,
 				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
 				7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */,

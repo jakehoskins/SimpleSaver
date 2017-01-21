@@ -109,11 +109,11 @@
 
 -(void) setupMockContributionsForGoal:(Goal *)goal withNumberOfContributions:(NSInteger)numContributions
 {
-    NSString *notes = @"Some notes...";
+    NSString *notes = @"This is some mocked notes used to distinguish between placeholders in testing...";
     
     for (NSInteger i = 0; i < numContributions; i++)
     {
-        NSNumber *amount = [Helpers randomNumberBetween:0.00f and:10000];
+        NSNumber *amount = [Helpers randomNumberBetween:-1000 and:10000];
         GoalContribution *contribution = [[GoalContribution alloc] initWithAmount:amount forDate:[Helpers addDaysToDate:[goal getStartDate] increaseBy:5*i] withNotes:notes];
         
         [goal contribute:contribution];

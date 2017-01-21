@@ -29,6 +29,8 @@
 
 // Operations
 -(void) contribute:(GoalContribution *)contribution;
+-(void) removeContributionAtIndex:(NSInteger)index;
+-(void) ammendContributionAtIndex:(NSInteger)index newContrbution:(GoalContribution *)newContribution;
 -(NSNumber *) daysRemaining;
 -(NSNumber *) daysPast;
 -(NSNumber *) numberOfContributions;
