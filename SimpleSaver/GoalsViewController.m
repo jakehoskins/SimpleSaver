@@ -8,7 +8,7 @@
 
 // View Controllers
 #import "GoalsViewController.h"
-#import "CreateGoalViewController.h"
+#import "StepOneViewController.h"
 #import "GoalDetailViewController.h"
 
 // Views
@@ -18,6 +18,8 @@
 // Model
 #import "SavingsModel.h"
 #import "Goal.h"
+#import "StepOneViewController.h"
+#import "SteppedNavigationViewController.h"
 
 // Util
 #import "Constants.h"
@@ -136,9 +138,11 @@
 -(void) presentCreateGoalViewController
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    CreateGoalViewController *cgvc = (CreateGoalViewController *)[storyboard instantiateViewControllerWithIdentifier:@"CreateGoalViewController"];
+    StepOneViewController *cgvc = (StepOneViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepOneViewController"];
     
-    [self presentViewController:cgvc];
+    SteppedNavigationViewController *snvc = [[SteppedNavigationViewController alloc] initWithRootViewController:cgvc];
+    
+    [self presentViewController:snvc animated:true completion:nil];
 }
 
 -(void) presentViewController:(UIViewController *)viewController

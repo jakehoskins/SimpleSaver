@@ -368,7 +368,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zw3-Qr-WqG" id="WCE-qP-Zzg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-ag-glq">
@@ -410,6 +410,127 @@
             </objects>
             <point key="canvasLocation" x="1060" y="-206.44677661169416"/>
         </scene>
+        <!--Step Base View Controller-->
+        <scene sceneID="fls-kb-e6m">
+            <objects>
+                <viewController storyboardIdentifier="StepBaseViewController" id="DvZ-sa-7Lj" customClass="StepBaseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VHc-J0-yZ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="KPg-kh-6C9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yri-3m-PPq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39l-Wq-Ej0" customClass="SteppedControlPannelView">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ttr-yO-6tZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="39l-Wq-Ej0" secondAttribute="trailing" id="GpQ-Pi-v6E"/>
+                            <constraint firstAttribute="trailing" secondItem="39l-Wq-Ej0" secondAttribute="trailing" id="HsO-fd-CHZ"/>
+                            <constraint firstItem="39l-Wq-Ej0" firstAttribute="leading" secondItem="yri-3m-PPq" secondAttribute="leading" id="SBe-rF-GyT"/>
+                            <constraint firstItem="39l-Wq-Ej0" firstAttribute="bottom" secondItem="KPg-kh-6C9" secondAttribute="top" id="XC8-Pj-tqF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pannel" destination="39l-Wq-Ej0" id="CXn-JB-CIL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcX-IJ-dpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970.39999999999998" y="-1510.7946026986508"/>
+        </scene>
+        <!--Step One View Controller-->
+        <scene sceneID="wmh-Gk-faI">
+            <objects>
+                <viewController storyboardIdentifier="StepOneViewController" id="SLb-Jy-ltT" customClass="StepOneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sCl-9Z-qk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="NXE-SN-S6e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MsI-aA-9Rm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-8v-Y1X" customClass="SteppedControlPannelView">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="HRI-YH-VA0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="oPl-CN-g7H"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-Py-Z90">
+                                <rect key="frame" x="162" y="323" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NXE-SN-S6e" firstAttribute="top" secondItem="Uec-8v-Y1X" secondAttribute="bottom" id="JUe-6T-H7z"/>
+                            <constraint firstAttribute="trailing" secondItem="Uec-8v-Y1X" secondAttribute="trailing" id="Soy-zb-EC5"/>
+                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leading" id="x9t-WX-ZDu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pannel" destination="Uec-8v-Y1X" id="Y81-I8-7T1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teU-Sr-7Em" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="-1511"/>
+        </scene>
+        <!--Step Two View Controller-->
+        <scene sceneID="dKX-bQ-f8q">
+            <objects>
+                <viewController storyboardIdentifier="StepTwoViewController" id="ccV-iH-c3I" customClass="StepTwoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="119-co-Dwa"/>
+                        <viewControllerLayoutGuide type="bottom" id="dfn-Dd-Bpl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ajy-AK-muA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-Yt-v2r">
+                                <rect key="frame" x="166" y="317" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjW-Sm-gTA" customClass="SteppedControlPannelView">
+                                <rect key="frame" x="4" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IbW-1D-r7A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wjW-Sm-gTA" firstAttribute="leading" secondItem="ajy-AK-muA" secondAttribute="leading" constant="4" id="N6q-wp-281"/>
+                            <constraint firstAttribute="trailing" secondItem="wjW-Sm-gTA" secondAttribute="trailing" constant="-4" id="Ndm-Sg-bd1"/>
+                            <constraint firstItem="dfn-Dd-Bpl" firstAttribute="top" secondItem="wjW-Sm-gTA" secondAttribute="bottom" id="ePZ-Mj-L0n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pannel" destination="wjW-Sm-gTA" id="wQZ-4F-iiC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lk4-Mn-5rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-1511"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnN-O3-ArG">
             <objects>
@@ -438,6 +559,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyE-og-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1919" y="-539"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7eH-jS-KSM">
+            <objects>
+                <viewController id="VWv-GT-8SY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Awd-uO-kKM"/>
+                        <viewControllerLayoutGuide type="bottom" id="LCt-XB-nV5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X5s-VE-FCh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbb-w5-JQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hKs-9c-tE7">
+            <objects>
+                <viewController id="U3o-Bd-TMt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wuk-al-jmD"/>
+                        <viewControllerLayoutGuide type="bottom" id="8zM-2J-6r5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lfh-2S-nJL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfN-NX-N6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

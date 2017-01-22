@@ -5,6 +5,7 @@ PODS:
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
+  - JKSteppedProgressBar (0.2.1)
   - MBCircularProgressBar (0.3.5)
   - NZCircularImageView (0.0.5):
     - UIActivityIndicator-for-SDWebImage (~> 1.2)
@@ -19,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - Charts
   - Colours
+  - JKSteppedProgressBar
   - MBCircularProgressBar
   - NZCircularImageView
   - OpinionzAlertView
@@ -27,6 +29,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+  JKSteppedProgressBar: 17ac37cfd9c7d4054dac3180de19eceba6781f99
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   NZCircularImageView: cc64eae9a0dd42800b4902dc483b0b37591c3a3d
   OpinionzAlertView: 213cf7fa544091962ebd9526ff2e7e120b13c149
@@ -34,6 +37,6 @@ SPEC CHECKSUMS:
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
   YLProgressBar: 40a0627522dc1b536e02bf082a1b1ce3085b4668
 
-PODFILE CHECKSUM: e53768f7a376f4d62bc6186650463b2ddf19bb55
+PODFILE CHECKSUM: d9feab46bb4e51a14e45ae2a5b4d30f989926684
 
 COCOAPODS: 1.1.1

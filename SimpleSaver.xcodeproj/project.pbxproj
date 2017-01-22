@@ -24,6 +24,12 @@
 		7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
 		7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
 		7A6F70A11E22FA680008AA7A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F70A01E22FA680008AA7A /* Constants.m */; };
+		7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC6E1E34E2C300D11435 /* SteppedNavigationViewController.m */; };
+		7A7EFC731E34E30E00D11435 /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC721E34E30E00D11435 /* StepOneViewController.m */; };
+		7A7EFC761E34F34900D11435 /* SteppedControlPannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC751E34F34900D11435 /* SteppedControlPannelView.m */; };
+		7A7EFC781E34F35A00D11435 /* SteppedControlPannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7EFC771E34F35A00D11435 /* SteppedControlPannelView.xib */; };
+		7A7EFC7B1E34F45B00D11435 /* StepBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC7A1E34F45B00D11435 /* StepBaseViewController.m */; };
+		7A7EFC7E1E3511C800D11435 /* StepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC7D1E3511C800D11435 /* StepTwoViewController.m */; };
 		7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */; };
 		7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B601E1C4195000CCF8A /* GoalDetailViewController.m */; };
 		7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */; };
@@ -80,6 +86,17 @@
 		7A577BCB1E1A7E510091C28F /* ValidationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationResult.m; sourceTree = "<group>"; };
 		7A6F709F1E22FA680008AA7A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		7A6F70A01E22FA680008AA7A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		7A7EFC6D1E34E2C300D11435 /* SteppedNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteppedNavigationViewController.h; sourceTree = "<group>"; };
+		7A7EFC6E1E34E2C300D11435 /* SteppedNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteppedNavigationViewController.m; sourceTree = "<group>"; };
+		7A7EFC711E34E30E00D11435 /* StepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepOneViewController.h; sourceTree = "<group>"; };
+		7A7EFC721E34E30E00D11435 /* StepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepOneViewController.m; sourceTree = "<group>"; };
+		7A7EFC741E34F34900D11435 /* SteppedControlPannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteppedControlPannelView.h; sourceTree = "<group>"; };
+		7A7EFC751E34F34900D11435 /* SteppedControlPannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteppedControlPannelView.m; sourceTree = "<group>"; };
+		7A7EFC771E34F35A00D11435 /* SteppedControlPannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SteppedControlPannelView.xib; sourceTree = "<group>"; };
+		7A7EFC791E34F45B00D11435 /* StepBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepBaseViewController.h; sourceTree = "<group>"; };
+		7A7EFC7A1E34F45B00D11435 /* StepBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepBaseViewController.m; sourceTree = "<group>"; };
+		7A7EFC7C1E3511C800D11435 /* StepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTwoViewController.h; sourceTree = "<group>"; };
+		7A7EFC7D1E3511C800D11435 /* StepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTwoViewController.m; sourceTree = "<group>"; };
 		7A853B5C1E1B11E7000CCF8A /* GoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsViewController.h; sourceTree = "<group>"; };
 		7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsViewController.m; sourceTree = "<group>"; };
 		7A853B5F1E1C4195000CCF8A /* GoalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalDetailViewController.h; sourceTree = "<group>"; };
@@ -168,6 +185,7 @@
 		7A24713D1E1942BA00C99780 /* SimpleSaver */ = {
 			isa = PBXGroup;
 			children = (
+				7A7EFC701E34E2CA00D11435 /* New Goal Steps */,
 				7AAF119A1E25709A00A27733 /* Views */,
 				7A6F709F1E22FA680008AA7A /* Constants.h */,
 				7A6F70A01E22FA680008AA7A /* Constants.m */,
@@ -245,6 +263,21 @@
 			name = "View Controller";
 			sourceTree = "<group>";
 		};
+		7A7EFC701E34E2CA00D11435 /* New Goal Steps */ = {
+			isa = PBXGroup;
+			children = (
+				7A7EFC6D1E34E2C300D11435 /* SteppedNavigationViewController.h */,
+				7A7EFC6E1E34E2C300D11435 /* SteppedNavigationViewController.m */,
+				7A7EFC791E34F45B00D11435 /* StepBaseViewController.h */,
+				7A7EFC7A1E34F45B00D11435 /* StepBaseViewController.m */,
+				7A7EFC711E34E30E00D11435 /* StepOneViewController.h */,
+				7A7EFC721E34E30E00D11435 /* StepOneViewController.m */,
+				7A7EFC7C1E3511C800D11435 /* StepTwoViewController.h */,
+				7A7EFC7D1E3511C800D11435 /* StepTwoViewController.m */,
+			);
+			name = "New Goal Steps";
+			sourceTree = "<group>";
+		};
 		7AAF119A1E25709A00A27733 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +287,9 @@
 				7AE8EE361E2C27A30048DEDE /* AmountView.h */,
 				7AE8EE371E2C27A30048DEDE /* AmountView.m */,
 				7AE8EE391E2C27C80048DEDE /* AmountView.xib */,
+				7A7EFC741E34F34900D11435 /* SteppedControlPannelView.h */,
+				7A7EFC751E34F34900D11435 /* SteppedControlPannelView.m */,
+				7A7EFC771E34F35A00D11435 /* SteppedControlPannelView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -353,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7EFC781E34F35A00D11435 /* SteppedControlPannelView.xib in Resources */,
 				7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */,
 				7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */,
 				7AE8EE3A1E2C27C80048DEDE /* AmountView.xib in Resources */,
@@ -469,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD016781E3362E500E3F68A /* GoalContributionsTableViewController.m in Sources */,
+				7A7EFC731E34E30E00D11435 /* StepOneViewController.m in Sources */,
 				7A2471681E19440E00C99780 /* Goal.m in Sources */,
 				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
 				7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */,
@@ -476,14 +514,18 @@
 				7A2471651E1943C300C99780 /* SavingsModel.m in Sources */,
 				7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */,
 				7AE8EE351E2C11D50048DEDE /* GoalContributionViewController.m in Sources */,
+				7A7EFC761E34F34900D11435 /* SteppedControlPannelView.m in Sources */,
 				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
+				7A7EFC7B1E34F45B00D11435 /* StepBaseViewController.m in Sources */,
 				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
 				7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */,
 				7A6F70A11E22FA680008AA7A /* Constants.m in Sources */,
+				7A7EFC7E1E3511C800D11435 /* StepTwoViewController.m in Sources */,
 				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
 				7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */,
 				7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */,
 				7A2471401E1942BA00C99780 /* main.m in Sources */,
+				7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */,
 				7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */,
 				7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */,
 				7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */,

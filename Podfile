@@ -12,6 +12,7 @@ target 'SimpleSaver' do
   pod "NZCircularImageView"
   pod "MBCircularProgressBar"
   pod 'Charts'
+  pod 'JKSteppedProgressBar'
 
   target 'SimpleSaverTests' do
     inherit! :search_paths
