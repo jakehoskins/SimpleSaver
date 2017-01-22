@@ -32,6 +32,8 @@
     self.pannel.datasource = self;
     [self.pannel reloadDatasource];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
+    
     self.navigationItem.hidesBackButton = true;
 }
 
@@ -50,16 +52,16 @@
 // Subclasses can override these
 -(NSString *) textforLeftButton
 {
-    return @"close";
+    return @"Cancel";
 }
 // Subclasses can override these
 -(NSString *) textforMiddleButton
 {
-    return @"back";
+    return @"Back";
 }
 // Subclasses can override these
 -(NSString *) textForRightButton
 {
-    return @"next";
+    return @"Next";
 }
 @end

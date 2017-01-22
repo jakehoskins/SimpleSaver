@@ -7,6 +7,7 @@
 //
 
 #import "SteppedControlPannelView.h"
+#import "Colours.h"
 
 @implementation SteppedControlPannelView
 
@@ -18,16 +19,23 @@
     
     [self addSubview: self.contentView];
     
-    self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.contentView.layer.borderWidth = 3.0f;
-    [self.contentView.layer setShadowOffset:CGSizeMake(5, 5)];
+//    self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
+  //  self.contentView.layer.borderWidth = 3.0f;
+    [self.contentView.layer setShadowOffset:CGSizeMake(-5, -5)];
     self.contentView.layer.shadowColor = [UIColor blackColor].CGColor;
     [self.contentView.layer setShadowOpacity:0.5];
     
     [self.leftButton addTarget:self action:@selector(callLeftDelegate) forControlEvents:UIControlEventTouchUpInside];
     [self.middleButton addTarget:self action:@selector(callMiddleDelegate) forControlEvents:UIControlEventTouchUpInside];
     [self.rightButton addTarget:self action:@selector(callRightDelegate) forControlEvents:UIControlEventTouchUpInside];
-
+    
+    self.leftButton.backgroundColor = [UIColor salmonColor];
+    self.middleButton.backgroundColor = [UIColor robinEggColor];
+    self.rightButton.backgroundColor = [UIColor seafoamColor];
+    
+    [self.leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.middleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
 

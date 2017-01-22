@@ -24,14 +24,14 @@
     [super viewDidLoad];
     CGRect progressFrame = CGRectMake(0, 10, self.navigationBar.frame.size.width, self.navigationBar.frame.size.height);
     
-    self.stepTitles = [NSArray arrayWithObjects:@"1",@"2", @"3",@"4", nil];
+    self.stepTitles = [NSArray arrayWithObjects:@"Step 1",@"Step 2", @"Step 3",@"Step 4", @"Step 5", nil];
     self.steppedProgress = [[SteppedProgressBar alloc] initWithFrame:progressFrame];
     self.steppedProgress.circleSpacing = 45.0f;
     self.steppedProgress.backgroundColor = [UIColor clearColor];
     self.steppedProgress.titles = self.stepTitles;
     self.steppedProgress.currentTab = 1;
-    self.steppedProgress.activeColor = [UIColor emeraldColor];
-    self.steppedProgress.inactiveColor = [UIColor brickRedColor];
+    self.steppedProgress.activeColor = [UIColor seafoamColor];
+    self.steppedProgress.inactiveColor = [UIColor salmonColor];
     [self.view addSubview:self.steppedProgress];
 }
 
@@ -54,7 +54,7 @@
 -(void) back
 {
     [self decrementProgressStep];
-    [self popViewControllerAnimated:true];
+    [self popViewControllerAnimated:false];
 }
 
 -(void) next
@@ -63,7 +63,7 @@
     
     if (viewController)
     {
-        [self pushViewController:viewController animated:true];
+        [self pushViewController:viewController animated:false];
         [self incrementProgressStep];
     }
 }

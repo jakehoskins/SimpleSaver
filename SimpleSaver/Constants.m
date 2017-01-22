@@ -17,7 +17,7 @@ NSString * const NOTIFICATION_GOAL_UPDATE = @"goal_updated";                    
 
 +(NSArray *)getGoalIconURLSet
 {
-    NSArray * const goalIcons = @[@"car",@"cash", @"debt", @"education", @"holiday",@"item",@"restaurent", @"retirement", @"savings", @"stocks", @"transport"];
+    NSArray * const goalIcons = @[@"car",@"cash", @"debt", @"education", @"holiday",@"item",@"restaurent", @"retirement", @"savings", @"stocks", @"transport", @"home", @"maintenance", @"party", @"birthday", @"christmas",@"family"];
     
     return goalIcons;
 }

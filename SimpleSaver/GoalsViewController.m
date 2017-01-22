@@ -49,7 +49,7 @@
     
     if ([[SavingsModel getInstance] getGoals].count == 0)
     {
-        [self setupMockDataForSize:15];
+        [self setupMockDataForSize:30];
     }
     
     [self setupNavigationBarImage];

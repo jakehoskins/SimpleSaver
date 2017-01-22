@@ -14,38 +14,47 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="azh-DT-47j"/>
                 <outlet property="leftButton" destination="YVA-QN-ziZ" id="jg2-FE-872"/>
                 <outlet property="middleButton" destination="as2-pu-ReL" id="Hag-vm-fAy"/>
-                <outlet property="rightButton" destination="1wD-Z6-SKG" id="ZgT-q0-ala"/>
+                <outlet property="rightButton" destination="mlI-PN-Pgi" id="XDe-9G-Vo8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="302" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="302" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVA-QN-ziZ">
-                    <rect key="frame" x="16" y="30" width="46" height="30"/>
+                    <rect key="frame" x="0.0" y="57" width="302" height="32.5"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as2-pu-ReL">
-                    <rect key="frame" x="128" y="30" width="46" height="30"/>
+                    <rect key="frame" x="0.0" y="29" width="302" height="32.5"/>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wD-Z6-SKG">
-                    <rect key="frame" x="240" y="30" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlI-PN-Pgi">
+                    <rect key="frame" x="0.0" y="0.0" width="302" height="32.5"/>
                     <state key="normal" title="Button"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1wD-Z6-SKG" firstAttribute="leading" secondItem="as2-pu-ReL" secondAttribute="trailing" constant="66" id="EID-T6-xAt"/>
-                <constraint firstItem="YVA-QN-ziZ" firstAttribute="baseline" secondItem="as2-pu-ReL" secondAttribute="baseline" id="RvE-jc-48r"/>
-                <constraint firstItem="YVA-QN-ziZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="YoM-Kt-q9b"/>
-                <constraint firstItem="as2-pu-ReL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ceM-tE-QOg"/>
-                <constraint firstItem="as2-pu-ReL" firstAttribute="leading" secondItem="YVA-QN-ziZ" secondAttribute="trailing" constant="66" id="qXl-5F-pIi"/>
-                <constraint firstItem="as2-pu-ReL" firstAttribute="baseline" secondItem="1wD-Z6-SKG" secondAttribute="baseline" id="vEw-OM-Ts3"/>
+                <constraint firstAttribute="trailing" secondItem="YVA-QN-ziZ" secondAttribute="trailing" id="18K-nx-1FM"/>
+                <constraint firstItem="YVA-QN-ziZ" firstAttribute="top" secondItem="mlI-PN-Pgi" secondAttribute="bottom" constant="24.5" id="5AE-XV-se8"/>
+                <constraint firstAttribute="bottom" secondItem="YVA-QN-ziZ" secondAttribute="bottom" constant="0.5" id="7iG-3N-ZCg"/>
+                <constraint firstItem="YVA-QN-ziZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="82C-UC-K1q"/>
+                <constraint firstItem="YVA-QN-ziZ" firstAttribute="width" secondItem="mlI-PN-Pgi" secondAttribute="width" id="9cH-Xe-H0b"/>
+                <constraint firstItem="as2-pu-ReL" firstAttribute="width" secondItem="mlI-PN-Pgi" secondAttribute="width" id="Ga2-4P-K7S"/>
+                <constraint firstItem="mlI-PN-Pgi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IQf-Dd-Uzl"/>
+                <constraint firstAttribute="trailing" secondItem="as2-pu-ReL" secondAttribute="trailing" id="Nn0-4E-TSr"/>
+                <constraint firstItem="as2-pu-ReL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VLG-sa-4BN"/>
+                <constraint firstItem="as2-pu-ReL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="Ysv-y5-Woh"/>
+                <constraint firstItem="YVA-QN-ziZ" firstAttribute="height" secondItem="mlI-PN-Pgi" secondAttribute="height" id="faa-Ch-2hG"/>
+                <constraint firstItem="as2-pu-ReL" firstAttribute="height" secondItem="mlI-PN-Pgi" secondAttribute="height" id="gXD-NZ-0GK"/>
+                <constraint firstAttribute="trailing" secondItem="mlI-PN-Pgi" secondAttribute="trailing" id="hTl-m4-Scr"/>
+                <constraint firstAttribute="bottom" secondItem="as2-pu-ReL" secondAttribute="bottom" constant="28.5" id="jTT-5P-Wv8"/>
+                <constraint firstItem="mlI-PN-Pgi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rNZ-Dj-602"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-3" y="-243"/>
+            <point key="canvasLocation" x="-21" y="-231"/>
         </view>
     </objects>
 </document>

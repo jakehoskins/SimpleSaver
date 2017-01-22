@@ -458,27 +458,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-8v-Y1X" customClass="SteppedControlPannelView">
-                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="HRI-YH-VA0"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="oPl-CN-g7H"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-Py-Z90">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-Py-Z90">
                                 <rect key="frame" x="162" y="323" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-8v-Y1X" customClass="SteppedControlPannelView">
+                                <rect key="frame" x="-1" y="582" width="375" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="D5o-QF-GF4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NXE-SN-S6e" firstAttribute="top" secondItem="Uec-8v-Y1X" secondAttribute="bottom" id="JUe-6T-H7z"/>
-                            <constraint firstAttribute="trailing" secondItem="Uec-8v-Y1X" secondAttribute="trailing" id="Soy-zb-EC5"/>
-                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leading" id="x9t-WX-ZDu"/>
+                            <constraint firstItem="mz2-Py-Z90" firstAttribute="centerY" secondItem="MsI-aA-9Rm" secondAttribute="centerY" id="Cm7-eT-OA4"/>
+                            <constraint firstItem="mz2-Py-Z90" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leading" constant="162" id="TjD-n5-R0Y"/>
+                            <constraint firstItem="NXE-SN-S6e" firstAttribute="top" secondItem="Uec-8v-Y1X" secondAttribute="bottom" id="YQk-RH-jF5"/>
+                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leading" id="iTP-Nv-U6H"/>
+                            <constraint firstItem="mz2-Py-Z90" firstAttribute="centerX" secondItem="Uec-8v-Y1X" secondAttribute="centerX" id="rOz-nL-T5z"/>
+                            <constraint firstAttribute="trailing" secondItem="Uec-8v-Y1X" secondAttribute="trailing" id="xzI-aU-l6H"/>
                         </constraints>
                     </view>
                     <connections>
@@ -501,26 +502,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-Yt-v2r">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY3-Yt-v2r">
                                 <rect key="frame" x="166" y="317" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjW-Sm-gTA" customClass="SteppedControlPannelView">
-                                <rect key="frame" x="4" y="539" width="375" height="128"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjW-Sm-gTA" customClass="SteppedControlPannelView">
+                                <rect key="frame" x="0.0" y="582" width="375" height="85"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="IbW-1D-r7A"/>
+                                    <constraint firstAttribute="height" constant="90" id="Gb4-eh-ljJ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wjW-Sm-gTA" firstAttribute="leading" secondItem="ajy-AK-muA" secondAttribute="leading" constant="4" id="N6q-wp-281"/>
-                            <constraint firstAttribute="trailing" secondItem="wjW-Sm-gTA" secondAttribute="trailing" constant="-4" id="Ndm-Sg-bd1"/>
-                            <constraint firstItem="dfn-Dd-Bpl" firstAttribute="top" secondItem="wjW-Sm-gTA" secondAttribute="bottom" id="ePZ-Mj-L0n"/>
+                            <constraint firstItem="iY3-Yt-v2r" firstAttribute="top" secondItem="119-co-Dwa" secondAttribute="bottom" constant="297" id="9cZ-I9-ann"/>
+                            <constraint firstItem="wjW-Sm-gTA" firstAttribute="leading" secondItem="ajy-AK-muA" secondAttribute="leading" id="NPZ-QX-Ohn"/>
+                            <constraint firstItem="iY3-Yt-v2r" firstAttribute="leading" secondItem="ajy-AK-muA" secondAttribute="leading" constant="166" id="Ssk-NQ-zTf"/>
+                            <constraint firstItem="dfn-Dd-Bpl" firstAttribute="top" secondItem="wjW-Sm-gTA" secondAttribute="bottom" id="cYS-oY-98H"/>
+                            <constraint firstAttribute="trailing" secondItem="wjW-Sm-gTA" secondAttribute="trailing" id="nPz-Wz-ecG"/>
                         </constraints>
                     </view>
                     <connections>
