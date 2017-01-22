@@ -58,14 +58,27 @@
     [super viewDidAppear:animated];
     NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
     
-    if ([Helpers isIpad])
+    if ([Helpers isIpad] && [[SavingsModel getInstance] getGoals].count > 0)
     {
         [self.tableView selectRowAtIndexPath:indexPath animated:animated  scrollPosition:UITableViewScrollPositionTop];
         [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
     }
+    
+    // Register to receive notifications for when contributions have been edited / deleted / created
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveUpdateNotification:) name:NOTIFICATION_GOAL_UPDATE object:nil];
 }
 
+-(void) viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NOTIFICATION_GOAL_UPDATE object:nil];
+    
+    [super viewDidDisappear:animated];
+}
 
+-(void) didReceiveUpdateNotification:(NSNotification *) notificaton
+{
+    [self.tableView reloadData];
+}
 #pragma mark private
 
 -(void)setupNavigationBarImage
@@ -172,6 +185,7 @@
 {
     id detail = [self detailViewController];
     BOOL willPush = false;
+    Goal *goal = [[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row];
     
     self.lastSelectedGoal = [[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row];
     if ([detail isKindOfClass:[UINavigationController class]])
@@ -194,7 +208,7 @@
     {
         self.delegate = detail;
         
-        [self.delegate goalSelected:[[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row]];
+        [self.delegate goalSelected:goal];
         
         // On iPhone we need to push the vc 
         if (willPush)
@@ -203,6 +217,8 @@
         }
     }
     
+    // Push a notification as other than our detail we may have views who care about what goal we have updated to
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NEW_GOAL_SELECTED object:goal];
     
      [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

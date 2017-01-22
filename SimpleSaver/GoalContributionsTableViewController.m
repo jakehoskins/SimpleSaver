@@ -17,6 +17,8 @@
 // Util
 #import "Helpers.h"
 #import "Colours.h"
+#import "Constants.h"
+
 @interface GoalContributionsTableViewController () <ContributionEvent>
 
 @end
@@ -29,8 +31,34 @@
     [self.tableView setSeparatorColor:[UIColor blackColor]];
     self.title = @"Contributions";
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
 }
 
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // Register for goal change notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRecieveGoalNotification:) name:NOTIFICATION_NEW_GOAL_SELECTED object:nil];
+}
+
+-(void) viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NOTIFICATION_NEW_GOAL_SELECTED object:nil];
+    [super viewDidDisappear:animated];
+}
+
+-(void) didRecieveGoalNotification:(NSNotification *)notification
+{
+    if ([[notification object] isKindOfClass:[Goal class]])
+    {
+        Goal *goal = (Goal *) [notification object];
+        
+        self.goal = goal;
+        
+        [self.tableView reloadData];
+    }
+}
 
 -(void) presentGoalContributeNormalForGoalContribution:(GoalContribution *)contribution
 {
@@ -102,7 +130,7 @@
         [[SavingsModel getInstance] writeToUserDefaults];
         [self.tableView reloadData];
         
-        // @TODO::: Notify the left vc to update(for iPad)
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_GOAL_UPDATE object:self.goal];
     }];
     deleteAction.backgroundColor = [UIColor redColor];
     return @[deleteAction,editAction];
@@ -112,16 +140,6 @@
 -(NSInteger) reversedIndex:(NSInteger)index
 {
     return ([self.goal getContributions].count - 1) - index;
-}
-
-
-// Need the savings model index for editing
--(NSInteger) trueIndex:(NSInteger)index
-{
-    
-    NSInteger x = index - ([self.goal getContributions].count - 1);
-    
-    return labs(x);
 }
 
 -(void) dismissCurrentViewController
@@ -153,7 +171,7 @@
     
     [self.tableView reloadData];
     
-    // @TODO::: Notify the left vc to update(for iPad)
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_GOAL_UPDATE object:self.goal];
 }
 
 #pragma mark - Table view data source

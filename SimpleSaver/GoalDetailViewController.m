@@ -21,6 +21,8 @@
 #import "Colours.h"
 #import "Helpers.h"
 #import "ChartsBuilder.h"
+#import "Constants.h"
+
 
 
 @interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent>
@@ -40,11 +42,15 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     [self refreshScrollView];
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     [self reloadForGoalChange];
 }
 -(void)initUi
@@ -341,8 +347,6 @@
     [[SavingsModel getInstance] writeToUserDefaults];
     
     [self reloadForGoalChange];
-    
-    // @TODO::: Notify the left vc to update
 }
 
 -(void) addNegativeContribution:(NSNumber *) amount withNotes:(NSString *)notes
@@ -353,8 +357,6 @@
     [[SavingsModel getInstance] writeToUserDefaults];
     
     [self reloadForGoalChange];
-    
-    // @TODO::: Notify the left vc to update
 }
 
 #pragma mark GoalSelection
@@ -382,6 +384,8 @@
         default:
             break;
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_GOAL_UPDATE object:self.goal];
 }
 
 #pragma Rotation

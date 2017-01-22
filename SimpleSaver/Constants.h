@@ -11,6 +11,8 @@
 
 @interface Constants : NSObject
 extern NSString * const BACKGROUND_IMAGE;
+extern NSString * const NOTIFICATION_NEW_GOAL_SELECTED;
+extern NSString * const NOTIFICATION_GOAL_UPDATE;
 
 +(NSArray *)getGoalIconURLSet;
 @end

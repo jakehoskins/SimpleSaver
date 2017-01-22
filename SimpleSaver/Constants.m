@@ -9,6 +9,8 @@
 #import "Constants.h"
 
 NSString * const BACKGROUND_IMAGE = @"background";
+NSString * const NOTIFICATION_NEW_GOAL_SELECTED = @"new_goal_selected";             // Tell our detail views to change goal context
+NSString * const NOTIFICATION_GOAL_UPDATE = @"goal_updated";                        // If goal has been edited update master table
 
 @implementation Constants
 
