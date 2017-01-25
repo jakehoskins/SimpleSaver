@@ -60,22 +60,23 @@
 
 -(void) next
 {
-    UIViewController *nextViewController = [self getNextViewController];
+    StepBaseViewController *nextViewController = (StepBaseViewController *) [self getNextViewController];
     
-    // Cast the pointer to our base class, but just changing the pointer type so can still invoke validate respectively.
+    // Cast the pointer to our base class, ( can still invoke validate respectively )
     StepBaseViewController *currentViewController = (StepBaseViewController *) [self visibleViewController];
     ValidationResult *validationResult = [currentViewController validate];
     
     if (nextViewController && [validationResult getCode] == CODE_OK)
     {
+        [self addToGoalSteps:currentViewController.stepItems];
         [self pushViewController:nextViewController animated:false];
         [self incrementProgressStep];
     }
-    else if (nextViewController && [validationResult getCode] != CODE_OK)
+    else if ([validationResult getCode] != CODE_OK)
     {
         [currentViewController presentErrorDialogForValidationResult:validationResult];
     }
-    else
+    else if(!nextViewController)
     {
         NSLog(@"%s", __PRETTY_FUNCTION__);
     }
@@ -104,6 +105,18 @@
     return viewController;
 }
 
+-(void) addToGoalSteps:(NSMutableDictionary *)stepItems
+{
+    if(!self.goalItems)
+    {
+        self.goalItems = [NSMutableDictionary dictionary];
+    }
+    
+    for (NSString *key in stepItems)
+    {
+        [self.goalItems setObject:[stepItems objectForKey:key] forKey:key];
+    }
+}
 -(void) leftButtonClicked
 {
     [self.presentingViewController dismissViewControllerAnimated:true completion:nil];
@@ -119,4 +132,10 @@
 {
     [self next];
 }
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
 @end

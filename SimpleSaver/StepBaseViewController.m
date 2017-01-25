@@ -59,10 +59,21 @@
     [alert show];
 }
 
+-(NSMutableDictionary *)stepItems
+{
+    if (!_stepItems)
+    {
+        _stepItems = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _stepItems;
+}
+
+
 // Subclasses are expected to overide this.
 -(ValidationResult *) validate
 {
-    NSInteger code = (self.preValidatedDictionry.count > 0) ? CODE_OK : CODE_EMPTY_FIELD;
+    NSInteger code = (self.stepItems.count > 0) ? CODE_OK : CODE_EMPTY_FIELD;
     
     return [[ValidationResult alloc] initWithValidationCode:code];
 }
@@ -82,4 +93,5 @@
 {
     return @"Next";
 }
+
 @end

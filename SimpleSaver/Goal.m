@@ -8,12 +8,13 @@
 
 #import "Goal.h"
 #import "GoalContribution.h"
-NSString * const kName = @"name";
+NSString * const kGoalName = @"name";
 NSString * const kSavingsTarget = @"savingsTarget";
 NSString * const kContributions = @"contributions";
 NSString * const kStart = @"start";
 NSString * const kEnd = @"end";
 NSString * const kIconUrl = @"iconUrl";
+
 
 @interface Goal ()
 @property (nonatomic, strong) NSString *name;
@@ -21,7 +22,6 @@ NSString * const kIconUrl = @"iconUrl";
 @property (nonatomic, strong) NSMutableArray<GoalContribution *> *contributions;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
-
 @end
 
 @implementation Goal
@@ -61,7 +61,7 @@ NSString * const kIconUrl = @"iconUrl";
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:self.name forKey:kName];
+    [aCoder encodeObject:self.name forKey:kGoalName];
     [aCoder encodeObject:self.savingsTarget forKey:kSavingsTarget];
     [aCoder encodeObject:self.contributions forKey:kContributions];
     [aCoder encodeObject:self.startDate forKey:kStart];
@@ -73,7 +73,7 @@ NSString * const kIconUrl = @"iconUrl";
 {
     if(self = [super init])
     {
-        self.name = [aDecoder decodeObjectForKey:kName];
+        self.name = [aDecoder decodeObjectForKey:kGoalName];
         self.savingsTarget = [aDecoder decodeObjectForKey:kSavingsTarget];
         self.contributions = [aDecoder decodeObjectForKey:kContributions];
         self.startDate = [aDecoder decodeObjectForKey:kStart];

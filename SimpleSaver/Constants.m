@@ -22,5 +22,9 @@ NSString * const NOTIFICATION_GOAL_UPDATE = @"goal_updated";                    
     return goalIcons;
 }
 
++(NSString *)getDefaultGoalIcon
+{
+    return @"savings";
+}
 
 @end

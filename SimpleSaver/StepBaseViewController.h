@@ -11,11 +11,11 @@
 
 #import "SteppedControlPannelView.h"
 #import "ValidationResult.h"
-
+#import "Goal.h"
+#import "Colours.h"
 @interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource>
 @property (weak, nonatomic) IBOutlet SteppedControlPannelView *pannel;
-@property (nonatomic, strong) NSMutableDictionary *preValidatedDictionry;
-@property (nonatomic, strong) NSDictionary *aggregatedValidatedDictionary;
+@property (nonatomic, strong) NSMutableDictionary *stepItems;
 -(ValidationResult *) validate;
 -(void) presentErrorDialogForValidationResult:(ValidationResult *)validationResult;
 @end

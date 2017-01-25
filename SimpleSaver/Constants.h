@@ -10,9 +10,11 @@
 
 
 @interface Constants : NSObject
+// Generics
 extern NSString * const BACKGROUND_IMAGE;
 extern NSString * const NOTIFICATION_NEW_GOAL_SELECTED;
 extern NSString * const NOTIFICATION_GOAL_UPDATE;
 
 +(NSArray *)getGoalIconURLSet;
++(NSString *)getDefaultGoalIcon;
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kGoalName;
+extern NSString * const kIconUrl;
+
 @class GoalContribution;
 
 @interface Goal : NSObject
