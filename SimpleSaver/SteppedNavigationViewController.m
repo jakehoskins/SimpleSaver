@@ -9,6 +9,7 @@
 #import "SteppedNavigationViewController.h"
 #import <JKSteppedProgressBar/JKSteppedProgressBar-Swift.h>
 #import "SteppedControlPannelView.h"
+#import "StepBaseViewController.h"
 #import "StepTwoViewController.h"
 #import "Colours.h"
 
@@ -59,12 +60,24 @@
 
 -(void) next
 {
-    UIViewController *viewController = [self getNextViewController];
+    UIViewController *nextViewController = [self getNextViewController];
     
-    if (viewController)
+    // Cast the pointer to our base class, but just changing the pointer type so can still invoke validate respectively.
+    StepBaseViewController *currentViewController = (StepBaseViewController *) [self visibleViewController];
+    ValidationResult *validationResult = [currentViewController validate];
+    
+    if (nextViewController && [validationResult getCode] == CODE_OK)
     {
-        [self pushViewController:viewController animated:false];
+        [self pushViewController:nextViewController animated:false];
         [self incrementProgressStep];
+    }
+    else if (nextViewController && [validationResult getCode] != CODE_OK)
+    {
+        [currentViewController presentErrorDialogForValidationResult:validationResult];
+    }
+    else
+    {
+        NSLog(@"%s", __PRETTY_FUNCTION__);
     }
 }
 

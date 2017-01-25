@@ -59,6 +59,7 @@ NSString * const DESC_NEEDS_STRING = @"Did not expect a numerican value";
             break;
         case CODE_EMPTY_FIELD:
             description = DESC_BAD_FIELD;
+            break;
         case CODE_NEEDS_STRING:
             description = DESC_NEEDS_STRING;
             break;

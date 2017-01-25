@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "StepBaseViewController.h"
+
+// Views
 #import "SteppedControlPannelView.h"
+#import "NZCircularImageView.h"
 
 @interface StepOneViewController : StepBaseViewController
-
+@property (weak, nonatomic) IBOutlet UITextField *tfGoalName;
+@property (weak, nonatomic) IBOutlet NZCircularImageView *goalIcon;
+@property (weak, nonatomic) IBOutlet UIButton *btnAvatar;
 
 @end

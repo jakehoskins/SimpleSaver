@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OpinionzAlertView/OpinionzAlertView.h>
+
 #import "SteppedControlPannelView.h"
+#import "ValidationResult.h"
 
-@interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource> 
-
+@interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource>
 @property (weak, nonatomic) IBOutlet SteppedControlPannelView *pannel;
+@property (nonatomic, strong) NSMutableDictionary *preValidatedDictionry;
+@property (nonatomic, strong) NSDictionary *aggregatedValidatedDictionary;
+-(ValidationResult *) validate;
+-(void) presentErrorDialogForValidationResult:(ValidationResult *)validationResult;
 @end

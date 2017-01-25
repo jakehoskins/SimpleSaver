@@ -6,11 +6,13 @@
 //  Copyright © 2017 Jake Hoskins. All rights reserved.
 //
 
+// Controllers
 #import "StepBaseViewController.h"
-#import "SteppedControlPannelView.h"
 #import "SteppedNavigationViewController.h"
 
-@interface StepBaseViewController () 
+// View
+#import "SteppedControlPannelView.h"
+@interface StepBaseViewController ()
 
 @end
 
@@ -37,8 +39,6 @@
     self.navigationItem.hidesBackButton = true;
 }
 
-
-
 -(SteppedNavigationViewController *) getNavigationController
 {
     if (self.navigationController)
@@ -47,6 +47,24 @@
     }
     
     return nil;
+}
+
+-(void) presentErrorDialogForValidationResult:(ValidationResult *)validationResult
+{
+    OpinionzAlertView *alert = [[OpinionzAlertView alloc] initWithTitle:@"Error"
+                                                                message:[validationResult description]
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+    alert.iconType = OpinionzAlertIconWarning;
+    [alert show];
+}
+
+// Subclasses are expected to overide this.
+-(ValidationResult *) validate
+{
+    NSInteger code = (self.preValidatedDictionry.count > 0) ? CODE_OK : CODE_EMPTY_FIELD;
+    
+    return [[ValidationResult alloc] initWithValidationCode:code];
 }
 
 // Subclasses can override these

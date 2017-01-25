@@ -458,37 +458,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-Py-Z90">
-                                <rect key="frame" x="162" y="323" width="48" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-8v-Y1X" customClass="SteppedControlPannelView">
+                                <rect key="frame" x="-1" y="582" width="375" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your goal..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-Jw-cSA">
+                                <rect key="frame" x="23" y="173" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Wa-VJ-4sD" customClass="NZCircularImageView">
+                                <rect key="frame" x="119" y="258" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ygS-gn-iOA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up a name for your goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzu-De-EtJ">
+                                <rect key="frame" x="19" y="28" width="336" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="roE-CC-xeH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-8v-Y1X" customClass="SteppedControlPannelView">
-                                <rect key="frame" x="-1" y="582" width="375" height="85"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="D5o-QF-GF4"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE6-EY-9hC">
+                                <rect key="frame" x="149" y="416" width="91" height="30"/>
+                                <state key="normal" title="Select Avatar"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mz2-Py-Z90" firstAttribute="centerY" secondItem="MsI-aA-9Rm" secondAttribute="centerY" id="Cm7-eT-OA4"/>
-                            <constraint firstItem="mz2-Py-Z90" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leading" constant="162" id="TjD-n5-R0Y"/>
-                            <constraint firstItem="NXE-SN-S6e" firstAttribute="top" secondItem="Uec-8v-Y1X" secondAttribute="bottom" id="YQk-RH-jF5"/>
-                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leading" id="iTP-Nv-U6H"/>
-                            <constraint firstItem="mz2-Py-Z90" firstAttribute="centerX" secondItem="Uec-8v-Y1X" secondAttribute="centerX" id="rOz-nL-T5z"/>
-                            <constraint firstAttribute="trailing" secondItem="Uec-8v-Y1X" secondAttribute="trailing" id="xzI-aU-l6H"/>
+                            <constraint firstItem="yeL-Jw-cSA" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leadingMargin" constant="7" id="1LJ-Sq-DnE"/>
+                            <constraint firstItem="JE6-EY-9hC" firstAttribute="top" secondItem="9Wa-VJ-4sD" secondAttribute="bottom" constant="8" id="75t-A0-p5p"/>
+                            <constraint firstItem="Wzu-De-EtJ" firstAttribute="centerX" secondItem="Uec-8v-Y1X" secondAttribute="centerX" id="8un-SM-F8m"/>
+                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leadingMargin" constant="-17" id="CVr-Wf-2yo"/>
+                            <constraint firstItem="JE6-EY-9hC" firstAttribute="centerX" secondItem="9Wa-VJ-4sD" secondAttribute="centerX" id="H6M-2c-VZU"/>
+                            <constraint firstItem="9Wa-VJ-4sD" firstAttribute="top" secondItem="yeL-Jw-cSA" secondAttribute="bottom" constant="55" id="IAj-WT-5JH"/>
+                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="bottom" secondItem="NXE-SN-S6e" secondAttribute="top" id="IWR-78-2Mp"/>
+                            <constraint firstItem="9Wa-VJ-4sD" firstAttribute="centerX" secondItem="Uec-8v-Y1X" secondAttribute="centerX" constant="7.5" id="LHd-yP-5m4"/>
+                            <constraint firstItem="Wzu-De-EtJ" firstAttribute="centerX" secondItem="MsI-aA-9Rm" secondAttribute="centerX" id="OKn-kx-ktl"/>
+                            <constraint firstItem="Wzu-De-EtJ" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leadingMargin" constant="3" id="OhR-as-Zak"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yeL-Jw-cSA" secondAttribute="trailing" constant="-7" id="d4T-PW-H7o"/>
+                            <constraint firstItem="9Wa-VJ-4sD" firstAttribute="leading" secondItem="MsI-aA-9Rm" secondAttribute="leadingMargin" constant="103" id="f8u-dd-krf"/>
+                            <constraint firstItem="9Wa-VJ-4sD" firstAttribute="centerY" secondItem="MsI-aA-9Rm" secondAttribute="centerY" id="gkC-YF-TK2"/>
+                            <constraint firstItem="Uec-8v-Y1X" firstAttribute="top" secondItem="MsI-aA-9Rm" secondAttribute="top" constant="582" id="kPR-md-v2b"/>
+                            <constraint firstItem="Wzu-De-EtJ" firstAttribute="top" secondItem="sCl-9Z-qk0" secondAttribute="bottom" constant="8" symbolic="YES" id="p4D-xk-2z4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAvatar" destination="JE6-EY-9hC" id="Ny8-vT-jPP"/>
+                        <outlet property="goalIcon" destination="9Wa-VJ-4sD" id="h4C-lc-CFg"/>
                         <outlet property="pannel" destination="Uec-8v-Y1X" id="Y81-I8-7T1"/>
+                        <outlet property="tfGoalName" destination="yeL-Jw-cSA" id="XwN-1p-WAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teU-Sr-7Em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="-1511"/>
+            <point key="canvasLocation" x="-319.19999999999999" y="-1511.6941529235382"/>
         </scene>
         <!--Step Two View Controller-->
         <scene sceneID="dKX-bQ-f8q">
