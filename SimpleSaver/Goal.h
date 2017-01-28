@@ -10,6 +10,8 @@
 
 extern NSString * const kGoalName;
 extern NSString * const kIconUrl;
+extern NSString * const kSavingsTarget;
+extern NSString * const kCurrency;
 
 @class GoalContribution;
 

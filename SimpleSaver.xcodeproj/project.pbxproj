@@ -20,6 +20,7 @@
 		7A24716B1E19449800C99780 /* GoalContribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716A1E19449800C99780 /* GoalContribution.m */; };
 		7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716C1E194D4F00C99780 /* GoalTest.m */; };
 		7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716E1E19532800C99780 /* SavingsModelTest.m */; };
+		7A4225B61E3D1CA200949D64 /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */; };
 		7A577BC31E19DEF70091C28F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC21E19DEF70091C28F /* Helpers.m */; };
 		7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
 		7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
@@ -78,6 +79,8 @@
 		7A24716A1E19449800C99780 /* GoalContribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContribution.m; sourceTree = "<group>"; };
 		7A24716C1E194D4F00C99780 /* GoalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTest.m; sourceTree = "<group>"; };
 		7A24716E1E19532800C99780 /* SavingsModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModelTest.m; sourceTree = "<group>"; };
+		7A4225B41E3D1CA200949D64 /* StepThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepThreeViewController.h; sourceTree = "<group>"; };
+		7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepThreeViewController.m; sourceTree = "<group>"; };
 		7A577BC11E19DEF70091C28F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		7A577BC21E19DEF70091C28F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleSaver.entitlements; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				7A7EFC721E34E30E00D11435 /* StepOneViewController.m */,
 				7A7EFC7C1E3511C800D11435 /* StepTwoViewController.h */,
 				7A7EFC7D1E3511C800D11435 /* StepTwoViewController.m */,
+				7A4225B41E3D1CA200949D64 /* StepThreeViewController.h */,
+				7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */,
 			);
 			name = "New Goal Steps";
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 				7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */,
 				7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */,
 				7A2471651E1943C300C99780 /* SavingsModel.m in Sources */,
+				7A4225B61E3D1CA200949D64 /* StepThreeViewController.m in Sources */,
 				7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */,
 				7AE8EE351E2C11D50048DEDE /* GoalContributionViewController.m in Sources */,
 				7A7EFC761E34F34900D11435 /* SteppedControlPannelView.m in Sources */,

@@ -36,6 +36,9 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
     self.navigationItem.hidesBackButton = true;
 }
 
@@ -61,6 +64,8 @@
 
 -(NSMutableDictionary *)stepItems
 {
+    // Lazy load our dictionary
+    
     if (!_stepItems)
     {
         _stepItems = [[NSMutableDictionary alloc] init];
@@ -92,6 +97,11 @@
 -(NSString *) textForRightButton
 {
     return @"Next";
+}
+
+-(void) dismissKeyboard
+{
+    [self.view endEditing:true];
 }
 
 @end

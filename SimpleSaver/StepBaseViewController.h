@@ -13,6 +13,8 @@
 #import "ValidationResult.h"
 #import "Goal.h"
 #import "Colours.h"
+#import "Helpers.h"
+
 @interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource>
 @property (weak, nonatomic) IBOutlet SteppedControlPannelView *pannel;
 @property (nonatomic, strong) NSMutableDictionary *stepItems;

@@ -10,6 +10,7 @@
 #import "GoalContribution.h"
 NSString * const kGoalName = @"name";
 NSString * const kSavingsTarget = @"savingsTarget";
+NSString * const kCurrency = @"currency";
 NSString * const kContributions = @"contributions";
 NSString * const kStart = @"start";
 NSString * const kEnd = @"end";
@@ -254,7 +255,7 @@ NSString * const kIconUrl = @"iconUrl";
 
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ Target: %.2f Contributed: %.2f Contributions: %li", self.name, self.getSavingsTarget.doubleValue, [self totalContributed].doubleValue ,[self.contributions count]];
+    return [NSString stringWithFormat:@"%@ Target: %.2f Contributed: %.2f Contributions: %li", self.name, self.getSavingsTarget.doubleValue, [self totalContributed].doubleValue ,(unsigned long)[self.contributions count]];
 }
 
 +(NSArray *) months

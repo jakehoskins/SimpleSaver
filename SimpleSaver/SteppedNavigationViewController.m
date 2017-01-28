@@ -11,6 +11,7 @@
 #import "SteppedControlPannelView.h"
 #import "StepBaseViewController.h"
 #import "StepTwoViewController.h"
+#import "StepThreeViewController.h"
 #import "Colours.h"
 
 @interface SteppedNavigationViewController () 
@@ -94,6 +95,7 @@
             viewController = (StepTwoViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepTwoViewController"];
             break;
         case 2:
+            viewController = (StepThreeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepThreeViewController"];
             break;
         case 3:
             break;
