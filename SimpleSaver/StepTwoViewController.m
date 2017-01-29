@@ -20,6 +20,33 @@
     [super viewDidLoad];
     [self.swNoTarget addTarget:self action:@selector(toggleTargetEnabled:) forControlEvents:UIControlEventValueChanged];
     self.tfCurrency.delegate = self;
+    
+    if (self.delegate)
+    {
+        [self loadEditItems:[self.delegate dictionaryForEdit]];
+    }
+}
+
+-(void) loadEditItems:(NSDictionary *)dictionary
+{
+    if (!dictionary) return;
+    
+    if ([dictionary objectForKey:kSavingsTarget])
+    {
+        self.targetAmount = [dictionary objectForKey:kSavingsTarget];
+        self.tfTarget.text = [NSString stringWithFormat:@"%.2f",self.targetAmount.doubleValue];
+    }
+    else
+    {
+        [self.swNoTarget setOn:true];
+        self.tfTarget.enabled = false;
+    }
+    
+    if ([dictionary objectForKey:kCurrency])
+    {
+        self.currency = [dictionary objectForKey:kCurrency];
+        self.tfCurrency.text = self.currency;
+    }
 }
 
 -(void) toggleTargetEnabled:(id)sender

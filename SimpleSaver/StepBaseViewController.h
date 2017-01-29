@@ -14,10 +14,12 @@
 #import "Goal.h"
 #import "Colours.h"
 #import "Helpers.h"
+#import "EditProtocol.h"
 
 @interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource>
 @property (weak, nonatomic) IBOutlet SteppedControlPannelView *pannel;
 @property (nonatomic, strong) NSMutableDictionary *stepItems;
 -(ValidationResult *) validate;
 -(void) presentErrorDialogForValidationResult:(ValidationResult *)validationResult;
+@property (nonatomic, weak, readwrite) id <EditProtocol> delegate;
 @end

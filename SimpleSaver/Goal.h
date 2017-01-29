@@ -12,6 +12,7 @@ extern NSString * const kGoalName;
 extern NSString * const kIconUrl;
 extern NSString * const kSavingsTarget;
 extern NSString * const kCurrency;
+extern NSString * const kContributions;
 extern NSString * const kInitialContribution;
 extern NSString * const kStartDate;
 extern NSString * const kDeadlineDate;
@@ -22,8 +23,8 @@ extern NSString * const kDeadlineDate;
 // Deprecating soon
 -(id) initWithName:(NSString *)name savingsTarget:(NSNumber *)target forStartDate:(NSDate *)start andEndDate:(NSDate *)end;
 
-// Move towards this approach
 -(id) initWithDictionary:(NSDictionary *)dictionary;
+
 
 // Getters
 -(NSArray<GoalContribution *> *) getContributions;
@@ -32,22 +33,25 @@ extern NSString * const kDeadlineDate;
 -(NSDate *) getStartDate;
 -(NSDate *) getEndDate;
 -(NSString *)getIconUrl;
--(void) setIconUrl:(NSString *)url;
-
-// Operations
--(void) contribute:(GoalContribution *)contribution;
--(void) removeContributionAtIndex:(NSInteger)index;
--(void) ammendContributionAtIndex:(NSInteger)index newContrbution:(GoalContribution *)newContribution;
 -(NSNumber *) daysRemaining;
 -(NSNumber *) daysPast;
 -(NSNumber *) numberOfContributions;
 -(NSNumber *) totalContributed;
 -(NSNumber *) completionPercentage;
 -(NSNumber *) daysRemainingPercentage;
+-(NSDictionary *) dictionaryForGoal;
 -(BOOL) hasDeadline;
 -(BOOL) isOverdue;
 -(BOOL) hasTarget;
 
+// Setters
+-(void) setIconUrl:(NSString *)url;
+-(void) setContributons:(NSArray<GoalContribution *> *)contributions;
+
+// Operations
+-(void) contribute:(GoalContribution *)contribution;
+-(void) removeContributionAtIndex:(NSInteger)index;
+-(void) ammendContributionAtIndex:(NSInteger)index newContrbution:(GoalContribution *)newContribution;
 -(NSString *)description;
 
 -(BOOL) isEqual:(id)object;

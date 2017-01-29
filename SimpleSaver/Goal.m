@@ -21,6 +21,8 @@ NSString * const kIconUrl = @"iconUrl";
 @interface Goal ()
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *savingsTarget;
+@property (nonatomic, strong) NSString *currency;
+@property (nonatomic, strong) NSNumber *initialContribution;
 @property (nonatomic, strong) NSMutableArray<GoalContribution *> *contributions;
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
@@ -29,6 +31,7 @@ NSString * const kIconUrl = @"iconUrl";
 @implementation Goal
 
 
+// DEPRECATE!
 -(id) initWithName:(NSString *)name savingsTarget:(NSNumber *)target forStartDate:(NSDate *)start andEndDate:(NSDate *)end
 {
     self = [super init];
@@ -52,10 +55,64 @@ NSString * const kIconUrl = @"iconUrl";
     
     if (self)
     {
-        
+        self.name = [dictionary objectForKey:kGoalName];
+        self.iconUrl = [dictionary objectForKey:kIconUrl];
+        self.savingsTarget = [dictionary objectForKey:kSavingsTarget];
+        self.currency = [dictionary objectForKey:kCurrency];
+        self.initialContribution = [dictionary objectForKey:kInitialContribution];
+        self.contributions = [NSMutableArray array];
+        self.startDate = [dictionary objectForKey:kStartDate];
+        self.endDate = [dictionary objectForKey:kDeadlineDate];
     }
     
     return self;
+}
+
+-(NSDictionary *) dictionaryForGoal
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    
+    if (self.name)
+    {
+        [dictionary setObject:self.name forKey:kGoalName];
+    }
+    
+    if (self.iconUrl)
+    {
+        [dictionary setObject:self.iconUrl forKey:kIconUrl];
+    }
+    
+    if (self.savingsTarget)
+    {
+        [dictionary setObject:self.savingsTarget forKey:kSavingsTarget];
+    }
+    
+    if (self.currency)
+    {
+        [dictionary setObject:self.currency forKey:kCurrency];
+    }
+    
+    if(self.initialContribution)
+    {
+        [dictionary setObject:self.initialContribution forKey:kInitialContribution];
+    }
+    
+    if (self.contributions)
+    {
+        [dictionary setObject:self.contributions forKey:kContributions];
+    }
+    
+    if (self.startDate)
+    {
+        [dictionary setObject:self.startDate forKey:kStartDate];
+    }
+    
+    if (self.endDate)
+    {
+        [dictionary setObject:self.endDate forKey:kDeadlineDate];
+    }
+    
+    return [NSDictionary dictionaryWithDictionary:dictionary];
 }
 
 /**
@@ -66,6 +123,8 @@ NSString * const kIconUrl = @"iconUrl";
     [aCoder encodeObject:self.name forKey:kGoalName];
     [aCoder encodeObject:self.savingsTarget forKey:kSavingsTarget];
     [aCoder encodeObject:self.contributions forKey:kContributions];
+    [aCoder encodeObject:self.currency forKey:kCurrency];
+    [aCoder encodeObject:self.initialContribution forKey:kInitialContribution];
     [aCoder encodeObject:self.startDate forKey:kStartDate];
     [aCoder encodeObject:self.endDate forKey:kDeadlineDate];
     [aCoder encodeObject:self.iconUrl forKey:kIconUrl];
@@ -77,6 +136,8 @@ NSString * const kIconUrl = @"iconUrl";
     {
         self.name = [aDecoder decodeObjectForKey:kGoalName];
         self.savingsTarget = [aDecoder decodeObjectForKey:kSavingsTarget];
+        self.currency = [aDecoder decodeObjectForKey:kCurrency];
+        self.initialContribution = [aDecoder decodeObjectForKey:kInitialContribution];
         self.contributions = [aDecoder decodeObjectForKey:kContributions];
         self.startDate = [aDecoder decodeObjectForKey:kStartDate];
         self.endDate = [aDecoder decodeObjectForKey:kDeadlineDate];
@@ -104,7 +165,18 @@ NSString * const kIconUrl = @"iconUrl";
     
     return false;
 }
-
+-(void) setContributons:(NSArray<GoalContribution *> *)contributions
+{
+    if (!_contributions)
+    {
+        _contributions = [[NSMutableArray alloc] initWithCapacity:contributions.count];
+    }
+    
+    for(GoalContribution *contribution in contributions)
+    {
+        [_contributions addObject:contribution];
+    }
+}
 
 -(NSString *) getName
 {

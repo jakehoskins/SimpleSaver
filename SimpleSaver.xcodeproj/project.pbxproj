@@ -87,6 +87,7 @@
 		7A4225B81E3DEE6900949D64 /* StepFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepFourViewController.m; sourceTree = "<group>"; };
 		7A4225BA1E3E014600949D64 /* StepFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepFiveViewController.h; sourceTree = "<group>"; };
 		7A4225BB1E3E014600949D64 /* StepFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepFiveViewController.m; sourceTree = "<group>"; };
+		7A4225BD1E3E198F00949D64 /* EditProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProtocol.h; sourceTree = "<group>"; };
 		7A577BC11E19DEF70091C28F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		7A577BC21E19DEF70091C28F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleSaver.entitlements; sourceTree = "<group>"; };
@@ -280,6 +281,7 @@
 		7A7EFC701E34E2CA00D11435 /* New Goal Steps */ = {
 			isa = PBXGroup;
 			children = (
+				7A4225BD1E3E198F00949D64 /* EditProtocol.h */,
 				7A7EFC6D1E34E2C300D11435 /* SteppedNavigationViewController.h */,
 				7A7EFC6E1E34E2C300D11435 /* SteppedNavigationViewController.m */,
 				7A7EFC791E34F45B00D11435 /* StepBaseViewController.h */,

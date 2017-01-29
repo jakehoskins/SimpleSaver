@@ -42,6 +42,8 @@
     self.navigationItem.hidesBackButton = true;
 }
 
+
+
 -(SteppedNavigationViewController *) getNavigationController
 {
     if (self.navigationController)

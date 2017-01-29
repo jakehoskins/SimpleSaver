@@ -32,7 +32,27 @@
     self.imageUrl = [Constants getDefaultGoalIcon];
     [self.btnAvatar addTarget:self action:@selector(presentGoalAvatarSelector) forControlEvents:UIControlEventTouchUpInside];
     [self setUpGoalIconForImage:[UIImage imageNamed:self.imageUrl]];
+    
+    if (self.delegate)
+    {
+        [self loadEditItems:[self.delegate dictionaryForEdit]];
+    }
+}
 
+-(void) loadEditItems:(NSDictionary *)dictionary
+{
+    if (!dictionary) return;
+    
+    if ([dictionary objectForKey:kGoalName])
+    {
+        self.tfGoalName.text = [dictionary objectForKey:kGoalName];
+    }
+    
+    if ([dictionary objectForKey:kIconUrl])
+    {
+        self.imageUrl = [dictionary objectForKey:kIconUrl];
+        [self setUpGoalIconForImage:[UIImage imageNamed:self.imageUrl]];
+    }
 }
 
 -(void) setUpGoalIconForImage:(UIImage *)image

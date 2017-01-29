@@ -19,6 +19,28 @@
     [super viewDidLoad];
     self.dfDeadline.minimumDate = [Helpers addDaysToDate:[NSDate date] increaseBy:1];
     [self.swNoDeadline addTarget:self action:@selector(toggleDeadlineEnabled:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if (self.delegate)
+    {
+        [self loadEditItems:[self.delegate dictionaryForEdit]];
+    }
+    
+}
+
+-(void) loadEditItems:(NSDictionary *)dictionary
+{
+    if (!dictionary) return;
+    
+    if ([dictionary objectForKey:kSavingsTarget])
+    {
+        self.deadlineDate = [dictionary objectForKey:kDeadlineDate];
+        self.dfDeadline.date = self.deadlineDate;
+    }
+    else
+    {
+        [self.swNoDeadline setOn:true];
+        [self.dfDeadline setEnabled:false];
+    }
 }
 
 -(void) toggleDeadlineEnabled:(id) sender

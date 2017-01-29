@@ -17,6 +17,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (self.delegate)
+    {
+        [self loadEditItems:[self.delegate dictionaryForEdit]];
+    }
+}
+
+-(void) loadEditItems:(NSDictionary *)dictionary
+{
+    if (!dictionary) return;
+    
+    if ([dictionary objectForKey:kSavingsTarget])
+    {
+        self.initialContribution = [dictionary objectForKey:kInitialContribution];
+        self.tfInitialContribution.text = [NSString stringWithFormat:@"%.2f",self.initialContribution.doubleValue];
+    }
 }
 
 -(ValidationResult *)validate

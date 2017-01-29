@@ -6,8 +6,9 @@
 //  Copyright © 2017 Jake Hoskins. All rights reserved.
 //
 
-#import "SteppedNavigationViewController.h"
 #import <JKSteppedProgressBar/JKSteppedProgressBar-Swift.h>
+
+#import "SteppedNavigationViewController.h"
 #import "SteppedControlPannelView.h"
 #import "StepBaseViewController.h"
 #import "StepTwoViewController.h"
@@ -15,6 +16,8 @@
 #import "StepFourViewController.h"
 #import "StepFiveViewController.h"
 #import "Colours.h"
+#import "Constants.h"
+#import "SavingsModel.h"
 
 @interface SteppedNavigationViewController () 
 @property (nonatomic, strong) SteppedProgressBar *steppedProgress;
@@ -23,6 +26,16 @@
 
 @implementation SteppedNavigationViewController
 
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController isEditing:(BOOL)edit
+{
+    self = [super initWithRootViewController:rootViewController];
+    
+    if (self)
+    {
+        self.isEditing = edit;
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,14 +94,43 @@
     }
     else if(!nextViewController)
     {
-        // All Steps have finished create the goal and dismiss the view controller
-        NSLog(@"%s", __PRETTY_FUNCTION__);
+        [self complete];
     }
+}
+
+-(void) complete
+{
+    // All Steps have finished create the goal and dismiss the view controller
+    Goal *goal = [[Goal alloc] initWithDictionary:self.goalItems];
+    
+    if (!self.isEditing)
+    {
+        [[SavingsModel getInstance] addGoal:goal];
+    }
+    else
+    {
+        // Have to transfer goal contributions
+        NSDictionary* edit = [self dictionaryForEdit];
+        
+        if ([edit objectForKey:kContributions])
+        {
+            [goal setContributons:[edit objectForKey:kContributions]];
+        }
+        
+        [[SavingsModel getInstance] editGoalAtIndex:self.goalIndex forGoal:goal];
+    }
+    
+    [[SavingsModel getInstance] writeToUserDefaults];
+    
+    [self dismissViewControllerAnimated:true completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_GOAL_UPDATE object:self];
+    }];
+
 }
 
 -(UIViewController *) getNextViewController
 {
-    UIViewController *viewController;
+    StepBaseViewController *viewController;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     switch (self.steppedProgress.currentTab)
     {
@@ -109,6 +151,11 @@
         default:
             viewController = nil;
             break;
+    }
+    
+    if (viewController)
+    {
+        viewController.delegate = self;
     }
     
     return viewController;
@@ -147,4 +194,11 @@
     return NO;
 }
 
+#pragma EditProtocol
+-(NSDictionary *) dictionaryForEdit
+{
+    if (!self.isEditing) return nil;
+    
+    return self.goalItems;
+}
 @end

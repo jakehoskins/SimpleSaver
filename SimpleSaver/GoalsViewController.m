@@ -29,9 +29,6 @@
 // Mocks
 #import "GoalContribution.h"
 
-// Remove!
-#import "StepFourViewController.h"
-
 @interface GoalsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) Goal *lastSelectedGoal;
 @end
@@ -52,7 +49,7 @@
     
     if ([[SavingsModel getInstance] getGoals].count == 0)
     {
-        [self setupMockDataForSize:30];
+        [self setupMockDataForSize:12];
     }
     
     [self setupNavigationBarImage];
@@ -107,6 +104,7 @@
         NSDate *endDate = [Helpers addDaysToDate:startDate increaseBy:[Helpers randomNumberBetween:1.0f and:2880.0f].integerValue];
         Goal *goal = [[Goal alloc] initWithName:name savingsTarget:savingsTarget forStartDate:startDate andEndDate:endDate];
         
+        
         [goal setIconUrl:[self randomGoalmage]];
         
         [self setupMockContributionsForGoal:goal withNumberOfContributions:numContributions];
@@ -138,13 +136,23 @@
     }
 }
 
+-(void) presentCreateGoalViewControllerWithEditingGoal:(Goal *)goal
+{
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    StepOneViewController *cgvc = (StepOneViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepOneViewController"];
+    SteppedNavigationViewController *snvc = [[SteppedNavigationViewController alloc] initWithRootViewController:cgvc isEditing:true];
+    cgvc.delegate = snvc;
+    snvc.goalItems = [NSMutableDictionary dictionaryWithDictionary:[goal dictionaryForGoal]];
+    snvc.goalIndex = [[SavingsModel getInstance] indexForGoal:goal];
+    [self presentViewController:snvc animated:true completion:nil];
+}
+
 -(void) presentCreateGoalViewController
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     StepOneViewController *cgvc = (StepOneViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepOneViewController"];
-
-//    StepFourViewController *cgvc = (StepFourViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepFourViewController"];
-    SteppedNavigationViewController *snvc = [[SteppedNavigationViewController alloc] initWithRootViewController:cgvc];
+    SteppedNavigationViewController *snvc = [[SteppedNavigationViewController alloc] initWithRootViewController:cgvc isEditing:false];
     
     [self presentViewController:snvc animated:true completion:nil];
 }
@@ -236,16 +244,24 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        Goal *goal = [[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row];
+        
+        [self presentCreateGoalViewControllerWithEditingGoal:goal];
+    }];
+    editAction.backgroundColor = [UIColor pastelBlueColor];
+    
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         SavingsModel *model = [SavingsModel getInstance];
         Goal *goal = [[model getGoals] objectAtIndex:indexPath.row];
         [model removeGoal:goal];
         [model writeToUserDefaults];
         [self.tableView reloadData];
-    }
+    }];
+    deleteAction.backgroundColor = [UIColor redColor];
+    return @[deleteAction,editAction];
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
