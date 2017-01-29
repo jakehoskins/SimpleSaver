@@ -9,5 +9,6 @@
 #import "StepBaseViewController.h"
 
 @interface StepThreeViewController : StepBaseViewController
+@property (weak, nonatomic) IBOutlet UITextField *tfInitialContribution;
 
 @end

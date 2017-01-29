@@ -12,6 +12,8 @@
 #import "StepBaseViewController.h"
 #import "StepTwoViewController.h"
 #import "StepThreeViewController.h"
+#import "StepFourViewController.h"
+#import "StepFiveViewController.h"
 #import "Colours.h"
 
 @interface SteppedNavigationViewController () 
@@ -26,7 +28,7 @@
     [super viewDidLoad];
     CGRect progressFrame = CGRectMake(0, 10, self.navigationBar.frame.size.width, self.navigationBar.frame.size.height);
     
-    self.stepTitles = [NSArray arrayWithObjects:@"Step 1",@"Step 2", @"Step 3",@"Step 4", @"Step 5", nil];
+    self.stepTitles = [NSArray arrayWithObjects:@"Step 1",@"Step 2", @"Step 3",@"Step 4",@"Done", nil];
     self.steppedProgress = [[SteppedProgressBar alloc] initWithFrame:progressFrame];
     self.steppedProgress.circleSpacing = 45.0f;
     self.steppedProgress.backgroundColor = [UIColor clearColor];
@@ -79,6 +81,7 @@
     }
     else if(!nextViewController)
     {
+        // All Steps have finished create the goal and dismiss the view controller
         NSLog(@"%s", __PRETTY_FUNCTION__);
     }
 }
@@ -98,6 +101,10 @@
             viewController = (StepThreeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepThreeViewController"];
             break;
         case 3:
+            viewController = (StepFourViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepFourViewController"];
+            break;
+        case 4:
+            viewController = (StepFiveViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepFiveViewController"];
             break;
         default:
             viewController = nil;

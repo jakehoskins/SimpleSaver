@@ -21,6 +21,8 @@
 		7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716C1E194D4F00C99780 /* GoalTest.m */; };
 		7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716E1E19532800C99780 /* SavingsModelTest.m */; };
 		7A4225B61E3D1CA200949D64 /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */; };
+		7A4225B91E3DEE6900949D64 /* StepFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B81E3DEE6900949D64 /* StepFourViewController.m */; };
+		7A4225BC1E3E014600949D64 /* StepFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225BB1E3E014600949D64 /* StepFiveViewController.m */; };
 		7A577BC31E19DEF70091C28F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC21E19DEF70091C28F /* Helpers.m */; };
 		7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
 		7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
@@ -81,6 +83,10 @@
 		7A24716E1E19532800C99780 /* SavingsModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModelTest.m; sourceTree = "<group>"; };
 		7A4225B41E3D1CA200949D64 /* StepThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepThreeViewController.h; sourceTree = "<group>"; };
 		7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepThreeViewController.m; sourceTree = "<group>"; };
+		7A4225B71E3DEE6900949D64 /* StepFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepFourViewController.h; sourceTree = "<group>"; };
+		7A4225B81E3DEE6900949D64 /* StepFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepFourViewController.m; sourceTree = "<group>"; };
+		7A4225BA1E3E014600949D64 /* StepFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepFiveViewController.h; sourceTree = "<group>"; };
+		7A4225BB1E3E014600949D64 /* StepFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepFiveViewController.m; sourceTree = "<group>"; };
 		7A577BC11E19DEF70091C28F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		7A577BC21E19DEF70091C28F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		7A577BC41E1A72A70091C28F /* SimpleSaver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleSaver.entitlements; sourceTree = "<group>"; };
@@ -284,6 +290,10 @@
 				7A7EFC7D1E3511C800D11435 /* StepTwoViewController.m */,
 				7A4225B41E3D1CA200949D64 /* StepThreeViewController.h */,
 				7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */,
+				7A4225B71E3DEE6900949D64 /* StepFourViewController.h */,
+				7A4225B81E3DEE6900949D64 /* StepFourViewController.m */,
+				7A4225BA1E3E014600949D64 /* StepFiveViewController.h */,
+				7A4225BB1E3E014600949D64 /* StepFiveViewController.m */,
 			);
 			name = "New Goal Steps";
 			sourceTree = "<group>";
@@ -535,7 +545,9 @@
 				7A7EFC7E1E3511C800D11435 /* StepTwoViewController.m in Sources */,
 				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
 				7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */,
+				7A4225BC1E3E014600949D64 /* StepFiveViewController.m in Sources */,
 				7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */,
+				7A4225B91E3DEE6900949D64 /* StepFourViewController.m in Sources */,
 				7A2471401E1942BA00C99780 /* main.m in Sources */,
 				7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */,
 				7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */,

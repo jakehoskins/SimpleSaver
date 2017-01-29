@@ -12,7 +12,9 @@ extern NSString * const kGoalName;
 extern NSString * const kIconUrl;
 extern NSString * const kSavingsTarget;
 extern NSString * const kCurrency;
-
+extern NSString * const kInitialContribution;
+extern NSString * const kStartDate;
+extern NSString * const kDeadlineDate;
 @class GoalContribution;
 
 @interface Goal : NSObject

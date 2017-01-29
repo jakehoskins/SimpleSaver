@@ -11,9 +11,10 @@
 NSString * const kGoalName = @"name";
 NSString * const kSavingsTarget = @"savingsTarget";
 NSString * const kCurrency = @"currency";
+NSString * const kInitialContribution = @"initialContribution";
 NSString * const kContributions = @"contributions";
-NSString * const kStart = @"start";
-NSString * const kEnd = @"end";
+NSString * const kStartDate = @"start";
+NSString * const kDeadlineDate = @"end";
 NSString * const kIconUrl = @"iconUrl";
 
 
@@ -65,8 +66,8 @@ NSString * const kIconUrl = @"iconUrl";
     [aCoder encodeObject:self.name forKey:kGoalName];
     [aCoder encodeObject:self.savingsTarget forKey:kSavingsTarget];
     [aCoder encodeObject:self.contributions forKey:kContributions];
-    [aCoder encodeObject:self.startDate forKey:kStart];
-    [aCoder encodeObject:self.endDate forKey:kEnd];
+    [aCoder encodeObject:self.startDate forKey:kStartDate];
+    [aCoder encodeObject:self.endDate forKey:kDeadlineDate];
     [aCoder encodeObject:self.iconUrl forKey:kIconUrl];
 }
 
@@ -77,8 +78,8 @@ NSString * const kIconUrl = @"iconUrl";
         self.name = [aDecoder decodeObjectForKey:kGoalName];
         self.savingsTarget = [aDecoder decodeObjectForKey:kSavingsTarget];
         self.contributions = [aDecoder decodeObjectForKey:kContributions];
-        self.startDate = [aDecoder decodeObjectForKey:kStart];
-        self.endDate = [aDecoder decodeObjectForKey:kEnd];
+        self.startDate = [aDecoder decodeObjectForKey:kStartDate];
+        self.endDate = [aDecoder decodeObjectForKey:kDeadlineDate];
         self.iconUrl = [aDecoder decodeObjectForKey:kIconUrl];
     }
     return self;

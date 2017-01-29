@@ -29,6 +29,9 @@
 // Mocks
 #import "GoalContribution.h"
 
+// Remove!
+#import "StepFourViewController.h"
+
 @interface GoalsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) Goal *lastSelectedGoal;
 @end
@@ -139,7 +142,8 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     StepOneViewController *cgvc = (StepOneViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepOneViewController"];
-    
+
+//    StepFourViewController *cgvc = (StepFourViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepFourViewController"];
     SteppedNavigationViewController *snvc = [[SteppedNavigationViewController alloc] initWithRootViewController:cgvc];
     
     [self presentViewController:snvc animated:true completion:nil];
