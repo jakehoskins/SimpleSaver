@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger, ContributionType) {
 @property (nonatomic) ContributionType type;
 @property (nonatomic) AmmendmentType ammendmentType;
 @property (nonatomic, strong) GoalContribution *contribution;
+@property (nonatomic, strong) NSString *currency;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnContribute;
 @property (weak, nonatomic) IBOutlet AmountView *av;
 @property (weak, nonatomic) IBOutlet UITextView *tv;

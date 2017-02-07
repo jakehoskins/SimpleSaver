@@ -9,6 +9,7 @@
 #import "StepFourViewController.h"
 
 @interface StepFourViewController ()
+@property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *deadlineDate;
 @end
 
@@ -33,6 +34,7 @@
     
     if ([dictionary objectForKey:kSavingsTarget])
     {
+        self.startDate = [dictionary objectForKey:kStartDate];
         self.deadlineDate = [dictionary objectForKey:kDeadlineDate];
         self.dfDeadline.date = self.deadlineDate;
     }
@@ -51,13 +53,18 @@
 -(ValidationResult *) validate
 {
     
+    if (self.startDate)
+    {
+        [self.stepItems setObject:self.startDate  forKey:kStartDate];
+    } else
+    {
+        [self.stepItems setObject:[NSDate date] forKey:kStartDate];
+    }
+    
     if (!self.swNoDeadline.isOn)
     {
         self.deadlineDate = self.dfDeadline.date;
         [self.stepItems setObject:self.deadlineDate forKey:kDeadlineDate];
-        
-        // NOTE WHEN IN EDIT MODE WE DON'T ACTUALLY WANT TO SET THIS PROPERTY I.E KEEP AS IS!
-        [self.stepItems setObject:[NSDate date] forKey:kStartDate];
     }
     return [[ValidationResult alloc] initWithValidationCode:CODE_OK];
 }

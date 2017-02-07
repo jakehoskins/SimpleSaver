@@ -8,6 +8,8 @@
 
 #import "Goal.h"
 #import "GoalContribution.h"
+#import "Helpers.h"
+
 NSString * const kGoalName = @"name";
 NSString * const kSavingsTarget = @"savingsTarget";
 NSString * const kCurrency = @"currency";
@@ -43,6 +45,7 @@ NSString * const kIconUrl = @"iconUrl";
         self.startDate = start;
         self.endDate = end;
         self.contributions = [NSMutableArray array];
+        self.currency = [Helpers defaultCurrency];
     }
     
     return self;
@@ -114,7 +117,10 @@ NSString * const kIconUrl = @"iconUrl";
     
     return [NSDictionary dictionaryWithDictionary:dictionary];
 }
-
+-(NSString *) currency
+{
+    return _currency;
+}
 /**
  @discussion ensure new keys are encoded
  */

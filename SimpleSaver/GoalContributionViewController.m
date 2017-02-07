@@ -25,7 +25,8 @@
     
      [self updateUi];
     [self.av setShadowColour:[self themeColour]];
-    [self.av setCurrency:@"#"];
+    self.currency = (self.currency) ? self.currency : [Helpers defaultCurrency];
+    [self.av setCurrency:self.currency];
     self.av.delegate = self;
     [self.av reload];
     self.tv.layer.borderColor = [self themeColour].CGColor;
@@ -36,14 +37,14 @@
     
     if (self.type == ContributionTypeNormal)
     {
-        [self.av.tfAmount setText:[Helpers formatCurrency:@"#" forAmount:self.contribution.amount]];
+        [self.av.tfAmount setText:[Helpers formatCurrency:self.currency forAmount:self.contribution.amount]];
         [self.av.tfAmount setEnabled:false];
         [self.tv setText:self.contribution.notes];
         [self.tv setEditable:false];
     }
     else if(self.type == ContributionTypeCreateAmmendContribution)
     {
-        [self.av.tfAmount setText:[Helpers formatCurrency:@"#" forAmount:self.contribution.amount]];
+        [self.av.tfAmount setText:[Helpers formatCurrency:self.currency forAmount:self.contribution.amount]];
         [self.tv setText:self.contribution.notes];
     }
     

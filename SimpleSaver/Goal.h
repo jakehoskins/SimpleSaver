@@ -40,6 +40,7 @@ extern NSString * const kDeadlineDate;
 -(NSNumber *) completionPercentage;
 -(NSNumber *) daysRemainingPercentage;
 -(NSDictionary *) dictionaryForGoal;
+-(NSString *) currency;
 -(BOOL) hasDeadline;
 -(BOOL) isOverdue;
 -(BOOL) hasTarget;

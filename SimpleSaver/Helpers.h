@@ -17,4 +17,5 @@
 +(BOOL) isIpad;
 + (NSNumber *)randomNumberBetween:(float)smallNumber and:(float)bigNumber;
 +(NSDate *)addDaysToDate:(NSDate *)date increaseBy:(NSInteger)days;
++(NSString *) defaultCurrency;
 @end

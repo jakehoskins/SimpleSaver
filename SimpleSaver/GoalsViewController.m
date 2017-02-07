@@ -305,7 +305,7 @@
                 completion = [goal completionPercentage];
                 progress.progressTintColor  = [self colourForProgressValue:completion];
                 progress.progress = completion.doubleValue;
-                progress.indicatorTextLabel.text = [Helpers formatCurrency:@"#" forAmount:[goal totalContributed]];
+                progress.indicatorTextLabel.text = [Helpers formatCurrency:goal.currency forAmount:[goal totalContributed]];
                 break;
             case ProgressDaysVsDaysRemaining:
                 completion = [goal daysRemainingPercentage];

@@ -190,7 +190,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE, MMM d, yyyy h:mm a"];
     
-    amount.text = [Helpers formatCurrency:@"#" forAmount:contribution.amount];
+    amount.text = [Helpers formatCurrency:self.goal.currency forAmount:contribution.amount];
     date.text = [formatter stringFromDate:contribution.contributionDate].uppercaseString;
     date.font = [UIFont systemFontOfSize:10];
     date.textColor = [UIColor grayColor];

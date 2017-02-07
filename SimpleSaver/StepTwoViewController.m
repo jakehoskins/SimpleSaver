@@ -20,7 +20,7 @@
     [super viewDidLoad];
     [self.swNoTarget addTarget:self action:@selector(toggleTargetEnabled:) forControlEvents:UIControlEventValueChanged];
     self.tfCurrency.delegate = self;
-    
+    self.tfCurrency.placeholder = [Helpers defaultCurrency];
     if (self.delegate)
     {
         [self loadEditItems:[self.delegate dictionaryForEdit]];

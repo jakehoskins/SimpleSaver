@@ -153,6 +153,7 @@
     GoalContributionViewController *vc = (GoalContributionViewController *)[storyboard instantiateViewControllerWithIdentifier:@"GoalContributionViewController"];
     [vc setType:ContributionTypeCreateAddFunds];
     [vc setDelegate:self];
+    [vc setCurrency:self.goal.currency];
     [self presentViewController:vc];
 }
 
@@ -163,6 +164,7 @@
     GoalContributionViewController *vc = (GoalContributionViewController *)[storyboard instantiateViewControllerWithIdentifier:@"GoalContributionViewController"];
     [vc setType:ContributionTypeCreateRemoveFunds];
     [vc setDelegate:self];
+    [vc setCurrency:self.goal.currency];
     [self presentViewController:vc];
 }
 
@@ -211,12 +213,12 @@
 
 -(NSString *) getTotalContributedString
 {
-    return [Helpers formatCurrency:@"#" forAmount:[self.goal totalContributed]];
+    return [Helpers formatCurrency:self.goal.currency forAmount:[self.goal totalContributed]];
 }
 
 -(NSString *) getTotalRemainingString
 {
-    return [Helpers formatCurrency:@"#" forAmount:@([self.goal getSavingsTarget].doubleValue - [self.goal totalContributed].doubleValue)];
+    return [Helpers formatCurrency:self.goal.currency forAmount:@([self.goal getSavingsTarget].doubleValue - [self.goal totalContributed].doubleValue)];
 }
 
 -(NSString *) getTotalElapsedTimeString
@@ -293,7 +295,7 @@
 {
     if ([self.goal hasTarget])
     {
-        return [Helpers formatCurrency:@"Savings Target: #" forAmount:[self.goal getSavingsTarget]];
+        return [Helpers formatCurrency:[NSString stringWithFormat:@"Savings Target: %@", self.goal.currency] forAmount:[self.goal getSavingsTarget]];
     }
     
     return ((GoalContributedView *)sender).lblTopChild.text;

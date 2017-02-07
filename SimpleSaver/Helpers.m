@@ -84,6 +84,20 @@
     return formatted;
 }
 
++(NSString *) defaultCurrency
+{
+    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
+    [currencyFormatter setLocale:[NSLocale currentLocale]];
+    [currencyFormatter setMaximumFractionDigits:2];
+    [currencyFormatter setMinimumFractionDigits:2];
+    [currencyFormatter setAlwaysShowsDecimalSeparator:YES];
+    [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    NSNumber *someAmount = [NSNumber numberWithFloat:5.00];
+    NSString *currencyString = [currencyFormatter stringFromNumber:someAmount];
+    
+    return [currencyString substringToIndex:1];
+}
 
 +(BOOL) containsOnlyNumericals:(NSString *) str {    
     NSScanner *scanner = [NSScanner scannerWithString:str];
