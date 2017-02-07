@@ -151,7 +151,15 @@
     NSMutableArray *entries = [[NSMutableArray alloc] init];
     double movingContributed = 0.0f;
     // Add a contribution for the initial setup so that we have data point as savings target
-    [entries addObject:[[ChartDataEntry alloc] initWithX:[goal getStartDate].timeIntervalSince1970 y:[goal getSavingsTarget].doubleValue]];
+    if ([goal initialContribution] <= 0)
+    {
+        [entries addObject:[[ChartDataEntry alloc] initWithX:[goal getStartDate].timeIntervalSince1970 y:[goal getSavingsTarget].doubleValue]];
+    }
+    else
+    {
+        [entries addObject:[[ChartDataEntry alloc] initWithX:[goal getStartDate].timeIntervalSince1970 y:[goal initialContribution].doubleValue]];
+    }
+    
     for (GoalContribution *contribution in [goal getContributions])
     {
         movingContributed += [contribution amount].doubleValue;

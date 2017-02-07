@@ -204,7 +204,7 @@ NSString * const kIconUrl = @"iconUrl";
 // Add caching
 -(NSNumber *) totalContributed
 {
-    double total = 0;
+    double total = self.initialContribution.doubleValue;
     
     for (GoalContribution *contribution in self.contributions)
     {
@@ -256,6 +256,11 @@ NSString * const kIconUrl = @"iconUrl";
 -(BOOL) hasTarget
 {
     return (self.savingsTarget);
+}
+
+-(NSNumber *) initialContribution
+{
+    return self.initialContribution;
 }
 
 -(BOOL) isOverdue

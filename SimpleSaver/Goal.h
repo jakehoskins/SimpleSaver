@@ -38,6 +38,7 @@ extern NSString * const kDeadlineDate;
 -(NSNumber *) numberOfContributions;
 -(NSNumber *) totalContributed;
 -(NSNumber *) completionPercentage;
+-(NSNumber *) initialContribution;
 -(NSNumber *) daysRemainingPercentage;
 -(NSDictionary *) dictionaryForGoal;
 -(NSString *) currency;
