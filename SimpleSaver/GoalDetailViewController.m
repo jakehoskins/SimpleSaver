@@ -43,14 +43,13 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self refreshScrollView];
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
+    [self refreshScrollView];
     [self reloadForGoalChange];
 }
 -(void)initUi

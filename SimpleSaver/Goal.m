@@ -260,7 +260,7 @@ NSString * const kIconUrl = @"iconUrl";
 
 -(NSNumber *) initialContribution
 {
-    return self.initialContribution;
+    return _initialContribution;
 }
 
 -(BOOL) isOverdue
