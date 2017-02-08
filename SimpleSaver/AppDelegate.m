@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MKiCloudSync.h"
+#import "iRate.h"
 
 @interface AppDelegate ()
 
@@ -15,9 +16,16 @@
 
 @implementation AppDelegate
 
++ (void)initializeIRate
+{
+    //configure iRate
+    [iRate sharedInstance].daysUntilPrompt = 14;
+    [iRate sharedInstance].usesUntilPrompt = 7;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AppDelegate initializeIRate];
 //    [MKiCloudSync startWithPrefix:@"ss-"];
     return YES;
 }

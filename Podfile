@@ -13,6 +13,7 @@ target 'SimpleSaver' do
   pod "MBCircularProgressBar"
   pod 'Charts'
   pod 'JKSteppedProgressBar'
+  pod 'iRate'
 
   target 'SimpleSaverTests' do
     inherit! :search_paths

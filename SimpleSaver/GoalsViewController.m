@@ -45,11 +45,11 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.backgroundColour = [UIColor colorWithPatternImage:[UIImage imageNamed:BACKGROUND_IMAGE]];
     self.tableView.backgroundColor = self.backgroundColour;
-//    [[SavingsModel getInstance] resetUserDefaults];
+    [[SavingsModel getInstance] resetUserDefaults];
     
     if ([[SavingsModel getInstance] getGoals].count == 0)
     {
-//        [self setupMockDataForSize:12];
+        [self setupMockDataForSize:12];
     }
     
     [self setupNavigationBarImage];
