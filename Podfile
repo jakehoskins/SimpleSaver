@@ -14,6 +14,7 @@ target 'SimpleSaver' do
   pod 'Charts'
   pod 'JKSteppedProgressBar'
   pod 'iRate'
+  pod 'SKSplashView'
 
   target 'SimpleSaverTests' do
     inherit! :search_paths

@@ -57,7 +57,7 @@
 // Override to validate within our step
 -(ValidationResult *) validate
 {
-    if (self.tfCurrency.text.length == 0 || (self.tfTarget.text.length == 0 && !self.swNoTarget.isOn))
+    if (self.tfTarget.text.length == 0 && !self.swNoTarget.isOn)
     {
         return [[ValidationResult alloc] initWithValidationCode:CODE_EMPTY_FIELD];
     }
@@ -68,7 +68,7 @@
     }
     
     // Set any ui objects to our properties
-    self.currency =self.tfCurrency.text;
+    self.currency = (self.tfCurrency.text.length > 0) ? self.tfTarget.text : self.tfCurrency.placeholder;
     
     if (!self.swNoTarget.isOn)
     {

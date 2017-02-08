@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutIconItemFile</key>
+			<string>open-new-goal</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>New Goal</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.jakehoskins.simplesaver.newgoal</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>key</key>
+				<string>value</string>
+			</dict>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

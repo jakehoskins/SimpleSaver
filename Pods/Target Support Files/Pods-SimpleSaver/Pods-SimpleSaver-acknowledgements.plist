@@ -402,6 +402,16 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2014 Sachin Kesiraju</string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>SKSplashView</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright (C) 2014 by Giacomo Saccardo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

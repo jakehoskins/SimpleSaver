@@ -347,6 +347,10 @@ THE SOFTWARE.
 
 
 
+## SKSplashView
+
+Copyright 2014 Sachin Kesiraju
+
 ## UIActivityIndicator-for-SDWebImage
 
 Copyright (C) 2014 by Giacomo Saccardo

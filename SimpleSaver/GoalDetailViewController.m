@@ -23,8 +23,6 @@
 #import "ChartsBuilder.h"
 #import "Constants.h"
 
-
-
 @interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent>
 @property (nonatomic, strong) Goal *goal;
 @property GoalContributedViewTouchState state;
