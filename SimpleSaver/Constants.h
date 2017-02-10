@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define SHOULD_SHOW_IAP YES
+#define SHOULD_FOLLOW_IAP_RULES NO
 
 @interface Constants : NSObject
 // Generics
@@ -17,4 +19,6 @@ extern NSString * const NOTIFICATION_GOAL_UPDATE;
 
 +(NSArray *)getGoalIconURLSet;
 +(NSString *)getDefaultGoalIcon;
++(void) writeToUnlimtedGoals:(BOOL) hasPaid;
++(BOOL) hasPurchasedUnlimitedGoals;
 @end

@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AvePurchaseButton/AvePurchaseButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Charts/Charts.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Colours/Colours.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JKSteppedProgressBar/JKSteppedProgressBar.framework"
@@ -97,6 +98,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/iRate/iRate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AvePurchaseButton/AvePurchaseButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Charts/Charts.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Colours/Colours.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JKSteppedProgressBar/JKSteppedProgressBar.framework"

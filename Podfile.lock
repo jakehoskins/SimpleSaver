@@ -1,4 +1,5 @@
 PODS:
+  - AvePurchaseButton (1.0.4)
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
@@ -20,6 +21,7 @@ PODS:
   - YLProgressBar (3.10.0)
 
 DEPENDENCIES:
+  - AvePurchaseButton (~> 1.0)
   - Charts
   - Colours
   - iRate
@@ -31,6 +33,7 @@ DEPENDENCIES:
   - YLProgressBar (~> 3.10.0)
 
 SPEC CHECKSUMS:
+  AvePurchaseButton: 08264076d1c5fbda949fd6f5faaab1325e77418b
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   iRate: adae3f183d83c925ac42d7a2e86e89e838963f57
@@ -43,6 +46,6 @@ SPEC CHECKSUMS:
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
   YLProgressBar: 40a0627522dc1b536e02bf082a1b1ce3085b4668
 
-PODFILE CHECKSUM: 802bab18a0182668e33fc7807e9baa23cce6ed9c
+PODFILE CHECKSUM: 825b7e00b56ddbc94efc4b7302dc70d7ff57f15e
 
 COCOAPODS: 1.1.1

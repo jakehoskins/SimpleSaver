@@ -10,6 +10,7 @@
 #import "GoalsViewController.h"
 #import "StepOneViewController.h"
 #import "GoalDetailViewController.h"
+#import "IAPPurchaseTableViewController.h"
 
 // Views
 #import "YLProgressBar.h"
@@ -40,6 +41,9 @@
     [super viewDidLoad];
     self.createGoal.target = self;
     self.createGoal.action = @selector(presentCreateGoalViewController);
+    self.btnInAppPurchase.target = self;
+    self.btnInAppPurchase.action = @selector(presentInAppPurchaseViewController);
+    [self hideIAPIfNeeded];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -83,6 +87,15 @@
 }
 #pragma mark private
 
+-(void) hideIAPIfNeeded
+{
+    // No .hidden property on UIBarButtonIte
+    if (!SHOULD_SHOW_IAP)
+    {
+        self.btnInAppPurchase.enabled = false;
+        self.btnInAppPurchase.tintColor = [UIColor clearColor];
+    }
+}
 -(void)setupNavigationBarImage
 {
     UIImage *image = [UIImage imageNamed:@"simplesaver"];
@@ -136,9 +149,17 @@
     }
 }
 
+-(void) presentInAppPurchaseViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    IAPPurchaseTableViewController *iap = (IAPPurchaseTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"IAPPurchaseTableViewController"];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:iap];
+    
+    [self presentViewController:navigation animated:true completion:nil];
+}
+
 -(void) presentCreateGoalViewControllerWithEditingGoal:(Goal *)goal
 {
-
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     StepOneViewController *cgvc = (StepOneViewController *)[storyboard instantiateViewControllerWithIdentifier:@"StepOneViewController"];
     SteppedNavigationViewController *snvc = [[SteppedNavigationViewController alloc] initWithRootViewController:cgvc isEditing:true];
