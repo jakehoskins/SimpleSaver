@@ -26,10 +26,11 @@
 #import "Constants.h"
 #import "Helpers.h"
 #import "Colours.h"
+#import "Skin.h"
 
 // Mocks
 #import "GoalContribution.h"
-
+#import "Skin.h"
 @interface GoalsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) Goal *lastSelectedGoal;
 @end
@@ -47,7 +48,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.backgroundColour = [UIColor colorWithPatternImage:[UIImage imageNamed:BACKGROUND_IMAGE]];
+    self.backgroundColour = [UIColor colorWithPatternImage:[Skin backgroundImageForMaster]];
     self.tableView.backgroundColor = self.backgroundColour;
     [[SavingsModel getInstance] resetUserDefaults];
     
@@ -89,7 +90,7 @@
 
 -(void) hideIAPIfNeeded
 {
-    // No .hidden property on UIBarButtonIte
+    // No .hidden property on UIBarButtonItem
     if (!SHOULD_SHOW_IAP)
     {
         self.btnInAppPurchase.enabled = false;
@@ -296,6 +297,7 @@
     Goal *goal = [[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row];
     
     goalName.text = [goal getName];
+    goalName.textColor = [Skin defaultTextColourForDarkBackground];
     
     
     cell.backgroundColor = [UIColor clearColor];
@@ -307,11 +309,26 @@
 
 -(void) setupGoalIconForGoal:(Goal *)goal forImageView:(NZCircularImageView *)imageView
 {
+    UIImage *image = [UIImage imageNamed:[goal getIconUrl]];
+    
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClipToMask(context, rect, image.CGImage);
+    CGContextSetFillColorWithColor(context, [Skin goalIconColour].CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    imageView.image = [UIImage imageWithCGImage:img.CGImage
+                                                scale:1.0 orientation: UIImageOrientationDownMirrored];
+    
+    imageView.backgroundColor = [Skin goalIconBackgroundColour];
     imageView.borderColor = [UIColor goldColor];
     imageView.borderWidth = @(1.0f);
-    imageView.image = [UIImage imageNamed:[goal getIconUrl]];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
+
 
 -(void) setupProgressIndicatorForIndicator:(YLProgressBar *)progress forContext:(ProgressIndicator)indicator forGoal:(Goal *)goal
 {
@@ -325,15 +342,19 @@
             case ProgressContributedVsTotal:
                 completion = [goal completionPercentage];
                 progress.progressTintColor  = [self colourForProgressValue:completion];
+                progress.trackTintColor = [Skin progressBarBackgroundColour];
                 progress.progress = completion.doubleValue;
                 progress.indicatorTextLabel.text = [Helpers formatCurrency:goal.currency forAmount:[goal totalContributed]];
+                progress.indicatorTextLabel.textColor = [Skin defaultTextColourForDarkBackground];
                 break;
             case ProgressDaysVsDaysRemaining:
                 completion = [goal daysRemainingPercentage];
                 progress.progressTintColor  = [self colourForProgressValue:completion];
+                progress.trackTintColor = [Skin progressBarBackgroundColour];
                 progress.progress = completion.doubleValue;
                 progress.indicatorTextLabel.text = [NSString stringWithFormat:@"%2.f days remaining.", [goal daysRemaining].doubleValue];
                 progress.indicatorTextLabel.font = [UIFont systemFontOfSize:14.0f];
+                progress.indicatorTextLabel.textColor = [Skin defaultTextColourForDarkBackground];
                 break;
             default:
                 break;
@@ -377,28 +398,13 @@
     {
         return [UIColor dangerColor];
     }
-    else if(value.doubleValue < 0.2f)
+    else if(value.doubleValue < 0.5f)
     {
-        return [UIColor salmonColor];
+        return [UIColor emeraldColor];
     }
-    else if(value.doubleValue < 0.4f)
+    else
     {
-        return [UIColor robinEggColor];
-    }
-    else if(value.doubleValue < 0.6f)
-    {
-        return [UIColor skyBlueColor];
-    }
-    else if(value.doubleValue < 0.8f)
-    {
-        return [UIColor honeydewColor];
-    }
-    else if(value.doubleValue < 1.00f)
-    {
-        return [UIColor pastelGreenColor];
-    } else
-    {
-        return [UIColor successColor];
+        return [UIColor emeraldColor];
     }
 }
 

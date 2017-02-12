@@ -16,6 +16,7 @@
 // Util
 #import "Helpers.h"
 #import "Colours.h"
+#import "Skin.h"
 
 // Views
 #import "MBCircularProgressBarView.h"
@@ -46,10 +47,11 @@
     MBCircularProgressBarView *circular = [[MBCircularProgressBarView alloc] init];
     double completion = [goal completionPercentage].doubleValue * 100;
     circular.backgroundColor = [UIColor clearColor];
-    circular.progressColor = [UIColor seafoamColor];
-    circular.progressStrokeColor = [UIColor seafoamColor];
+    circular.progressColor = [UIColor emeraldColor];
+    circular.progressStrokeColor = [UIColor emeraldColor];
     circular.emptyLineColor = [UIColor easterPinkColor];
     circular.emptyLineStrokeColor = [UIColor easterPinkColor];
+    circular.fontColor = [Skin defaultTextColourForDarkBackground];
     circular.value = (completion > 100.0f) ? 100.0f : completion;
     
     return circular;
@@ -123,8 +125,8 @@
     
     LineChartDataSet *set = [[LineChartDataSet alloc] initWithValues:entries label:@"Contributions"];
     NSArray *gradientColors = @[
-                                (id)[UIColor seafoamColor].CGColor,
-                                (id)[UIColor honeydewColor].CGColor
+                                (id)[UIColor emeraldColor].CGColor,
+                                (id)[UIColor emeraldColor].CGColor
                                 ];
     CGGradientRef gradient = CGGradientCreateWithColors(nil, (CFArrayRef)gradientColors, nil);
     

@@ -12,6 +12,7 @@
 #import "GoalContribution.h"
 #import "AmountView.h"
 #import "Helpers.h"
+#import "Skin.h"
 
 @interface GoalContributionViewController () <AmountViewDatasource>
 
@@ -31,7 +32,7 @@
     [self.av reload];
     self.tv.layer.borderColor = [self themeColour].CGColor;
     self.tv.layer.borderWidth = 3.0f;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
     [self.btnContribute addTarget:self action:@selector(confirmContribution) forControlEvents:UIControlEventTouchUpInside];
     [self.btnContribute setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     

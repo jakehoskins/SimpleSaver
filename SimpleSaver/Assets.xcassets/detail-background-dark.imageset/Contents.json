@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "detailed-background.png",
+      "filename" : "concrete_wall.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "concrete_wall_@2X.png",
       "scale" : "2x"
     },
     {

@@ -60,7 +60,7 @@
     self.goalIcon.borderColor = [UIColor goldColor];
     self.goalIcon.borderWidth = @(4.0f);
     [self.goalIcon setImage:image];
-    self.goalIcon.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:BACKGROUND_IMAGE]];
+    self.goalIcon.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForMaster]];
 }
 
 -(void) presentGoalAvatarSelector
