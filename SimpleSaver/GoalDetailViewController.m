@@ -22,6 +22,7 @@
 #import "Helpers.h"
 #import "ChartsBuilder.h"
 #import "Constants.h"
+#import "Skin.h"
 
 @interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent>
 @property (nonatomic, strong) Goal *goal;
@@ -52,7 +53,7 @@
 }
 -(void)initUi
 {
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
     self.gcv.delegate = self;
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;

@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "NZCircularImageView.h"
 #import "Colours.h"
+#import "Skin.h"
 @interface GoalIconTableViewController ()
 @property (nonatomic, strong) NSArray *loadedImages;
 @property (nonatomic, strong) UIImage *imageViewBackground;
@@ -26,7 +27,7 @@
     
     [self loadImages];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
     
     self.title = @"Select Goal Icon";
 }
@@ -40,7 +41,7 @@
 {
     NSMutableArray *icons = [NSMutableArray arrayWithCapacity:[Constants getGoalIconURLSet].count];
     
-    self.imageViewBackground = [UIImage imageNamed:BACKGROUND_IMAGE];
+    self.imageViewBackground = [Skin backgroundImageForMaster];
     
     for (NSString *url in [Constants getGoalIconURLSet])
     {

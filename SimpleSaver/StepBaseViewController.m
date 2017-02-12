@@ -12,6 +12,8 @@
 
 // View
 #import "SteppedControlPannelView.h"
+#import "Skin.h"
+
 @interface StepBaseViewController ()
 
 @end
@@ -34,7 +36,7 @@
     self.pannel.datasource = self;
     [self.pannel reloadDatasource];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];

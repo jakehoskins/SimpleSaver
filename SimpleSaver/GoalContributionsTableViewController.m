@@ -18,6 +18,7 @@
 #import "Helpers.h"
 #import "Colours.h"
 #import "Constants.h"
+#import "Skin.h"
 
 @interface GoalContributionsTableViewController () <ContributionEvent>
 
@@ -31,7 +32,7 @@
     [self.tableView setSeparatorColor:[UIColor blackColor]];
     self.title = @"Contributions";
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"detail-background"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
 }
 
 -(void) viewDidAppear:(BOOL)animated

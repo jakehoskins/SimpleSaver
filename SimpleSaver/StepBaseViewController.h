@@ -15,6 +15,7 @@
 #import "Colours.h"
 #import "Helpers.h"
 #import "EditProtocol.h"
+#import "Skin.h"
 
 @interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource>
 @property (weak, nonatomic) IBOutlet SteppedControlPannelView *pannel;

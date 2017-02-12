@@ -54,6 +54,7 @@
 		7A1A8AD21E85F2B800CC602A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714A1E1942BA00C99780 /* Assets.xcassets */; };
 		7A1A8AD31E85F2B800CC602A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2471471E1942BA00C99780 /* Main.storyboard */; };
 		7A1A8ADB1E85F2D800CC602A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */; };
+		7A04A6211E50E82100BBCE45 /* Skin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A6201E50E82100BBCE45 /* Skin.m */; };
 		7A2471401E1942BA00C99780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24713F1E1942BA00C99780 /* main.m */; };
 		7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471421E1942BA00C99780 /* AppDelegate.m */; };
 		7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
@@ -118,6 +119,8 @@
 		7A1A8A9F1E85F10500CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7A1A8AD91E85F2B800CC602A /* SimpleSaverDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaverDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1A8ADA1E85F2B800CC602A /* SimpleSaver copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSaver copy-Info.plist"; path = "/Users/jakehoskins/Documents/workspace/SimpleSaver/SimpleSaver copy-Info.plist"; sourceTree = "<absolute>"; };
+		7A04A61F1E50E82100BBCE45 /* Skin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skin.h; sourceTree = "<group>"; };
+		7A04A6201E50E82100BBCE45 /* Skin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skin.m; sourceTree = "<group>"; };
 		7A24713B1E1942BA00C99780 /* SimpleSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A24713F1E1942BA00C99780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2471411E1942BA00C99780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */,
 				7A7EFC7F1E393FF600D11435 /* GoalIconTableViewController.h */,
 				7A7EFC801E393FF600D11435 /* GoalIconTableViewController.m */,
+				7A04A61F1E50E82100BBCE45 /* Skin.h */,
+				7A04A6201E50E82100BBCE45 /* Skin.m */,
 			);
 			name = "General View Controller";
 			sourceTree = "<group>";
@@ -834,6 +839,7 @@
 				7A4225B91E3DEE6900949D64 /* StepFourViewController.m in Sources */,
 				7A2471401E1942BA00C99780 /* main.m in Sources */,
 				7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */,
+				7A04A6211E50E82100BBCE45 /* Skin.m in Sources */,
 				7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */,
 				7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */,
 				7A8967AF1E759706004F1549 /* SettingsTableViewController.m in Sources */,
