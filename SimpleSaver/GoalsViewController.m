@@ -64,6 +64,7 @@
         [self setupMockDataForSize:[[UserSettings getInstance] numberOfStubs]];
     }
     
+    
     [self setupNavigationBarImage];
 }
 
@@ -404,15 +405,11 @@
 {
     if (value.doubleValue <= 0.f)
     {
-        return [UIColor dangerColor];
-    }
-    else if(value.doubleValue < 0.5f)
-    {
-        return [UIColor emeraldColor];
+        return [Skin defaultRedColour];
     }
     else
     {
-        return [UIColor emeraldColor];
+        return [Skin defaultGreenColour];
     }
 }
 

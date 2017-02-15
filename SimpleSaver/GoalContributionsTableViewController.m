@@ -103,17 +103,16 @@
 {
     if (amount.doubleValue < 0)
     {
-        return [UIColor salmonColor];
+        return [Skin defaultRedColour];
     }
     else
     {
-        return [UIColor seafoamColor];
+        return [Skin defaultGreenColour];
     }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return YES if you want the specified item to be editable.
     return YES;
 }
 

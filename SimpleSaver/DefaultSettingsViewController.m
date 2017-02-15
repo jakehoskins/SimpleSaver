@@ -9,6 +9,7 @@
 #import "DefaultSettingsViewController.h"
 #import "Constants.h"
 #import "UserSettings.h"
+#import "Skin.h"
 
 @implementation DefaultSettingsViewController
 
@@ -16,9 +17,11 @@
 {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:BACKGROUND_IMAGE]];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
     UIBarButtonItem *btnClose = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleDone target:self action:@selector(dismissViewController)];
     self.navigationItem.rightBarButtonItem = btnClose;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.showCreditsFooter = NO;
 }

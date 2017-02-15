@@ -25,6 +25,8 @@
     UIBarButtonItem *btnClose = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleDone target:self action:@selector(dismissViewController)];
     self.navigationItem.rightBarButtonItem = btnClose;
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self setupNavigationBarImage];
     
     _busyIndexes = [NSMutableIndexSet new];

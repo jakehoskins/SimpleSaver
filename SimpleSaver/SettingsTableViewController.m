@@ -8,6 +8,7 @@
 
 #import "SettingsTableViewController.h"
 #import "SettingsConfig.h"
+#import "Skin.h"
 
 @interface SettingsTableViewController ()
 
@@ -18,10 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:BACKGROUND_IMAGE]];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
     
     UIBarButtonItem *btnClose = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleDone target:self action:@selector(dismissViewController)];
     self.navigationItem.rightBarButtonItem = btnClose;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self setupNavigationBarImage];
     

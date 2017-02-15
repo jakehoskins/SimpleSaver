@@ -14,6 +14,8 @@
 // Model
 #import "SavingsModel.h"
 #import "GoalContribution.h"
+#import "Skin.h"
+
 // Views
 #import "GoalContributedView.h"
 
@@ -59,6 +61,13 @@
     self.scrollView.showsHorizontalScrollIndicator = false;
     self.scrollView.pagingEnabled = true;
     self.scrollView.delegate = self;
+    
+    self.btnAddFunds.backgroundColor = [Skin defaultGreenColour];
+    self.btnRemoveFunds.backgroundColor = [Skin defaultRedColour];
+    self.btnViewContributions.backgroundColor = [Skin defaultBlueColour];
+    [self.btnAddFunds setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.btnRemoveFunds setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.btnViewContributions setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
 -(void)refreshScrollView
@@ -125,14 +134,6 @@
     [self.btnAddFunds addTarget:self action:@selector(presentAddFundsView) forControlEvents:UIControlEventTouchUpInside];
     [self.btnRemoveFunds addTarget:self action:@selector(presentRemoveFundsView) forControlEvents:UIControlEventTouchUpInside];
     [self.btnViewContributions addTarget:self action:@selector(presentViewContributionsView) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.btnAddFunds setBackgroundColor:[UIColor seafoamColor]];
-    [self.btnRemoveFunds setBackgroundColor:[UIColor salmonColor]];
-    [self.btnViewContributions setBackgroundColor:[UIColor robinEggColor]];
-    
-    [self.btnAddFunds setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.btnRemoveFunds setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.btnViewContributions setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     if (self.goal)
     {

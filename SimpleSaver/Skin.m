@@ -8,7 +8,63 @@
 
 #import "Skin.h"
 #import "Colours.h"
+#import "UserSettings.h"
+
 @implementation Skin
+
++(UIColor *) defaultGreenColour
+{
+    UIColor *colour = nil;
+    
+    switch ([Skin currentSkin])
+    {
+        case LightSkin:
+            colour = [UIColor successColor];
+            break;
+        case DarkSkin:
+            colour = [UIColor emeraldColor];
+        default:
+            break;
+    }
+    
+    return colour;
+}
+
++(UIColor *) defaultBlueColour
+{
+    UIColor *colour = nil;
+    
+    switch ([Skin currentSkin])
+    {
+        case LightSkin:
+            colour = [UIColor pastelBlueColor];
+            break;
+        case DarkSkin:
+            colour = [UIColor indigoColor];
+        default:
+            break;
+    }
+    
+    return colour;
+}
+
++(UIColor *) defaultRedColour
+{
+    UIColor *colour = nil;
+    
+    switch ([Skin currentSkin])
+    {
+        case LightSkin:
+            colour = [UIColor salmonColor];
+            break;
+        case DarkSkin:
+            colour = [UIColor brickRedColor];
+        default:
+            break;
+    }
+    
+    return colour;
+}
 
 +(UIColor *) goalIconColour
 {
@@ -67,7 +123,7 @@
     switch ([Skin currentSkin])
     {
         case LightSkin:
-            colour = [UIColor clearColor];
+            colour = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
             break;
         case DarkSkin:
             colour = [UIColor colorWithPatternImage:[Skin backgroundImageForDetail]];
@@ -113,9 +169,10 @@
     return image;
 }
 
+
 +(SkinType) currentSkin
 {
-    return LightSkin;
+    return ([[UserSettings getInstance] darkSkinEnabled]) ? DarkSkin : LightSkin;
 }
 
 @end
