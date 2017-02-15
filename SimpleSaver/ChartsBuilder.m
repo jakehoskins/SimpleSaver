@@ -47,10 +47,10 @@
     MBCircularProgressBarView *circular = [[MBCircularProgressBarView alloc] init];
     double completion = [goal completionPercentage].doubleValue * 100;
     circular.backgroundColor = [UIColor clearColor];
-    circular.progressColor = [UIColor emeraldColor];
-    circular.progressStrokeColor = [UIColor emeraldColor];
-    circular.emptyLineColor = [UIColor easterPinkColor];
-    circular.emptyLineStrokeColor = [UIColor easterPinkColor];
+    circular.progressColor = [Skin defaultGreenColour];
+    circular.progressStrokeColor = [Skin defaultGreenColour ];
+    circular.emptyLineColor = [Skin defaultRedColour];
+    circular.emptyLineStrokeColor = [Skin defaultRedColour];
     circular.fontColor = [Skin defaultTextColourForDarkBackground];
     circular.value = (completion > 100.0f) ? 100.0f : completion;
     

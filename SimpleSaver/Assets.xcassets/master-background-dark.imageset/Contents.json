@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "noisy_net.png",
+      "filename" : "master-background-dark.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "noisy_net_@2X.png",
+      "filename" : "master-background-dark@2x.png",
       "scale" : "2x"
     },
     {
