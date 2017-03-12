@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, ProgressIndicator)
 
 @property (nonatomic, strong) UIColor *backgroundColour;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *createGoal;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnInAppPurchase;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnSettings;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, weak, readwrite) id <GoalSelection> delegate;
 @end

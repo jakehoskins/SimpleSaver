@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MKiCloudSync.h"
 #import "iRate.h"
+#import "UserSettings.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
     // Override point for customization after application launch.
     [AppDelegate initializeIRate];
 //    [MKiCloudSync startWithPrefix:@"ss-"];

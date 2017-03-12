@@ -11,6 +11,7 @@
 #import "StepOneViewController.h"
 #import "GoalDetailViewController.h"
 #import "IAPPurchaseTableViewController.h"
+#import "SettingsTableViewController.h"
 
 // Views
 #import "YLProgressBar.h"
@@ -26,6 +27,7 @@
 #import "Constants.h"
 #import "Helpers.h"
 #import "Colours.h"
+#import "UserSettings.h"
 
 // Mocks
 #import "GoalContribution.h"
@@ -41,19 +43,24 @@
     [super viewDidLoad];
     self.createGoal.target = self;
     self.createGoal.action = @selector(presentCreateGoalViewController);
-    self.btnInAppPurchase.target = self;
-    self.btnInAppPurchase.action = @selector(presentInAppPurchaseViewController);
-    [self hideIAPIfNeeded];
+    self.btnSettings.target = self;
+    self.btnSettings.action = @selector(presentSettingsViewController);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.backgroundColour = [UIColor colorWithPatternImage:[UIImage imageNamed:BACKGROUND_IMAGE]];
     self.tableView.backgroundColor = self.backgroundColour;
-    [[SavingsModel getInstance] resetUserDefaults];
     
-    if ([[SavingsModel getInstance] getGoals].count == 0)
+    NSLog(@"App using debug settings: %i", [UserSettings isUsingDebugSettings]);
+    
+    if ([[UserSettings getInstance] shouldResetUserDefaultsOnLoad])
     {
-        [self setupMockDataForSize:12];
+        [[SavingsModel getInstance] resetUserDefaults];
+    }
+    
+    if ([[UserSettings getInstance] shouldUseStubbs] && [[UserSettings getInstance] shouldResetUserDefaultsOnLoad])
+    {
+        [self setupMockDataForSize:[[UserSettings getInstance] numberOfStubs]];
     }
     
     [self setupNavigationBarImage];
@@ -87,15 +94,6 @@
 }
 #pragma mark private
 
--(void) hideIAPIfNeeded
-{
-    // No .hidden property on UIBarButtonIte
-    if (!SHOULD_SHOW_IAP)
-    {
-        self.btnInAppPurchase.enabled = false;
-        self.btnInAppPurchase.tintColor = [UIColor clearColor];
-    }
-}
 -(void)setupNavigationBarImage
 {
     UIImage *image = [UIImage imageNamed:@"simplesaver"];
@@ -126,6 +124,7 @@
     }
     
     [model writeToUserDefaults];
+    [model assertContext];
 }
 
 -(NSString *)randomGoalmage
@@ -154,6 +153,15 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     IAPPurchaseTableViewController *iap = (IAPPurchaseTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"IAPPurchaseTableViewController"];
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:iap];
+    
+    [self presentViewController:navigation animated:true completion:nil];
+}
+
+-(void) presentSettingsViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SettingsTableViewController *svc = (SettingsTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SettingsTableViewController"];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:svc];
     
     [self presentViewController:navigation animated:true completion:nil];
 }

@@ -6,6 +6,7 @@ PODS:
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
+  - InAppSettingsKit (2.8.1)
   - iRate (1.11.7)
   - JKSteppedProgressBar (0.2.1)
   - MBCircularProgressBar (0.3.5)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - AvePurchaseButton (~> 1.0)
   - Charts
   - Colours
+  - InAppSettingsKit
   - iRate
   - JKSteppedProgressBar
   - MBCircularProgressBar
@@ -36,6 +38,7 @@ SPEC CHECKSUMS:
   AvePurchaseButton: 08264076d1c5fbda949fd6f5faaab1325e77418b
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+  InAppSettingsKit: 94d2fba3ccd700fc4e32c6d09fabcc0af2426744
   iRate: adae3f183d83c925ac42d7a2e86e89e838963f57
   JKSteppedProgressBar: 17ac37cfd9c7d4054dac3180de19eceba6781f99
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
   YLProgressBar: 40a0627522dc1b536e02bf082a1b1ce3085b4668
 
-PODFILE CHECKSUM: 825b7e00b56ddbc94efc4b7302dc70d7ff57f15e
+PODFILE CHECKSUM: bf86dabe7c36299449d3817130d9116850ffafd6
 
 COCOAPODS: 1.1.1

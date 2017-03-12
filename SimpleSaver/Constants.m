@@ -7,11 +7,14 @@
 //
 
 #import "Constants.h"
+#import "UserSettings.h"
 
 NSString * const BACKGROUND_IMAGE = @"background";
 NSString * const NOTIFICATION_NEW_GOAL_SELECTED = @"new_goal_selected";             // Tell our detail views to change goal context
 NSString * const NOTIFICATION_GOAL_UPDATE = @"goal_updated";                        // If goal has been edited update master table
 NSString * const IAP_UNLIMITED_GOALS_KEY = @"~Tu17b^m5J1U5r9O:Y8bDkE!2GvvFZ";       // For NSUserDefaults checking if purchased
+NSString * const SETTINGS_CONFIG_PATH = @"SettingsConfig";
+NSString * const NAVIGATION_BAR_IMAGE = @"simplesaver";
 
 @implementation Constants
 
@@ -35,11 +38,11 @@ NSString * const IAP_UNLIMITED_GOALS_KEY = @"~Tu17b^m5J1U5r9O:Y8bDkE!2GvvFZ";   
 
 +(BOOL) hasPurchasedUnlimitedGoals
 {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:IAP_UNLIMITED_GOALS_KEY] == nil) return SHOULD_FOLLOW_IAP_RULES;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:IAP_UNLIMITED_GOALS_KEY] == nil) return [[UserSettings getInstance] shouldAdhereToIap];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:IAP_UNLIMITED_GOALS_KEY]) return true;
     
-    return SHOULD_FOLLOW_IAP_RULES;
+    return [[UserSettings getInstance] shouldAdhereToIap];
 }
 
 @end

@@ -9,6 +9,51 @@
 /* Begin PBXBuildFile section */
 		6035CB383A087E8A0377793C /* Pods_SimpleSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */; };
 		7409605A0CFA3B3E16C7D745 /* Pods_SimpleSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FC6F41981832F2A3F5A8BC /* Pods_SimpleSaverTests.framework */; };
+		7A1A8AA11E85F1BF00CC602A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A8A9F1E85F10500CC602A /* Settings.bundle */; };
+		7A1A8AA51E85F2B800CC602A /* IAPPurchaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACACDEB1E4E682D009DFC64 /* IAPPurchaseTableViewController.m */; };
+		7A1A8AA61E85F2B800CC602A /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0E56A1E4B6AEE006BAF75 /* LaunchViewController.m */; };
+		7A1A8AA71E85F2B800CC602A /* GoalContributionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */; };
+		7A1A8AA81E85F2B800CC602A /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC721E34E30E00D11435 /* StepOneViewController.m */; };
+		7A1A8AA91E85F2B800CC602A /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471671E19440E00C99780 /* Goal.m */; };
+		7A1A8AAA1E85F2B800CC602A /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
+		7A1A8AAB1E85F2B800CC602A /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE371E2C27A30048DEDE /* AmountView.m */; };
+		7A1A8AAC1E85F2B800CC602A /* SimpleSaverSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */; };
+		7A1A8AAD1E85F2B800CC602A /* SavingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471641E1943C300C99780 /* SavingsModel.m */; };
+		7A1A8AAE1E85F2B800CC602A /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */; };
+		7A1A8AB01E85F2B800CC602A /* GoalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B601E1C4195000CCF8A /* GoalDetailViewController.m */; };
+		7A1A8AB11E85F2B800CC602A /* GoalContributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */; };
+		7A1A8AB21E85F2B800CC602A /* SteppedControlPannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC751E34F34900D11435 /* SteppedControlPannelView.m */; };
+		7A1A8AB31E85F2B800CC602A /* GoalIconTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC801E393FF600D11435 /* GoalIconTableViewController.m */; };
+		7A1A8AB41E85F2B800CC602A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471421E1942BA00C99780 /* AppDelegate.m */; };
+		7A1A8AB51E85F2B800CC602A /* StepBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC7A1E34F45B00D11435 /* StepBaseViewController.m */; };
+		7A1A8AB61E85F2B800CC602A /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC21E19DEF70091C28F /* Helpers.m */; };
+		7A1A8AB71E85F2B800CC602A /* DefaultSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E9FF61E8085F10087E731 /* DefaultSettingsViewController.m */; };
+		7A1A8AB81E85F2B800CC602A /* XAxisMonthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */; };
+		7A1A8AB91E85F2B800CC602A /* SettingsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8967B31E7598C9004F1549 /* SettingsConfig.m */; };
+		7A1A8ABA1E85F2B800CC602A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F70A01E22FA680008AA7A /* Constants.m */; };
+		7A1A8ABB1E85F2B800CC602A /* StepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC7D1E3511C800D11435 /* StepTwoViewController.m */; };
+		7A1A8ABC1E85F2B800CC602A /* GoalContribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716A1E19449800C99780 /* GoalContribution.m */; };
+		7A1A8ABD1E85F2B800CC602A /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA45EE31E847E3D00436EDB /* UserSettings.m */; };
+		7A1A8ABE1E85F2B800CC602A /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */; };
+		7A1A8ABF1E85F2B800CC602A /* StepFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225BB1E3E014600949D64 /* StepFiveViewController.m */; };
+		7A1A8AC01E85F2B800CC602A /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
+		7A1A8AC11E85F2B800CC602A /* StepFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B81E3DEE6900949D64 /* StepFourViewController.m */; };
+		7A1A8AC21E85F2B800CC602A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24713F1E1942BA00C99780 /* main.m */; };
+		7A1A8AC31E85F2B800CC602A /* SteppedNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC6E1E34E2C300D11435 /* SteppedNavigationViewController.m */; };
+		7A1A8AC41E85F2B800CC602A /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
+		7A1A8AC51E85F2B800CC602A /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
+		7A1A8AC61E85F2B800CC602A /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8967AE1E759706004F1549 /* SettingsTableViewController.m */; };
+		7A1A8AC71E85F2B800CC602A /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */; };
+		7A1A8AC91E85F2B800CC602A /* Pods_SimpleSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */; };
+		7A1A8ACA1E85F2B800CC602A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A90D4691E4E729500B2C750 /* StoreKit.framework */; };
+		7A1A8ACD1E85F2B800CC602A /* SteppedControlPannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7EFC771E34F35A00D11435 /* SteppedControlPannelView.xib */; };
+		7A1A8ACE1E85F2B800CC602A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */; };
+		7A1A8ACF1E85F2B800CC602A /* SettingsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8967B01E75983E004F1549 /* SettingsConfig.plist */; };
+		7A1A8AD01E85F2B800CC602A /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
+		7A1A8AD11E85F2B800CC602A /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8EE391E2C27C80048DEDE /* AmountView.xib */; };
+		7A1A8AD21E85F2B800CC602A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714A1E1942BA00C99780 /* Assets.xcassets */; };
+		7A1A8AD31E85F2B800CC602A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2471471E1942BA00C99780 /* Main.storyboard */; };
+		7A1A8ADB1E85F2D800CC602A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */; };
 		7A2471401E1942BA00C99780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24713F1E1942BA00C99780 /* main.m */; };
 		7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471421E1942BA00C99780 /* AppDelegate.m */; };
 		7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
@@ -26,6 +71,7 @@
 		7A577BC31E19DEF70091C28F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC21E19DEF70091C28F /* Helpers.m */; };
 		7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BC61E1A74770091C28F /* MKiCloudSync.m */; };
 		7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
+		7A6E9FF71E8085F10087E731 /* DefaultSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E9FF61E8085F10087E731 /* DefaultSettingsViewController.m */; };
 		7A6F70A11E22FA680008AA7A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F70A01E22FA680008AA7A /* Constants.m */; };
 		7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC6E1E34E2C300D11435 /* SteppedNavigationViewController.m */; };
 		7A7EFC731E34E30E00D11435 /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC721E34E30E00D11435 /* StepOneViewController.m */; };
@@ -37,7 +83,11 @@
 		7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */; };
 		7A853B611E1C4195000CCF8A /* GoalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B601E1C4195000CCF8A /* GoalDetailViewController.m */; };
 		7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */; };
+		7A8967AF1E759706004F1549 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8967AE1E759706004F1549 /* SettingsTableViewController.m */; };
+		7A8967B11E75983E004F1549 /* SettingsConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8967B01E75983E004F1549 /* SettingsConfig.plist */; };
+		7A8967B41E7598C9004F1549 /* SettingsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8967B31E7598C9004F1549 /* SettingsConfig.m */; };
 		7A90D46A1E4E729500B2C750 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A90D4691E4E729500B2C750 /* StoreKit.framework */; };
+		7AA45EE41E847E3D00436EDB /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA45EE31E847E3D00436EDB /* UserSettings.m */; };
 		7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */; };
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
 		7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
@@ -64,6 +114,10 @@
 		21BCA3BCB39F8D4FD125F66A /* Pods-SimpleSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.release.xcconfig"; sourceTree = "<group>"; };
 		77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		7A1A8A9F1E85F10500CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		7A1A8AD91E85F2B800CC602A /* SimpleSaverDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaverDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1A8ADA1E85F2B800CC602A /* SimpleSaver copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSaver copy-Info.plist"; path = "/Users/jakehoskins/Documents/workspace/SimpleSaver/SimpleSaver copy-Info.plist"; sourceTree = "<absolute>"; };
 		7A24713B1E1942BA00C99780 /* SimpleSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A24713F1E1942BA00C99780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2471411E1942BA00C99780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +152,8 @@
 		7A577BC61E1A74770091C28F /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		7A577BCA1E1A7E510091C28F /* ValidationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationResult.h; sourceTree = "<group>"; };
 		7A577BCB1E1A7E510091C28F /* ValidationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationResult.m; sourceTree = "<group>"; };
+		7A6E9FF51E8085F10087E731 /* DefaultSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultSettingsViewController.h; sourceTree = "<group>"; };
+		7A6E9FF61E8085F10087E731 /* DefaultSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSettingsViewController.m; sourceTree = "<group>"; };
 		7A6F709F1E22FA680008AA7A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		7A6F70A01E22FA680008AA7A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		7A7EFC6D1E34E2C300D11435 /* SteppedNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteppedNavigationViewController.h; sourceTree = "<group>"; };
@@ -119,7 +175,14 @@
 		7A853B601E1C4195000CCF8A /* GoalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalDetailViewController.m; sourceTree = "<group>"; };
 		7A853B621E1C4428000CCF8A /* SimpleSaverSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSaverSplitViewController.h; sourceTree = "<group>"; };
 		7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSaverSplitViewController.m; sourceTree = "<group>"; };
+		7A8967AD1E759706004F1549 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		7A8967AE1E759706004F1549 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		7A8967B01E75983E004F1549 /* SettingsConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SettingsConfig.plist; sourceTree = "<group>"; };
+		7A8967B21E7598C9004F1549 /* SettingsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsConfig.h; sourceTree = "<group>"; };
+		7A8967B31E7598C9004F1549 /* SettingsConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsConfig.m; sourceTree = "<group>"; };
 		7A90D4691E4E729500B2C750 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7AA45EE21E847E3D00436EDB /* UserSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettings.h; sourceTree = "<group>"; };
+		7AA45EE31E847E3D00436EDB /* UserSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettings.m; sourceTree = "<group>"; };
 		7AAE7F281E2AE076009C8561 /* XAxisMonthFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAxisMonthFormatter.h; sourceTree = "<group>"; };
 		7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAxisMonthFormatter.m; sourceTree = "<group>"; };
 		7AAF11951E25703A00A27733 /* GoalContributedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalContributedView.xib; sourceTree = "<group>"; };
@@ -144,6 +207,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7A1A8AC81E85F2B800CC602A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1A8AC91E85F2B800CC602A /* Pods_SimpleSaver.framework in Frameworks */,
+				7A1A8ACA1E85F2B800CC602A /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A2471381E1942BA00C99780 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +257,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A1A8A9B1E85F0FF00CC602A /* DebugSettings */ = {
+			isa = PBXGroup;
+			children = (
+				7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */,
+			);
+			path = DebugSettings;
+			sourceTree = "<group>";
+		};
+		7A1A8A9E1E85F10500CC602A /* DefaultSettings */ = {
+			isa = PBXGroup;
+			children = (
+				7A1A8A9F1E85F10500CC602A /* Settings.bundle */,
+			);
+			path = DefaultSettings;
+			sourceTree = "<group>";
+		};
 		7A2471321E1942BA00C99780 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +281,7 @@
 				7A24713C1E1942BA00C99780 /* Products */,
 				049F9FB38BBA82F25E3597BC /* Pods */,
 				4758C1B9D072A667755324B7 /* Frameworks */,
+				7A1A8ADA1E85F2B800CC602A /* SimpleSaver copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +290,7 @@
 			children = (
 				7A24713B1E1942BA00C99780 /* SimpleSaver.app */,
 				7A2471541E1942BA00C99780 /* SimpleSaverTests.xctest */,
+				7A1A8AD91E85F2B800CC602A /* SimpleSaverDebug.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +365,7 @@
 				7A90D4671E4E71C900B2C750 /* Master */,
 				7A90D4681E4E71D600B2C750 /* Detail */,
 				7A90D4661E4E71B500B2C750 /* IAP */,
+				7A8967AC1E7596EE004F1549 /* Settings */,
 				7A2471441E1942BA00C99780 /* CreateGoalViewController.h */,
 				7A2471451E1942BA00C99780 /* CreateGoalViewController.m */,
 				7A853B621E1C4428000CCF8A /* SimpleSaverSplitViewController.h */,
@@ -309,6 +400,24 @@
 				7A4225BB1E3E014600949D64 /* StepFiveViewController.m */,
 			);
 			name = "New Goal Steps";
+			sourceTree = "<group>";
+		};
+		7A8967AC1E7596EE004F1549 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7A1A8A9B1E85F0FF00CC602A /* DebugSettings */,
+				7A1A8A9E1E85F10500CC602A /* DefaultSettings */,
+				7A8967AD1E759706004F1549 /* SettingsTableViewController.h */,
+				7A8967AE1E759706004F1549 /* SettingsTableViewController.m */,
+				7A6E9FF51E8085F10087E731 /* DefaultSettingsViewController.h */,
+				7A6E9FF61E8085F10087E731 /* DefaultSettingsViewController.m */,
+				7A8967B21E7598C9004F1549 /* SettingsConfig.h */,
+				7A8967B31E7598C9004F1549 /* SettingsConfig.m */,
+				7A8967B01E75983E004F1549 /* SettingsConfig.plist */,
+				7AA45EE21E847E3D00436EDB /* UserSettings.h */,
+				7AA45EE31E847E3D00436EDB /* UserSettings.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		7A90D4661E4E71B500B2C750 /* IAP */ = {
@@ -357,6 +466,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7A1A8AA21E85F2B800CC602A /* SimpleSaverDebug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A1A8AD61E85F2B800CC602A /* Build configuration list for PBXNativeTarget "SimpleSaverDebug" */;
+			buildPhases = (
+				7A1A8AA31E85F2B800CC602A /* [CP] Check Pods Manifest.lock */,
+				7A1A8AA41E85F2B800CC602A /* Sources */,
+				7A1A8AC81E85F2B800CC602A /* Frameworks */,
+				7A1A8ACB1E85F2B800CC602A /* Resources */,
+				7A1A8AD41E85F2B800CC602A /* [CP] Embed Pods Frameworks */,
+				7A1A8AD51E85F2B800CC602A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSaverDebug;
+			productName = SimpleSaver;
+			productReference = 7A1A8AD91E85F2B800CC602A /* SimpleSaverDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7A24713A1E1942BA00C99780 /* SimpleSaver */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A24715D1E1942BA00C99780 /* Build configuration list for PBXNativeTarget "SimpleSaver" */;
@@ -407,6 +536,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jake Hoskins";
 				TargetAttributes = {
+					7A1A8AA21E85F2B800CC602A = {
+						DevelopmentTeam = 2L29NL2BW9;
+					};
 					7A24713A1E1942BA00C99780 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 2L29NL2BW9;
@@ -443,17 +575,35 @@
 			targets = (
 				7A24713A1E1942BA00C99780 /* SimpleSaver */,
 				7A2471531E1942BA00C99780 /* SimpleSaverTests */,
+				7A1A8AA21E85F2B800CC602A /* SimpleSaverDebug */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7A1A8ACB1E85F2B800CC602A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1A8ADB1E85F2D800CC602A /* Settings.bundle in Resources */,
+				7A1A8ACD1E85F2B800CC602A /* SteppedControlPannelView.xib in Resources */,
+				7A1A8ACE1E85F2B800CC602A /* LaunchScreen.storyboard in Resources */,
+				7A1A8ACF1E85F2B800CC602A /* SettingsConfig.plist in Resources */,
+				7A1A8AD01E85F2B800CC602A /* GoalContributedView.xib in Resources */,
+				7A1A8AD11E85F2B800CC602A /* AmountView.xib in Resources */,
+				7A1A8AD21E85F2B800CC602A /* Assets.xcassets in Resources */,
+				7A1A8AD31E85F2B800CC602A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A2471391E1942BA00C99780 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1A8AA11E85F1BF00CC602A /* Settings.bundle in Resources */,
 				7A7EFC781E34F35A00D11435 /* SteppedControlPannelView.xib in Resources */,
 				7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */,
+				7A8967B11E75983E004F1549 /* SettingsConfig.plist in Resources */,
 				7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */,
 				7AE8EE3A1E2C27C80048DEDE /* AmountView.xib in Resources */,
 				7A24714B1E1942BA00C99780 /* Assets.xcassets in Resources */,
@@ -531,6 +681,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7A1A8AA31E85F2B800CC602A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A1A8AD41E85F2B800CC602A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A1A8AD51E85F2B800CC602A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		86E34D475F4F76A28848D800 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,6 +759,47 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7A1A8AA41E85F2B800CC602A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1A8AA51E85F2B800CC602A /* IAPPurchaseTableViewController.m in Sources */,
+				7A1A8AA61E85F2B800CC602A /* LaunchViewController.m in Sources */,
+				7A1A8AA71E85F2B800CC602A /* GoalContributionsTableViewController.m in Sources */,
+				7A1A8AA81E85F2B800CC602A /* StepOneViewController.m in Sources */,
+				7A1A8AA91E85F2B800CC602A /* Goal.m in Sources */,
+				7A1A8AAA1E85F2B800CC602A /* CreateGoalViewController.m in Sources */,
+				7A1A8AAB1E85F2B800CC602A /* AmountView.m in Sources */,
+				7A1A8AAC1E85F2B800CC602A /* SimpleSaverSplitViewController.m in Sources */,
+				7A1A8AAD1E85F2B800CC602A /* SavingsModel.m in Sources */,
+				7A1A8AAE1E85F2B800CC602A /* StepThreeViewController.m in Sources */,
+				7A1A8AB01E85F2B800CC602A /* GoalDetailViewController.m in Sources */,
+				7A1A8AB11E85F2B800CC602A /* GoalContributionViewController.m in Sources */,
+				7A1A8AB21E85F2B800CC602A /* SteppedControlPannelView.m in Sources */,
+				7A1A8AB31E85F2B800CC602A /* GoalIconTableViewController.m in Sources */,
+				7A1A8AB41E85F2B800CC602A /* AppDelegate.m in Sources */,
+				7A1A8AB51E85F2B800CC602A /* StepBaseViewController.m in Sources */,
+				7A1A8AB61E85F2B800CC602A /* Helpers.m in Sources */,
+				7A1A8AB71E85F2B800CC602A /* DefaultSettingsViewController.m in Sources */,
+				7A1A8AB81E85F2B800CC602A /* XAxisMonthFormatter.m in Sources */,
+				7A1A8AB91E85F2B800CC602A /* SettingsConfig.m in Sources */,
+				7A1A8ABA1E85F2B800CC602A /* Constants.m in Sources */,
+				7A1A8ABB1E85F2B800CC602A /* StepTwoViewController.m in Sources */,
+				7A1A8ABC1E85F2B800CC602A /* GoalContribution.m in Sources */,
+				7A1A8ABD1E85F2B800CC602A /* UserSettings.m in Sources */,
+				7A1A8ABE1E85F2B800CC602A /* ChartsBuilder.m in Sources */,
+				7A1A8ABF1E85F2B800CC602A /* StepFiveViewController.m in Sources */,
+				7A1A8AC01E85F2B800CC602A /* MKiCloudSync.m in Sources */,
+				7A1A8AC11E85F2B800CC602A /* StepFourViewController.m in Sources */,
+				7A1A8AC21E85F2B800CC602A /* main.m in Sources */,
+				7A1A8AC31E85F2B800CC602A /* SteppedNavigationViewController.m in Sources */,
+				7A1A8AC41E85F2B800CC602A /* GoalContributedView.m in Sources */,
+				7A1A8AC51E85F2B800CC602A /* ValidationResult.m in Sources */,
+				7A1A8AC61E85F2B800CC602A /* SettingsTableViewController.m in Sources */,
+				7A1A8AC71E85F2B800CC602A /* GoalsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A2471371E1942BA00C99780 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,10 +821,13 @@
 				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
 				7A7EFC7B1E34F45B00D11435 /* StepBaseViewController.m in Sources */,
 				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
+				7A6E9FF71E8085F10087E731 /* DefaultSettingsViewController.m in Sources */,
 				7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */,
+				7A8967B41E7598C9004F1549 /* SettingsConfig.m in Sources */,
 				7A6F70A11E22FA680008AA7A /* Constants.m in Sources */,
 				7A7EFC7E1E3511C800D11435 /* StepTwoViewController.m in Sources */,
 				7A24716B1E19449800C99780 /* GoalContribution.m in Sources */,
+				7AA45EE41E847E3D00436EDB /* UserSettings.m in Sources */,
 				7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */,
 				7A4225BC1E3E014600949D64 /* StepFiveViewController.m in Sources */,
 				7A577BC71E1A74770091C28F /* MKiCloudSync.m in Sources */,
@@ -597,6 +836,7 @@
 				7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */,
 				7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */,
 				7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */,
+				7A8967AF1E759706004F1549 /* SettingsTableViewController.m in Sources */,
 				7A853B5E1E1B11E7000CCF8A /* GoalsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +880,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7A1A8AD71E85F2B800CC602A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
+				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				INFOPLIST_FILE = "SimpleSaver copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehoskins.SimpleSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A1A8AD81E85F2B800CC602A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
+				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				INFOPLIST_FILE = "SimpleSaver copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehoskins.SimpleSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7A24715B1E1942BA00C99780 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -791,6 +1061,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7A1A8AD61E85F2B800CC602A /* Build configuration list for PBXNativeTarget "SimpleSaverDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A1A8AD71E85F2B800CC602A /* Debug */,
+				7A1A8AD81E85F2B800CC602A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7A2471361E1942BA00C99780 /* Build configuration list for PBXProject "SimpleSaver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -106,11 +106,7 @@ NSString * const kProfile = @"ss-user-profile";
 -(void) resetUserDefaults
 {
     // Should re-init our self to update our context
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self assertContext];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:kProfile];
 }
 
 @end

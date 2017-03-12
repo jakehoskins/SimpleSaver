@@ -39,6 +39,7 @@
 {
     [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
 }
+
 -(void)setupNavigationBarImage
 {
     UIImage *image = [UIImage imageNamed:@"simplesaver"];

@@ -16,6 +16,7 @@ target 'SimpleSaver' do
   pod 'iRate'
   pod 'SKSplashView'
   pod 'AvePurchaseButton', '~> 1.0'
+  pod 'InAppSettingsKit'
 
   target 'SimpleSaverTests' do
     inherit! :search_paths

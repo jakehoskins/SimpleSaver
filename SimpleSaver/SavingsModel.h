@@ -16,6 +16,8 @@ extern NSString * const kProfile;
 
 + (id)getInstance;
 
+- (void) assertContext;
+
 -(void) addGoal:(Goal *) goal;
 
 -(void) removeGoal:(Goal *)goal;
