@@ -22,6 +22,8 @@
     {
         [self loadEditItems:[self.delegate dictionaryForEdit]];
     }
+    
+    self.lblInfo.textColor = [Skin defaultTextColour];
 }
 
 -(void) loadEditItems:(NSDictionary *)dictionary
@@ -33,6 +35,7 @@
         self.initialContribution = [dictionary objectForKey:kInitialContribution];
         self.tfInitialContribution.text = [NSString stringWithFormat:@"%.2f",self.initialContribution.doubleValue];
     }
+
 }
 
 -(ValidationResult *)validate

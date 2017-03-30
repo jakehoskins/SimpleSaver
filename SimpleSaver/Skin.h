@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, SkinType) {
 +(UIColor *) defaultBlueColour;
 +(UIColor *) defaultRedColour;
 +(UIColor *) goalIconColour;
-+(UIColor *) defaultTextColourForDarkBackground;
++(UIColor *) defaultTextColour;
 +(UIColor *) progressBarBackgroundColour;
 +(UIColor *) goalIconBackgroundColour;
 +(UIImage *) backgroundImageForMaster;

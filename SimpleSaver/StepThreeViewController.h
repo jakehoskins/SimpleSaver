@@ -10,5 +10,6 @@
 
 @interface StepThreeViewController : StepBaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *tfInitialContribution;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 
 @end

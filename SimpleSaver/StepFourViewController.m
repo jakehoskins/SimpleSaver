@@ -26,6 +26,8 @@
         [self loadEditItems:[self.delegate dictionaryForEdit]];
     }
     
+    self.lblInfo.textColor = [Skin defaultTextColour];
+    self.lblNoDeadline.textColor = [Skin defaultTextColour];
 }
 
 -(void) loadEditItems:(NSDictionary *)dictionary

@@ -14,10 +14,6 @@
 #import "Colours.h"
 #import "Helpers.h"
 
-// remove
-#import "SavingsModel.h"
-#import "Constants.h"
-
 
 @interface StepOneViewController () <GoalIconTableViewDelegate>
 @property (nonatomic, strong) NSString *goalName;
@@ -37,6 +33,7 @@
     {
         [self loadEditItems:[self.delegate dictionaryForEdit]];
     }
+    self.lblInfo.textColor = [Skin defaultTextColour];
 }
 
 -(void) loadEditItems:(NSDictionary *)dictionary

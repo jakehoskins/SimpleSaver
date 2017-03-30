@@ -11,5 +11,7 @@
 @interface StepFourViewController : StepBaseViewController
 @property (weak, nonatomic) IBOutlet UIDatePicker *dfDeadline;
 @property (weak, nonatomic) IBOutlet UISwitch *swNoDeadline;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
+@property (weak, nonatomic) IBOutlet UILabel *lblNoDeadline;
 
 @end

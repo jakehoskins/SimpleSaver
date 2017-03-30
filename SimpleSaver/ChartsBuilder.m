@@ -51,7 +51,7 @@
     circular.progressStrokeColor = [Skin defaultGreenColour ];
     circular.emptyLineColor = [Skin defaultRedColour];
     circular.emptyLineStrokeColor = [Skin defaultRedColour];
-    circular.fontColor = [Skin defaultTextColourForDarkBackground];
+    circular.fontColor = [Skin defaultTextColour];
     circular.value = (completion > 100.0f) ? 100.0f : completion;
     
     return circular;
@@ -66,8 +66,10 @@
     chartView.scaleYEnabled = false;
     chartView.xAxis.valueFormatter = [[XAxisMonthFormatter alloc] init];
     chartView.gridBackgroundColor = [UIColor blackColor];
+    chartView.xAxis.labelTextColor = [Skin defaultTextColour];
+    chartView.leftAxis.labelTextColor = [Skin defaultTextColour];
+    chartView.descriptionTextColor = [Skin defaultTextColour];
     chartView.descriptionText = @"Total Contributions";
-
     return chartView;
 }
 
@@ -79,8 +81,11 @@
     chartView.scaleYEnabled = false;
     chartView.xAxis.valueFormatter = [[XAxisMonthFormatter alloc] init];
     chartView.gridBackgroundColor = [UIColor blackColor];
+    chartView.xAxis.labelTextColor = [Skin defaultTextColour];
+    chartView.leftAxis.labelTextColor = [Skin defaultTextColour];
+    chartView.descriptionTextColor = [Skin defaultTextColour];
     chartView.descriptionText = @"Contribution Burndown";
-    
+
     return chartView;
 }
 
@@ -136,7 +141,7 @@
     set.circleHoleRadius = 1;
     set.drawValuesEnabled = false;
     set.highlightColor = [UIColor clearColor];
-
+    
     set.drawFilledEnabled = true;
     set.fill = [ChartFill fillWithLinearGradient:gradient angle:90.f];
     set.fillAlpha = 1.f;

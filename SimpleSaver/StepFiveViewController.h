@@ -10,5 +10,6 @@
 
 @interface StepFiveViewController : StepBaseViewController
 @property (weak, nonatomic) IBOutlet UIImageView *ivSuccess;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 
 @end

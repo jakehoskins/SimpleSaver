@@ -100,7 +100,7 @@
     
     return colour;
 }
-+(UIColor *) defaultTextColourForDarkBackground
++(UIColor *) defaultTextColour
 {
     UIColor *colour = nil;
     switch ([Skin currentSkin])

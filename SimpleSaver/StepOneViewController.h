@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfGoalName;
 @property (weak, nonatomic) IBOutlet NZCircularImageView *goalIcon;
 @property (weak, nonatomic) IBOutlet UIButton *btnAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 
 @end

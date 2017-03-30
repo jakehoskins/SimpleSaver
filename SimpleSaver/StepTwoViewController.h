@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *tfTarget;
 @property (weak, nonatomic) IBOutlet UISwitch *swNoTarget;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 @property (weak, nonatomic) IBOutlet UITextField *tfCurrency;
 @end

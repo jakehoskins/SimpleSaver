@@ -665,6 +665,7 @@
                     <connections>
                         <outlet property="btnAvatar" destination="JE6-EY-9hC" id="Ny8-vT-jPP"/>
                         <outlet property="goalIcon" destination="9Wa-VJ-4sD" id="h4C-lc-CFg"/>
+                        <outlet property="lblInfo" destination="Wzu-De-EtJ" id="Rqi-Ln-0Em"/>
                         <outlet property="pannel" destination="Uec-8v-Y1X" id="Y81-I8-7T1"/>
                         <outlet property="tfGoalName" destination="yeL-Jw-cSA" id="XwN-1p-WAx"/>
                     </connections>
@@ -750,6 +751,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblInfo" destination="U6N-Zf-yIb" id="imY-nI-Zpw"/>
                         <outlet property="pannel" destination="5RP-xm-ZqK" id="eES-a7-Xus"/>
                         <outlet property="swNoTarget" destination="hY9-Jd-rk0" id="adB-5W-dZd"/>
                         <outlet property="tfCurrency" destination="S8D-rd-s31" id="7Ag-sx-EPD"/>
@@ -812,6 +814,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblInfo" destination="jML-kl-cUH" id="dyf-0z-Yb0"/>
                         <outlet property="pannel" destination="2hx-Xa-Igc" id="wke-Me-ptA"/>
                         <outlet property="tfInitialContribution" destination="y4i-oL-A2n" id="3PN-E2-dR0"/>
                     </connections>
@@ -889,6 +892,8 @@
                     </view>
                     <connections>
                         <outlet property="dfDeadline" destination="F2I-gQ-ku1" id="Yxs-2p-0Y6"/>
+                        <outlet property="lblInfo" destination="TWC-sS-opw" id="iNt-31-wQ1"/>
+                        <outlet property="lblNoDeadline" destination="YsS-Ec-6Gk" id="Uug-Ky-r9q"/>
                         <outlet property="pannel" destination="5gG-bJ-p8V" id="Uz6-jq-YXa"/>
                         <outlet property="swNoDeadline" destination="tV0-kr-KLh" id="uKT-WX-5UU"/>
                     </connections>
@@ -943,6 +948,7 @@
                     </view>
                     <connections>
                         <outlet property="ivSuccess" destination="YKe-0Y-9uY" id="6XV-fZ-GhM"/>
+                        <outlet property="lblInfo" destination="DCe-r7-cJq" id="AoA-jw-Iry"/>
                         <outlet property="pannel" destination="7NF-gY-1kt" id="MsO-fL-STB"/>
                     </connections>
                 </viewController>

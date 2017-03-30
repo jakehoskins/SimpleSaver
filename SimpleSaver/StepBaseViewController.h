@@ -9,13 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <OpinionzAlertView/OpinionzAlertView.h>
 
+// View
 #import "SteppedControlPannelView.h"
+
+// Model
 #import "ValidationResult.h"
 #import "Goal.h"
+#import "Skin.h"
+
+// Util
+#import "EditProtocol.h"
 #import "Colours.h"
 #import "Helpers.h"
-#import "EditProtocol.h"
-#import "Skin.h"
+#import "Constants.h"
 
 @interface StepBaseViewController : UIViewController <SteppedControlPannelDataSource>
 @property (weak, nonatomic) IBOutlet SteppedControlPannelView *pannel;

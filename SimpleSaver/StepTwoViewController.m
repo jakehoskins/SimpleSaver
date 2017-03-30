@@ -21,6 +21,9 @@
     [self.swNoTarget addTarget:self action:@selector(toggleTargetEnabled:) forControlEvents:UIControlEventValueChanged];
     self.tfCurrency.delegate = self;
     self.tfCurrency.placeholder = [Helpers defaultCurrency];
+    self.tfTarget.textColor = [Skin defaultTextColour];
+    self.lblInfo.textColor = [Skin defaultTextColour];
+    
     if (self.delegate)
     {
         [self loadEditItems:[self.delegate dictionaryForEdit]];

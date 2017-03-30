@@ -21,6 +21,7 @@
     [self.ivSuccess.layer setShadowOffset:CGSizeMake(10, 10)];
     [self.ivSuccess.layer setShadowColor:[UIColor blackColor].CGColor];
     [self.ivSuccess.layer setShadowOpacity:0.5];
+    self.lblInfo.textColor = [Skin defaultTextColour];
 }
 
 // Subclasses can override these

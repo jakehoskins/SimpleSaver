@@ -306,7 +306,7 @@
     Goal *goal = [[[SavingsModel getInstance] getGoals] objectAtIndex:indexPath.row];
     
     goalName.text = [goal getName];
-    goalName.textColor = [Skin defaultTextColourForDarkBackground];
+    goalName.textColor = [Skin defaultTextColour];
     
     
     cell.backgroundColor = [UIColor clearColor];
@@ -341,7 +341,7 @@
                 progress.trackTintColor = [Skin progressBarBackgroundColour];
                 progress.progress = completion.doubleValue;
                 progress.indicatorTextLabel.text = [Helpers formatCurrency:goal.currency forAmount:[goal totalContributed]];
-                progress.indicatorTextLabel.textColor = [Skin defaultTextColourForDarkBackground];
+                progress.indicatorTextLabel.textColor = [Skin defaultTextColour];
                 break;
             case ProgressDaysVsDaysRemaining:
                 completion = [goal daysRemainingPercentage];
@@ -350,7 +350,7 @@
                 progress.progress = completion.doubleValue;
                 progress.indicatorTextLabel.text = [NSString stringWithFormat:@"%2.f days remaining.", [goal daysRemaining].doubleValue];
                 progress.indicatorTextLabel.font = [UIFont systemFontOfSize:14.0f];
-                progress.indicatorTextLabel.textColor = [Skin defaultTextColourForDarkBackground];
+                progress.indicatorTextLabel.textColor = [Skin defaultTextColour];
                 break;
             default:
                 break;

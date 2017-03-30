@@ -191,9 +191,10 @@
     [formatter setDateFormat:@"EEEE, MMM d, yyyy h:mm a"];
     
     amount.text = [Helpers formatCurrency:self.goal.currency forAmount:contribution.amount];
+    amount.textColor = [Skin defaultTextColour];
     date.text = [formatter stringFromDate:contribution.contributionDate].uppercaseString;
     date.font = [UIFont systemFontOfSize:10];
-    date.textColor = [UIColor grayColor];
+    date.textColor = [Skin defaultTextColour];
     
     cell.backgroundColor = [self cellBackgroundForAmount:contribution.amount];
     
