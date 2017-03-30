@@ -68,7 +68,7 @@
     }
     
     // Set any ui objects to our properties
-    self.currency = (self.tfCurrency.text.length > 0) ? self.tfTarget.text : self.tfCurrency.placeholder;
+    self.currency = (self.tfCurrency.text.length > 0) ? self.tfCurrency.text : self.tfCurrency.placeholder;
     
     if (!self.swNoTarget.isOn)
     {

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Helpers : NSObject
 +(NSString *) formatTimeInterval:(NSDateComponents *) components;
@@ -18,4 +19,5 @@
 + (NSNumber *)randomNumberBetween:(float)smallNumber and:(float)bigNumber;
 +(NSDate *)addDaysToDate:(NSDate *)date increaseBy:(NSInteger)days;
 +(NSString *) defaultCurrency;
++(UIImage *) goalIconForImage:(UIImage *)image;
 @end

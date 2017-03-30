@@ -11,6 +11,8 @@
 #import "NZCircularImageView.h"
 #import "Colours.h"
 #import "Skin.h"
+#import "Helpers.h"
+
 @interface GoalIconTableViewController ()
 @property (nonatomic, strong) NSArray *loadedImages;
 @property (nonatomic, strong) UIImage *imageViewBackground;
@@ -45,7 +47,7 @@
     
     for (NSString *url in [Constants getGoalIconURLSet])
     {
-        [icons addObject:[UIImage imageNamed:url]];
+        [icons addObject:[Helpers goalIconForImage:[UIImage imageNamed:url]]];
     }
     
     self.loadedImages = [NSArray arrayWithArray:icons];

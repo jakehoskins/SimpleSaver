@@ -21,5 +21,4 @@ extern NSString * const NAVIGATION_BAR_IMAGE;
 +(void) writeToUnlimtedGoals:(BOOL) hasPaid;
 +(BOOL) hasPurchasedUnlimitedGoals;
 
-
 @end

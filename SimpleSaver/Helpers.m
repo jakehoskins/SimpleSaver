@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 #import <stdlib.h>
 
+// Never include UserSettings && Skin together
+#import "Skin.h"
 #import "Helpers.h"
 @implementation Helpers
 
@@ -123,5 +125,22 @@
     dayComponent.day = days;
     return [theCalendar dateByAddingComponents:dayComponent toDate:date options:0];
 }
+
++(UIImage *) goalIconForImage:(UIImage *)image
+{
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClipToMask(context, rect, image.CGImage);
+    CGContextSetFillColorWithColor(context, [Skin goalIconColour].CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    img = [UIImage imageWithCGImage:img.CGImage scale:1.0 orientation: UIImageOrientationDownMirrored];
+    
+    return img;
+}
+
 
 @end

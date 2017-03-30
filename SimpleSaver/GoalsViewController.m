@@ -318,20 +318,7 @@
 
 -(void) setupGoalIconForGoal:(Goal *)goal forImageView:(NZCircularImageView *)imageView
 {
-    UIImage *image = [UIImage imageNamed:[goal getIconUrl]];
-    
-    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextClipToMask(context, rect, image.CGImage);
-    CGContextSetFillColorWithColor(context, [Skin goalIconColour].CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    imageView.image = [UIImage imageWithCGImage:img.CGImage
-                                                scale:1.0 orientation: UIImageOrientationDownMirrored];
-    
+    imageView.image = [Helpers goalIconForImage:[UIImage imageNamed:[goal getIconUrl]]];
     imageView.backgroundColor = [Skin goalIconBackgroundColour];
     imageView.borderColor = [UIColor goldColor];
     imageView.borderWidth = @(1.0f);

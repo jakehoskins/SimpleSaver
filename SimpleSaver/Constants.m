@@ -8,6 +8,7 @@
 
 #import "Constants.h"
 #import "UserSettings.h"
+#import "Skin.h"
 
 NSString * const BACKGROUND_IMAGE = @"background";
 NSString * const NOTIFICATION_NEW_GOAL_SELECTED = @"new_goal_selected";             // Tell our detail views to change goal context

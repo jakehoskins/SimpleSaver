@@ -25,7 +25,6 @@ extern NSString * const kDeadlineDate;
 
 -(id) initWithDictionary:(NSDictionary *)dictionary;
 
-
 // Getters
 -(NSArray<GoalContribution *> *) getContributions;
 -(NSString *) getName;

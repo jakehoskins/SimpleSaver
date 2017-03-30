@@ -45,8 +45,6 @@ static NSString * const NS_UD_DEBUG_SHOULD_SHOW_IAP = @"NS_UD_DEBUG_SHOULD_SHOW_
 
 -(BOOL) shouldResetUserDefaultsOnLoad
 {
-    NSLog(@"%i", [[[NSUserDefaults standardUserDefaults] objectForKey:NS_UD_RESET_FAKES_ON_LOAD] boolValue]);
-    
     return ([self.class isUsingDebugSettings] && [[NSUserDefaults standardUserDefaults] boolForKey:NS_UD_RESET_FAKES_ON_LOAD]);
 }
 

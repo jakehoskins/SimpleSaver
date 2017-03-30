@@ -57,17 +57,7 @@
 
 -(void) setUpGoalIconForImage:(UIImage *)image
 {
-    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextClipToMask(context, rect, image.CGImage);
-    CGContextSetFillColorWithColor(context, [Skin goalIconColour].CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    self.goalIcon.image = [UIImage imageWithCGImage:img.CGImage
-                                          scale:1.0 orientation: UIImageOrientationDownMirrored];
+    self.goalIcon.image = [Helpers goalIconForImage:image];
     self.goalIcon.borderColor = [UIColor goldColor];
     self.goalIcon.borderWidth = @(4.0f);
     self.goalIcon.backgroundColor = [UIColor colorWithPatternImage:[Skin backgroundImageForMaster]];

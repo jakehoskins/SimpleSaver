@@ -41,6 +41,7 @@ NSString * const kProfile = @"ss-user-profile";
 
 -(void) assertContext
 {
+    NSLog(@"--  %s", __PRETTY_FUNCTION__);
     if ([[NSUserDefaults standardUserDefaults] objectForKey:kProfile])
     {
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kProfile];
@@ -54,14 +55,14 @@ NSString * const kProfile = @"ss-user-profile";
 
 -(void) addGoal:(Goal *) goal
 {
-    NSLog(@"Adding Goal: %@", [goal description]);
+    NSLog(@"--  Adding Goal: %@", [goal description]);
     
     [self.goals addObject:goal];
 }
 
 -(void) removeGoal:(Goal *)goal
 {
-    NSLog(@"Removing Goal: %@", [goal description]);
+    NSLog(@"--  Removing Goal: %@", [goal description]);
  
     [self.goals removeObject:goal];
 }
@@ -70,8 +71,8 @@ NSString * const kProfile = @"ss-user-profile";
 {
     if ([self.goals objectAtIndex:index])
     {
-        NSLog(@"Replacing Goal: %@ ",[[self.goals objectAtIndex:index] description]);
-        NSLog(@"UpdatedGoal: %@", [goal description]);
+        NSLog(@"--  Replacing Goal: %@ ",[[self.goals objectAtIndex:index] description]);
+        NSLog(@"--  UpdatedGoal: %@", [goal description]);
         
         [self.goals replaceObjectAtIndex:index withObject:goal];
     }
@@ -105,8 +106,14 @@ NSString * const kProfile = @"ss-user-profile";
 
 -(void) resetUserDefaults
 {
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kProfile];
+    NSArray *profile = [NSArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
+    
+    NSLog(@"Removing profile:: %@", profile);
+    
     // Should re-init our self to update our context
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:kProfile];
+    [self assertContext];
 }
 
 @end
