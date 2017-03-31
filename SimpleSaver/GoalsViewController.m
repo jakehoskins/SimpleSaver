@@ -199,8 +199,7 @@
     else
     {
         UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
-        [popOverController setPopoverContentSize:CGSizeMake(viewController.view.frame.size.width, viewController.view.frame.size.width)];
-        
+        [popOverController setPopoverContentSize:CGSizeMake(MAX_POPOVER_WIDTH, MAX_POPOVER_HEIGHT)];
         [popOverController presentPopoverFromBarButtonItem:self.createGoal permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
     }
 }

@@ -117,6 +117,23 @@
     return colour;
 }
 
++(UIColor *) defaultColourForLightBackground
+{
+    UIColor *colour = nil;
+    switch ([Skin currentSkin])
+    {
+        case LightSkin:
+            colour = [UIColor blackColor];
+            break;
+        case DarkSkin:
+            colour = [UIColor blackColor];
+        default:
+            break;
+    }
+    
+    return colour;
+}
+
 +(UIColor *) progressBarBackgroundColour
 {
     UIColor *colour = nil;

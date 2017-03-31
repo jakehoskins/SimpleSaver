@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, SkinType) {
 +(UIColor *) defaultRedColour;
 +(UIColor *) goalIconColour;
 +(UIColor *) defaultTextColour;
++(UIColor *) defaultColourForLightBackground;
 +(UIColor *) progressBarBackgroundColour;
 +(UIColor *) goalIconBackgroundColour;
 +(UIImage *) backgroundImageForMaster;

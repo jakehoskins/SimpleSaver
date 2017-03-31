@@ -21,7 +21,7 @@
 #import "Skin.h"
 
 @interface GoalContributionsTableViewController () <ContributionEvent>
-
+@property (nonatomic, strong) UITableViewCell *selectedCell;
 @end
 
 @implementation GoalContributionsTableViewController
@@ -92,9 +92,8 @@
     else
     {
         UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
-        [popOverController setPopoverContentSize:CGSizeMake(viewController.view.frame.size.width, viewController.view.frame.size.width)];
-        
-        [popOverController presentPopoverFromRect:self.navigationController.navigationBar.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
+        [popOverController setPopoverContentSize:CGSizeMake(MAX_POPOVER_WIDTH, MAX_POPOVER_HEIGHT)];
+        [popOverController presentPopoverFromRect:self.selectedCell.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
     }
 }
 
@@ -191,10 +190,10 @@
     [formatter setDateFormat:@"EEEE, MMM d, yyyy h:mm a"];
     
     amount.text = [Helpers formatCurrency:self.goal.currency forAmount:contribution.amount];
-    amount.textColor = [Skin defaultTextColour];
+    amount.textColor = [Skin defaultColourForLightBackground];
     date.text = [formatter stringFromDate:contribution.contributionDate].uppercaseString;
     date.font = [UIFont systemFontOfSize:10];
-    date.textColor = [Skin defaultTextColour];
+    date.textColor = [Skin defaultColourForLightBackground];
     
     cell.backgroundColor = [self cellBackgroundForAmount:contribution.amount];
     
@@ -204,6 +203,8 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GoalContribution *contribution = [[self.goal getContributions] objectAtIndex:[self reversedIndex:indexPath.row]];
+    
+    self.selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
     
     self.previousSelection = [self reversedIndex:indexPath.row];
     [self presentGoalContributeNormalForGoalContribution:contribution];
