@@ -1,0 +1,3 @@
+[submodule "Acknowledge"]
+	path = Acknowledge
+	url = https://github.com/DangerCove/Acknowledge.git

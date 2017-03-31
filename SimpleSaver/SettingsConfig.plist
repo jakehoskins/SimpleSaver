@@ -22,9 +22,9 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Credits</string>
+			<string>Acknowledgements</string>
 			<key>target</key>
-			<string></string>
+			<string>AcknowledgementsViewController</string>
 			<key>info</key>
 			<dict/>
 		</dict>

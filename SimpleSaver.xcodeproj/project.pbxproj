@@ -66,6 +66,10 @@
 		7A24716B1E19449800C99780 /* GoalContribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716A1E19449800C99780 /* GoalContribution.m */; };
 		7A24716D1E194D4F00C99780 /* GoalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716C1E194D4F00C99780 /* GoalTest.m */; };
 		7A24716F1E19532800C99780 /* SavingsModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24716E1E19532800C99780 /* SavingsModelTest.m */; };
+		7A2ED30A1E8E69DD00114514 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2ED3091E8E69DD00114514 /* AcknowledgementsViewController.m */; };
+		7A2ED30B1E8E69DD00114514 /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2ED3091E8E69DD00114514 /* AcknowledgementsViewController.m */; };
+		7A2ED30D1E8E6D3D00114514 /* Acknowledgments.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A2ED30C1E8E6D3D00114514 /* Acknowledgments.rtf */; };
+		7A2ED3101E8E6DE200114514 /* Acknowledgments.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A2ED30C1E8E6D3D00114514 /* Acknowledgments.rtf */; };
 		7A4225B61E3D1CA200949D64 /* StepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */; };
 		7A4225B91E3DEE6900949D64 /* StepFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225B81E3DEE6900949D64 /* StepFourViewController.m */; };
 		7A4225BC1E3E014600949D64 /* StepFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4225BB1E3E014600949D64 /* StepFiveViewController.m */; };
@@ -121,7 +125,6 @@
 		7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7A1A8A9F1E85F10500CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7A1A8AD91E85F2B800CC602A /* SimpleSaverDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaverDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A1A8ADA1E85F2B800CC602A /* SimpleSaver copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSaver copy-Info.plist"; path = "/Users/jakehoskins/Documents/workspace/SimpleSaver/SimpleSaver copy-Info.plist"; sourceTree = "<absolute>"; };
 		7A24713B1E1942BA00C99780 /* SimpleSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A24713F1E1942BA00C99780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2471411E1942BA00C99780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +145,9 @@
 		7A24716A1E19449800C99780 /* GoalContribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContribution.m; sourceTree = "<group>"; };
 		7A24716C1E194D4F00C99780 /* GoalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTest.m; sourceTree = "<group>"; };
 		7A24716E1E19532800C99780 /* SavingsModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsModelTest.m; sourceTree = "<group>"; };
+		7A2ED3081E8E69DD00114514 /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
+		7A2ED3091E8E69DD00114514 /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
+		7A2ED30C1E8E6D3D00114514 /* Acknowledgments.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Acknowledgments.rtf; sourceTree = "<group>"; };
 		7A4225B41E3D1CA200949D64 /* StepThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepThreeViewController.h; sourceTree = "<group>"; };
 		7A4225B51E3D1CA200949D64 /* StepThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepThreeViewController.m; sourceTree = "<group>"; };
 		7A4225B71E3DEE6900949D64 /* StepFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepFourViewController.h; sourceTree = "<group>"; };
@@ -285,7 +291,6 @@
 				7A24713C1E1942BA00C99780 /* Products */,
 				049F9FB38BBA82F25E3597BC /* Pods */,
 				4758C1B9D072A667755324B7 /* Frameworks */,
-				7A1A8ADA1E85F2B800CC602A /* SimpleSaver copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,6 +307,7 @@
 		7A24713D1E1942BA00C99780 /* SimpleSaver */ = {
 			isa = PBXGroup;
 			children = (
+				7A2ED30C1E8E6D3D00114514 /* Acknowledgments.rtf */,
 				7AAF119A1E25709A00A27733 /* Views */,
 				7A6F709F1E22FA680008AA7A /* Constants.h */,
 				7A6F70A01E22FA680008AA7A /* Constants.m */,
@@ -382,6 +388,8 @@
 				7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */,
 				7A7EFC7F1E393FF600D11435 /* GoalIconTableViewController.h */,
 				7A7EFC801E393FF600D11435 /* GoalIconTableViewController.m */,
+				7A2ED3081E8E69DD00114514 /* AcknowledgementsViewController.h */,
+				7A2ED3091E8E69DD00114514 /* AcknowledgementsViewController.m */,
 			);
 			name = "General View Controller";
 			sourceTree = "<group>";
@@ -599,6 +607,7 @@
 				7A1A8AD11E85F2B800CC602A /* AmountView.xib in Resources */,
 				7A1A8AD21E85F2B800CC602A /* Assets.xcassets in Resources */,
 				7A1A8AD31E85F2B800CC602A /* Main.storyboard in Resources */,
+				7A2ED30D1E8E6D3D00114514 /* Acknowledgments.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +615,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2ED3101E8E6DE200114514 /* Acknowledgments.rtf in Resources */,
 				7A1A8AA11E85F1BF00CC602A /* Settings.bundle in Resources */,
 				7A7EFC781E34F35A00D11435 /* SteppedControlPannelView.xib in Resources */,
 				7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */,
@@ -799,6 +809,7 @@
 				7A1A8AC01E85F2B800CC602A /* MKiCloudSync.m in Sources */,
 				7A1A8AC11E85F2B800CC602A /* StepFourViewController.m in Sources */,
 				7A1A8AC21E85F2B800CC602A /* main.m in Sources */,
+				7A2ED30B1E8E69DD00114514 /* AcknowledgementsViewController.m in Sources */,
 				7A1A8AC31E85F2B800CC602A /* SteppedNavigationViewController.m in Sources */,
 				7A1A8AC41E85F2B800CC602A /* GoalContributedView.m in Sources */,
 				7A1A8AC51E85F2B800CC602A /* ValidationResult.m in Sources */,
@@ -841,6 +852,7 @@
 				7A4225B91E3DEE6900949D64 /* StepFourViewController.m in Sources */,
 				7A2471401E1942BA00C99780 /* main.m in Sources */,
 				7A7EFC6F1E34E2C300D11435 /* SteppedNavigationViewController.m in Sources */,
+				7A2ED30A1E8E69DD00114514 /* AcknowledgementsViewController.m in Sources */,
 				7A04A6211E50E82100BBCE45 /* Skin.m in Sources */,
 				7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */,
 				7A577BCC1E1A7E510091C28F /* ValidationResult.m in Sources */,
