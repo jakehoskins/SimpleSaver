@@ -221,14 +221,22 @@
 
 -(NSString *) getTotalElapsedTimeString
 {
-    if (![self.goal isOverdue])
+    if (![self.goal isOverdue] && [self.goal hasDeadline])
     {
-        return [NSString stringWithFormat:@"%li days remaining",[self.goal daysRemaining].integerValue];
+        NSDateComponents *components;
+        components = [[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMonth | NSCalendarUnitYear ) fromDate: [self.goal getStartDate] toDate:[NSDate date] options: 0];
+        
+        return [NSString stringWithFormat:@"%@",[Helpers formatTimeInterval:components]].uppercaseString;
     }
-    else
+    else if([self.goal hasDeadline])
     {
-        return [NSString stringWithFormat:@"%i days overdue",abs([self.goal daysRemaining].intValue)];
+        NSDateComponents *components;
+        components = [[NSCalendar currentCalendar] components: (NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMonth | NSCalendarUnitYear ) fromDate:[NSDate date] toDate:[self.goal getStartDate] options: 0];
+        
+        return [NSString stringWithFormat:@"%@",[Helpers formatTimeInterval:components]].uppercaseString;
     }
+    
+    return @"";
 }
 
 -(NSString *) getNumberOfContributions
@@ -293,7 +301,7 @@
 {
     if ([self.goal hasTarget])
     {
-        return [Helpers formatCurrency:[NSString stringWithFormat:@"Savings Target: %@", self.goal.currency] forAmount:[self.goal getSavingsTarget]];
+        return [Helpers formatCurrency:[NSString stringWithFormat:@"TARGET: %@", self.goal.currency] forAmount:[self.goal getSavingsTarget]];
     }
     
     return ((GoalContributedView *)sender).lblTopChild.text;
@@ -304,16 +312,16 @@
     switch (self.state)
     {
         case TotalContribution:
-            return @"total saved";
+            return [@"total saved" uppercaseString];
             break;
         case TotalRemaining:
             if ([self.goal hasTarget])
             {
-                return @"total remaining";
+                return [@"total remaining" uppercaseString];
             }
             break;
         case TotalContributions:
-            return @"contributions";
+            return [@"contributions" uppercaseString];
         default:
             break;
     }

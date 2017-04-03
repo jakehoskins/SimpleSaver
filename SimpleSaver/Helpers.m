@@ -20,32 +20,32 @@
     long months = [components month];
     long day = [components day];
     long hour = [components hour];
-    long minute = [components minute];
-    long seconds = [components second];
+//    long minute = [components minute];
+//    long seconds = [components second];
     
     if (years != 0) {
-        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Years: %ld \n", years]];
+        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Years: %ld, ", years]];
     }
     
     if (months != 0) {
-        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Months: %ld \n", months]];
+        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Months: %ld, ", months]];
     }
     
     if (day != 0) {
-        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Days: %ld \n", day]];
+        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Days: %ld, ", day]];
     }
     
     if (hour != 0) {
-        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Hours: %ld \n", hour]];
+        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Hours: %ld", hour]];
     }
     
-    if (minute != 0) {
-        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Minutes: %ld \n", minute]];
-    }
-    
-    if (seconds != 0) {
-        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Seconds: %ld \n", seconds]];
-    }
+//    if (minute != 0) {
+//        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Minutes: %ld \n", minute]];
+//    }
+//    
+//    if (seconds != 0) {
+//        formattedTimeDelta = [formattedTimeDelta stringByAppendingString: [NSString stringWithFormat:@"Seconds: %ld \n", seconds]];
+//    }
     
     return formattedTimeDelta;
 }
