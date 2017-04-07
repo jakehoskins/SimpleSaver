@@ -52,6 +52,8 @@
 
 +(NSString *) formatCurrency:(NSString *)currency forAmount:(NSNumber *)amount
 {
+    if (!amount || !currency) return @"";
+    
     NSNumberFormatter * formatter = [NSNumberFormatter new];
     NSString *formatted = [NSString stringWithFormat:@""];
     

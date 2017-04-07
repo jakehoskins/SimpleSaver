@@ -15,6 +15,7 @@
 #import "SavingsModel.h"
 #import "GoalContribution.h"
 #import "Skin.h"
+#import "GoalMeta.h"
 
 // Views
 #import "GoalContributedView.h"
@@ -193,6 +194,8 @@
 
 -(GoalContributedViewTouchState) rotateState
 {
+    GoalContributedViewTouchState fromTotalContributions = ([self canDisplayMonthlyAverageNeeded]) ? TotalMonthlyAverageNeeded : TotalContribution;
+    
     switch (self.state)
     {
         case TotalContribution:
@@ -202,11 +205,20 @@
             return TotalContributions;
             break;
         case TotalContributions:
+            return fromTotalContributions;
+            break;
+        case TotalMonthlyAverageNeeded:
             return TotalContribution;
+            break;
         default:
             return TotalContribution;
             break;
     }
+}
+
+-(BOOL) canDisplayMonthlyAverageNeeded
+{
+    return (self.goal.hasDeadline && self.goal.hasTarget && !self.goal.isOverdue);
 }
 
 -(NSString *) getTotalContributedString
@@ -257,12 +269,15 @@
 
 - (NSString *) textForParent:(id)sender
 {
+    GoalMeta *goalMeta = [[GoalMeta alloc] initWithGoal:self.goal];
+    
     switch (self.state)
     {
         case TotalContribution:
             return [self getTotalContributedString];
             break;
         case TotalRemaining:
+            // Lol don't do this, see how we do it for avg needed
             if ([self.goal hasTarget])
             {
                 return [self getTotalRemainingString];
@@ -270,12 +285,16 @@
             break;
         case TotalContributions:
             return [self getNumberOfContributions];
+        case TotalMonthlyAverageNeeded:
+            return [Helpers formatCurrency:self.goal.currency forAmount:[goalMeta averageMonthlyNeededToReachTarget]];
+            break;
         default:
             break;
     }
     
     return ((GoalContributedView *)sender).lblParent.text;
 }
+
 - (NSString *) textForBottomChild:(id)sender;
 {
     switch (self.state)
@@ -315,6 +334,7 @@
             return [@"total saved" uppercaseString];
             break;
         case TotalRemaining:
+            // Lol don't do this, see how we do it for avg needed
             if ([self.goal hasTarget])
             {
                 return [@"total remaining" uppercaseString];
@@ -322,6 +342,10 @@
             break;
         case TotalContributions:
             return [@"contributions" uppercaseString];
+            break;
+        case TotalMonthlyAverageNeeded:
+            return [@"monthly avg. required" uppercaseString];
+            break;
         default:
             break;
     }

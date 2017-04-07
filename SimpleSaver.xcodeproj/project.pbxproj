@@ -93,6 +93,8 @@
 		7A8967B41E7598C9004F1549 /* SettingsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8967B31E7598C9004F1549 /* SettingsConfig.m */; };
 		7A90D46A1E4E729500B2C750 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A90D4691E4E729500B2C750 /* StoreKit.framework */; };
 		7AA45EE41E847E3D00436EDB /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA45EE31E847E3D00436EDB /* UserSettings.m */; };
+		7AA5B5E51E983CD600A85CC8 /* GoalMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA5B5E41E983CD600A85CC8 /* GoalMeta.m */; };
+		7AA5B5E61E983CD600A85CC8 /* GoalMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA5B5E41E983CD600A85CC8 /* GoalMeta.m */; };
 		7AAC8E4E1E880EAD00CAD6BA /* Skin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A6201E50E82100BBCE45 /* Skin.m */; };
 		7AAE7F2A1E2AE076009C8561 /* XAxisMonthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */; };
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
@@ -193,6 +195,8 @@
 		7A90D4691E4E729500B2C750 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7AA45EE21E847E3D00436EDB /* UserSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettings.h; sourceTree = "<group>"; };
 		7AA45EE31E847E3D00436EDB /* UserSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettings.m; sourceTree = "<group>"; };
+		7AA5B5E31E983CD600A85CC8 /* GoalMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalMeta.h; sourceTree = "<group>"; };
+		7AA5B5E41E983CD600A85CC8 /* GoalMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalMeta.m; sourceTree = "<group>"; };
 		7AAE7F281E2AE076009C8561 /* XAxisMonthFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAxisMonthFormatter.h; sourceTree = "<group>"; };
 		7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAxisMonthFormatter.m; sourceTree = "<group>"; };
 		7AAF11951E25703A00A27733 /* GoalContributedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalContributedView.xib; sourceTree = "<group>"; };
@@ -357,6 +361,8 @@
 				7A2471631E1943C300C99780 /* SavingsModel.h */,
 				7A2471641E1943C300C99780 /* SavingsModel.m */,
 				7A2471661E19440E00C99780 /* Goal.h */,
+				7AA5B5E31E983CD600A85CC8 /* GoalMeta.h */,
+				7AA5B5E41E983CD600A85CC8 /* GoalMeta.m */,
 				7A2471671E19440E00C99780 /* Goal.m */,
 				7A577BCA1E1A7E510091C28F /* ValidationResult.h */,
 				7A577BCB1E1A7E510091C28F /* ValidationResult.m */,
@@ -783,6 +789,7 @@
 				7A1A8AA61E85F2B800CC602A /* LaunchViewController.m in Sources */,
 				7A1A8AA71E85F2B800CC602A /* GoalContributionsTableViewController.m in Sources */,
 				7A1A8AA81E85F2B800CC602A /* StepOneViewController.m in Sources */,
+				7AA5B5E61E983CD600A85CC8 /* GoalMeta.m in Sources */,
 				7A1A8AA91E85F2B800CC602A /* Goal.m in Sources */,
 				7A1A8AAA1E85F2B800CC602A /* CreateGoalViewController.m in Sources */,
 				7A1A8AAB1E85F2B800CC602A /* AmountView.m in Sources */,
@@ -826,6 +833,7 @@
 				7AD0E56B1E4B6AEE006BAF75 /* LaunchViewController.m in Sources */,
 				7AD016781E3362E500E3F68A /* GoalContributionsTableViewController.m in Sources */,
 				7A7EFC731E34E30E00D11435 /* StepOneViewController.m in Sources */,
+				7AA5B5E51E983CD600A85CC8 /* GoalMeta.m in Sources */,
 				7A2471681E19440E00C99780 /* Goal.m in Sources */,
 				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
 				7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */,
