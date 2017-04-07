@@ -30,11 +30,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO DEADLINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-ai-Srm">
-                    <rect key="frame" x="16" y="76" width="225" height="6"/>
+                    <rect key="frame" x="16" y="72" width="225" height="10"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="225" id="115-2x-ccO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>

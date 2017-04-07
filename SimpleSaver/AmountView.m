@@ -21,7 +21,7 @@
     
     self.tfAmount.delegate = self;
     [self.lblDate setAdjustsFontSizeToFitWidth:true];
-    self.lblDate.font = [UIFont systemFontOfSize:10];
+    self.lblDate.font = [UIFont systemFontOfSize:8];
     self.lblDate.textColor = [UIColor lightGrayColor];
 }
 

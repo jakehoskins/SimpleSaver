@@ -130,8 +130,8 @@
     
     LineChartDataSet *set = [[LineChartDataSet alloc] initWithValues:entries label:@"Contributions"];
     NSArray *gradientColors = @[
-                                (id)[UIColor emeraldColor].CGColor,
-                                (id)[UIColor emeraldColor].CGColor
+                                (id)[Skin defaultGreenColour].CGColor,
+                                (id)[Skin defaultGreenColour].CGColor
                                 ];
     CGGradientRef gradient = CGGradientCreateWithColors(nil, (CFArrayRef)gradientColors, nil);
     
@@ -176,8 +176,8 @@
     }
     LineChartDataSet *set = [[LineChartDataSet alloc] initWithValues:entries label:@"Contributions"];
     NSArray *gradientColors = @[
-                                (id)[UIColor strawberryColor].CGColor,
-                                (id)[UIColor easterPinkColor].CGColor
+                                (id)[Skin defaultRedColour].CGColor,
+                                (id)[Skin defaultRedColour].CGColor
                                 ];
     CGGradientRef gradient = CGGradientCreateWithColors(nil, (CFArrayRef)gradientColors, nil);
     
