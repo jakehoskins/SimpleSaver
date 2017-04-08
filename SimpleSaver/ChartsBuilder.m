@@ -12,6 +12,7 @@
 #import "Goal.h"
 #import "GoalContribution.h"
 #import "XAxisMonthFormatter.h"
+#import "ChartMarker.h"
 
 // Util
 #import "Helpers.h"
@@ -21,24 +22,65 @@
 // Views
 #import "MBCircularProgressBarView.h"
 
+@interface ChartsBuilder()
+@property (nonatomic, strong) id<IChartMarker> marker;
+@end
+
 @implementation ChartsBuilder
 
-+(UIView *) buildChart:(ChartType)chart forGoal:(Goal *)goal
++ (id)sharedInstance{
+    static ChartsBuilder *sharedMyManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyManager = [[self alloc] init];
+    });
+    return sharedMyManager;
+}
+
+-(id) init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        ChartMarker *marker = [[ChartMarker alloc] init];
+        
+        self.marker = marker;
+    }
+    
+    return self;
+}
+
+-(UIView *) buildChart:(ChartType)chart forGoal:(Goal *)goal
 {
     switch (chart)
     {
         case ChartCircularContribution:
+        {
             return [ChartsBuilder buildTotalContributedViewForGoal:goal];
             break;
+            
+        }
         case ChartContributed:
-            return [ChartsBuilder lineChartForContributionsForGoal:goal];
+        {
+            LineChartView *view = [ChartsBuilder lineChartForContributionsForGoal:goal];
+            
+            view.marker = self.marker;
+            return view;
+        }
             break;
         case ChartBurndown:
-            return [ChartsBuilder lineChartForBurndown:goal];
-            break;
+        {
+            LineChartView *view = [ChartsBuilder lineChartForBurndown:goal];
+            
+            view.marker = self.marker;
+            return view;
+        }
         default:
+        {
             return nil;
             break;
+        }
     }
 }
 
@@ -70,6 +112,9 @@
     chartView.leftAxis.labelTextColor = [Skin defaultTextColour];
     chartView.descriptionTextColor = [Skin defaultTextColour];
     chartView.descriptionText = @"Total Contributions";
+    
+    chartView.marker = (id) self;
+    
     return chartView;
 }
 
@@ -199,6 +244,7 @@
     
     return lineChartData;
 }
+
 
 
 @end

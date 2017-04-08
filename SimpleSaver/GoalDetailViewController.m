@@ -82,7 +82,7 @@
     CGFloat x = 0.0f;
     for (int i = 0; i < self.availableCharts.count; i++)
     {
-        UIView *view = [ChartsBuilder buildChart:[[self.availableCharts objectAtIndex:i] integerValue] forGoal:self.goal];
+        UIView *view = [[ChartsBuilder sharedInstance] buildChart:[[self.availableCharts objectAtIndex:i] integerValue] forGoal:self.goal];
         
         view.frame = CGRectMake(x, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
         x+=view.frame.size.width;
@@ -425,4 +425,5 @@
 {
     [self.view setNeedsLayout];
 }
+
 @end

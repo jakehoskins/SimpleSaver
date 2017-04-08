@@ -20,7 +20,9 @@ typedef NS_ENUM(NSInteger, ChartType)
     ChartBurndown
 };
 
-+(UIView *) buildChart:(ChartType)chart forGoal:(Goal *)goal;
++(instancetype) sharedInstance;
+
+-(UIView *) buildChart:(ChartType)chart forGoal:(Goal *)goal;
 
 +(MBCircularProgressBarView *) buildTotalContributedViewForGoal:(Goal *)goal;
 

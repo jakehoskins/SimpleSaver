@@ -103,6 +103,8 @@
 		7ACACDEC1E4E682D009DFC64 /* IAPPurchaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACACDEB1E4E682D009DFC64 /* IAPPurchaseTableViewController.m */; };
 		7AD016781E3362E500E3F68A /* GoalContributionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */; };
 		7AD0E56B1E4B6AEE006BAF75 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0E56A1E4B6AEE006BAF75 /* LaunchViewController.m */; };
+		7ADBC39D1E98EC4E008B535E /* ChartMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBC39C1E98EC4E008B535E /* ChartMarker.m */; };
+		7ADBC39E1E98EC4E008B535E /* ChartMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBC39C1E98EC4E008B535E /* ChartMarker.m */; };
 		7AE8EE351E2C11D50048DEDE /* GoalContributionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */; };
 		7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE371E2C27A30048DEDE /* AmountView.m */; };
 		7AE8EE3A1E2C27C80048DEDE /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8EE391E2C27C80048DEDE /* AmountView.xib */; };
@@ -210,6 +212,8 @@
 		7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributionsTableViewController.m; sourceTree = "<group>"; };
 		7AD0E5691E4B6AEE006BAF75 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		7AD0E56A1E4B6AEE006BAF75 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		7ADBC39B1E98EC4E008B535E /* ChartMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartMarker.h; sourceTree = "<group>"; };
+		7ADBC39C1E98EC4E008B535E /* ChartMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartMarker.m; sourceTree = "<group>"; };
 		7AE8EE331E2C11D50048DEDE /* GoalContributionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalContributionViewController.h; sourceTree = "<group>"; };
 		7AE8EE341E2C11D50048DEDE /* GoalContributionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalContributionViewController.m; sourceTree = "<group>"; };
 		7AE8EE361E2C27A30048DEDE /* AmountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 				7A24716A1E19449800C99780 /* GoalContribution.m */,
 				7AAF3AFD1E282644001B3F11 /* ChartsBuilder.h */,
 				7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */,
+				7ADBC39B1E98EC4E008B535E /* ChartMarker.h */,
+				7ADBC39C1E98EC4E008B535E /* ChartMarker.m */,
 				7AAE7F281E2AE076009C8561 /* XAxisMonthFormatter.h */,
 				7AAE7F291E2AE076009C8561 /* XAxisMonthFormatter.m */,
 			);
@@ -801,6 +807,7 @@
 				7A1A8AB21E85F2B800CC602A /* SteppedControlPannelView.m in Sources */,
 				7A1A8AB31E85F2B800CC602A /* GoalIconTableViewController.m in Sources */,
 				7A1A8AB41E85F2B800CC602A /* AppDelegate.m in Sources */,
+				7ADBC39E1E98EC4E008B535E /* ChartMarker.m in Sources */,
 				7AAC8E4E1E880EAD00CAD6BA /* Skin.m in Sources */,
 				7A1A8AB51E85F2B800CC602A /* StepBaseViewController.m in Sources */,
 				7A1A8AB61E85F2B800CC602A /* Helpers.m in Sources */,
@@ -845,6 +852,7 @@
 				7A7EFC761E34F34900D11435 /* SteppedControlPannelView.m in Sources */,
 				7A7EFC811E393FF600D11435 /* GoalIconTableViewController.m in Sources */,
 				7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */,
+				7ADBC39D1E98EC4E008B535E /* ChartMarker.m in Sources */,
 				7A7EFC7B1E34F45B00D11435 /* StepBaseViewController.m in Sources */,
 				7A577BC31E19DEF70091C28F /* Helpers.m in Sources */,
 				7A6E9FF71E8085F10087E731 /* DefaultSettingsViewController.m in Sources */,
