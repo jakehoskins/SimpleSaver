@@ -16,7 +16,6 @@
 		7A1A8AA71E85F2B800CC602A /* GoalContributionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */; };
 		7A1A8AA81E85F2B800CC602A /* StepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7EFC721E34E30E00D11435 /* StepOneViewController.m */; };
 		7A1A8AA91E85F2B800CC602A /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471671E19440E00C99780 /* Goal.m */; };
-		7A1A8AAA1E85F2B800CC602A /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
 		7A1A8AAB1E85F2B800CC602A /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8EE371E2C27A30048DEDE /* AmountView.m */; };
 		7A1A8AAC1E85F2B800CC602A /* SimpleSaverSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */; };
 		7A1A8AAD1E85F2B800CC602A /* SavingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471641E1943C300C99780 /* SavingsModel.m */; };
@@ -57,7 +56,6 @@
 		7A1A8ADB1E85F2D800CC602A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */; };
 		7A2471401E1942BA00C99780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A24713F1E1942BA00C99780 /* main.m */; };
 		7A2471431E1942BA00C99780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471421E1942BA00C99780 /* AppDelegate.m */; };
-		7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2471451E1942BA00C99780 /* CreateGoalViewController.m */; };
 		7A2471491E1942BA00C99780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2471471E1942BA00C99780 /* Main.storyboard */; };
 		7A24714B1E1942BA00C99780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714A1E1942BA00C99780 /* Assets.xcassets */; };
 		7A24714E1E1942BA00C99780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */; };
@@ -133,8 +131,6 @@
 		7A24713F1E1942BA00C99780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2471411E1942BA00C99780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A2471421E1942BA00C99780 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A2471441E1942BA00C99780 /* CreateGoalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateGoalViewController.h; sourceTree = "<group>"; };
-		7A2471451E1942BA00C99780 /* CreateGoalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateGoalViewController.m; sourceTree = "<group>"; };
 		7A2471481E1942BA00C99780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A24714A1E1942BA00C99780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A24714D1E1942BA00C99780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -390,8 +386,6 @@
 				7A90D4681E4E71D600B2C750 /* Detail */,
 				7A90D4661E4E71B500B2C750 /* IAP */,
 				7A8967AC1E7596EE004F1549 /* Settings */,
-				7A2471441E1942BA00C99780 /* CreateGoalViewController.h */,
-				7A2471451E1942BA00C99780 /* CreateGoalViewController.m */,
 				7A853B621E1C4428000CCF8A /* SimpleSaverSplitViewController.h */,
 				7A853B631E1C4428000CCF8A /* SimpleSaverSplitViewController.m */,
 				7AE8EE331E2C11D50048DEDE /* GoalContributionViewController.h */,
@@ -797,7 +791,6 @@
 				7A1A8AA81E85F2B800CC602A /* StepOneViewController.m in Sources */,
 				7AA5B5E61E983CD600A85CC8 /* GoalMeta.m in Sources */,
 				7A1A8AA91E85F2B800CC602A /* Goal.m in Sources */,
-				7A1A8AAA1E85F2B800CC602A /* CreateGoalViewController.m in Sources */,
 				7A1A8AAB1E85F2B800CC602A /* AmountView.m in Sources */,
 				7A1A8AAC1E85F2B800CC602A /* SimpleSaverSplitViewController.m in Sources */,
 				7A1A8AAD1E85F2B800CC602A /* SavingsModel.m in Sources */,
@@ -842,7 +835,6 @@
 				7A7EFC731E34E30E00D11435 /* StepOneViewController.m in Sources */,
 				7AA5B5E51E983CD600A85CC8 /* GoalMeta.m in Sources */,
 				7A2471681E19440E00C99780 /* Goal.m in Sources */,
-				7A2471461E1942BA00C99780 /* CreateGoalViewController.m in Sources */,
 				7AE8EE381E2C27A30048DEDE /* AmountView.m in Sources */,
 				7A853B641E1C4428000CCF8A /* SimpleSaverSplitViewController.m in Sources */,
 				7A2471651E1943C300C99780 /* SavingsModel.m in Sources */,
