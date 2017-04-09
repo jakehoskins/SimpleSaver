@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05732BAF33ECED630A112F3F /* Pods_BasePods_SimpleSaverDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE05DD3DCD41A5B9A94589B4 /* Pods_BasePods_SimpleSaverDebug.framework */; };
 		6035CB383A087E8A0377793C /* Pods_SimpleSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */; };
+		64AD8252093B70A235CD0E5E /* Pods_SimpleSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */; };
 		7409605A0CFA3B3E16C7D745 /* Pods_SimpleSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FC6F41981832F2A3F5A8BC /* Pods_SimpleSaverTests.framework */; };
 		7A04A6211E50E82100BBCE45 /* Skin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A6201E50E82100BBCE45 /* Skin.m */; };
 		7A1A8AA11E85F1BF00CC602A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A1A8A9F1E85F10500CC602A /* Settings.bundle */; };
@@ -44,7 +46,6 @@
 		7A1A8AC51E85F2B800CC602A /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A577BCB1E1A7E510091C28F /* ValidationResult.m */; };
 		7A1A8AC61E85F2B800CC602A /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8967AE1E759706004F1549 /* SettingsTableViewController.m */; };
 		7A1A8AC71E85F2B800CC602A /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853B5D1E1B11E7000CCF8A /* GoalsViewController.m */; };
-		7A1A8AC91E85F2B800CC602A /* Pods_SimpleSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */; };
 		7A1A8ACA1E85F2B800CC602A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A90D4691E4E729500B2C750 /* StoreKit.framework */; };
 		7A1A8ACD1E85F2B800CC602A /* SteppedControlPannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7EFC771E34F35A00D11435 /* SteppedControlPannelView.xib */; };
 		7A1A8ACE1E85F2B800CC602A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A24714C1E1942BA00C99780 /* LaunchScreen.storyboard */; };
@@ -98,6 +99,7 @@
 		7AAF11961E25703A00A27733 /* GoalContributedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF11951E25703A00A27733 /* GoalContributedView.xib */; };
 		7AAF11991E25709000A27733 /* GoalContributedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF11981E25709000A27733 /* GoalContributedView.m */; };
 		7AAF3AFF1E282644001B3F11 /* ChartsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1E282644001B3F11 /* ChartsBuilder.m */; };
+		7AB6A3921546BEB14975B173 /* Pods_BasePods_SimpleSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F5406C4A37678142B0BAA0 /* Pods_BasePods_SimpleSaver.framework */; };
 		7ACACDEC1E4E682D009DFC64 /* IAPPurchaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACACDEB1E4E682D009DFC64 /* IAPPurchaseTableViewController.m */; };
 		7AD016781E3362E500E3F68A /* GoalContributionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD016771E3362E500E3F68A /* GoalContributionsTableViewController.m */; };
 		7AD0E56B1E4B6AEE006BAF75 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0E56A1E4B6AEE006BAF75 /* LaunchViewController.m */; };
@@ -119,11 +121,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183E99621930F18E47BCF0DD /* Pods-BasePods-SimpleSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-SimpleSaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-SimpleSaver/Pods-BasePods-SimpleSaver.debug.xcconfig"; sourceTree = "<group>"; };
 		21BCA3BCB39F8D4FD125F66A /* Pods-SimpleSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.release.xcconfig"; sourceTree = "<group>"; };
+		25FFFCC22E1B94200B278B01 /* Pods-BasePods-SimpleSaverDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-SimpleSaverDebug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-SimpleSaverDebug/Pods-BasePods-SimpleSaverDebug.debug.xcconfig"; sourceTree = "<group>"; };
 		77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A04A61F1E50E82100BBCE45 /* Skin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skin.h; sourceTree = "<group>"; };
 		7A04A6201E50E82100BBCE45 /* Skin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skin.m; sourceTree = "<group>"; };
+		7A165CA51E9A3E0F001A01E3 /* Pods_SimpleSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SimpleSaver.framework; path = "../../../Library/Developer/Xcode/DerivedData/SimpleSaver-ambjnptiekscoobdxlbjtjfjfuji/Build/Products/Debug-iphonesimulator/Pods_SimpleSaver.framework"; sourceTree = "<group>"; };
+		7A165CA61E9A3E0F001A01E3 /* Pods_SimpleSaverTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SimpleSaverTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_SimpleSaverTests.framework"; sourceTree = "<group>"; };
 		7A1A8A9C1E85F0FF00CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7A1A8A9F1E85F10500CC602A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7A1A8AD91E85F2B800CC602A /* SimpleSaverDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSaverDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,9 +220,14 @@
 		7AE8EE361E2C27A30048DEDE /* AmountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
 		7AE8EE371E2C27A30048DEDE /* AmountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
 		7AE8EE391E2C27C80048DEDE /* AmountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmountView.xib; sourceTree = "<group>"; };
+		80F5406C4A37678142B0BAA0 /* Pods_BasePods_SimpleSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasePods_SimpleSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E386B1F85B0EAC6BBF97FE /* Pods-SimpleSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.release.xcconfig"; sourceTree = "<group>"; };
 		B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests.release.xcconfig"; sourceTree = "<group>"; };
+		B91FE405901E059752DF8A6D /* Pods-BasePods-SimpleSaverDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-SimpleSaverDebug.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-SimpleSaverDebug/Pods-BasePods-SimpleSaverDebug.release.xcconfig"; sourceTree = "<group>"; };
+		BF186EF31E5768B616A60979 /* Pods-SimpleSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.debug.xcconfig"; sourceTree = "<group>"; };
 		E8FC6F41981832F2A3F5A8BC /* Pods_SimpleSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver.debug.xcconfig"; sourceTree = "<group>"; };
+		ED45CC4879B82FCBE5E28F50 /* Pods-BasePods-SimpleSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-SimpleSaver.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-SimpleSaver/Pods-BasePods-SimpleSaver.release.xcconfig"; sourceTree = "<group>"; };
+		FE05DD3DCD41A5B9A94589B4 /* Pods_BasePods_SimpleSaverDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasePods_SimpleSaverDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,8 +235,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A1A8AC91E85F2B800CC602A /* Pods_SimpleSaver.framework in Frameworks */,
 				7A1A8ACA1E85F2B800CC602A /* StoreKit.framework in Frameworks */,
+				05732BAF33ECED630A112F3F /* Pods_BasePods_SimpleSaverDebug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +246,8 @@
 			files = (
 				6035CB383A087E8A0377793C /* Pods_SimpleSaver.framework in Frameworks */,
 				7A90D46A1E4E729500B2C750 /* StoreKit.framework in Frameworks */,
+				64AD8252093B70A235CD0E5E /* Pods_SimpleSaver.framework in Frameworks */,
+				7AB6A3921546BEB14975B173 /* Pods_BasePods_SimpleSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +265,14 @@
 		049F9FB38BBA82F25E3597BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */,
-				6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */,
 				21BCA3BCB39F8D4FD125F66A /* Pods-SimpleSaverTests.debug.xcconfig */,
 				B78B75277E9BE817B5829CB5 /* Pods-SimpleSaverTests.release.xcconfig */,
+				BF186EF31E5768B616A60979 /* Pods-SimpleSaver.debug.xcconfig */,
+				91E386B1F85B0EAC6BBF97FE /* Pods-SimpleSaver.release.xcconfig */,
+				183E99621930F18E47BCF0DD /* Pods-BasePods-SimpleSaver.debug.xcconfig */,
+				ED45CC4879B82FCBE5E28F50 /* Pods-BasePods-SimpleSaver.release.xcconfig */,
+				25FFFCC22E1B94200B278B01 /* Pods-BasePods-SimpleSaverDebug.debug.xcconfig */,
+				B91FE405901E059752DF8A6D /* Pods-BasePods-SimpleSaverDebug.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -264,9 +280,13 @@
 		4758C1B9D072A667755324B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A165CA51E9A3E0F001A01E3 /* Pods_SimpleSaver.framework */,
+				7A165CA61E9A3E0F001A01E3 /* Pods_SimpleSaverTests.framework */,
 				7A90D4691E4E729500B2C750 /* StoreKit.framework */,
 				77AF631C8A61758A8A2B0CB9 /* Pods_SimpleSaver.framework */,
 				E8FC6F41981832F2A3F5A8BC /* Pods_SimpleSaverTests.framework */,
+				80F5406C4A37678142B0BAA0 /* Pods_BasePods_SimpleSaver.framework */,
+				FE05DD3DCD41A5B9A94589B4 /* Pods_BasePods_SimpleSaverDebug.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -490,12 +510,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1A8AD61E85F2B800CC602A /* Build configuration list for PBXNativeTarget "SimpleSaverDebug" */;
 			buildPhases = (
-				7A1A8AA31E85F2B800CC602A /* [CP] Check Pods Manifest.lock */,
+				7728AFD0D5131768F5B65ED6 /* [CP] Check Pods Manifest.lock */,
 				7A1A8AA41E85F2B800CC602A /* Sources */,
 				7A1A8AC81E85F2B800CC602A /* Frameworks */,
 				7A1A8ACB1E85F2B800CC602A /* Resources */,
-				7A1A8AD41E85F2B800CC602A /* [CP] Embed Pods Frameworks */,
-				7A1A8AD51E85F2B800CC602A /* [CP] Copy Pods Resources */,
+				08C663D0A0CB7FB233120AB3 /* [CP] Embed Pods Frameworks */,
+				34CD2F34445664868A56D7EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -643,6 +663,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08C663D0A0CB7FB233120AB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasePods-SimpleSaverDebug/Pods-BasePods-SimpleSaverDebug-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0C7C4550859F8FE89CE179E9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -688,6 +723,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		34CD2F34445664868A56D7EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasePods-SimpleSaverDebug/Pods-BasePods-SimpleSaverDebug-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4CD1D4FC255609380BCAA37B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -703,7 +753,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaverTests/Pods-SimpleSaverTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A1A8AA31E85F2B800CC602A /* [CP] Check Pods Manifest.lock */ = {
+		7728AFD0D5131768F5B65ED6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -718,36 +768,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7A1A8AD41E85F2B800CC602A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7A1A8AD51E85F2B800CC602A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		86E34D475F4F76A28848D800 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -760,7 +780,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasePods-SimpleSaver/Pods-BasePods-SimpleSaver-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEDAD7EC868C274BC891E366 /* [CP] Copy Pods Resources */ = {
@@ -775,7 +795,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSaver/Pods-SimpleSaver-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasePods-SimpleSaver/Pods-BasePods-SimpleSaver-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -910,11 +930,15 @@
 /* Begin XCBuildConfiguration section */
 		7A1A8AD71E85F2B800CC602A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */;
+			baseConfigurationReference = 25FFFCC22E1B94200B278B01 /* Pods-BasePods-SimpleSaverDebug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
 				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "SimpleSaver copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -925,11 +949,15 @@
 		};
 		7A1A8AD81E85F2B800CC602A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */;
+			baseConfigurationReference = B91FE405901E059752DF8A6D /* Pods-BasePods-SimpleSaverDebug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
 				DEVELOPMENT_TEAM = 2L29NL2BW9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "SimpleSaver copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -961,6 +989,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1009,6 +1038,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1030,7 +1060,7 @@
 		};
 		7A24715E1E1942BA00C99780 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE172F5FEDCA6616B32E2FAF /* Pods-SimpleSaver.debug.xcconfig */;
+			baseConfigurationReference = 183E99621930F18E47BCF0DD /* Pods-BasePods-SimpleSaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
@@ -1045,7 +1075,7 @@
 		};
 		7A24715F1E1942BA00C99780 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C686847D9999796A9396DFB /* Pods-SimpleSaver.release.xcconfig */;
+			baseConfigurationReference = ED45CC4879B82FCBE5E28F50 /* Pods-BasePods-SimpleSaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleSaver/SimpleSaver.entitlements;
