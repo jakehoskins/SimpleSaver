@@ -20,4 +20,5 @@
 +(NSDate *)addDaysToDate:(NSDate *)date increaseBy:(NSInteger)days;
 +(NSString *) defaultCurrency;
 +(UIImage *) goalIconForImage:(UIImage *)image;
+-(NSString *) suffixNumber:(NSNumber*)number;
 @end

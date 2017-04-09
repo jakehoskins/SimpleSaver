@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class GoalContributedView;
+@class SteppedControlPannelView;
 
 @interface GoalDetailViewController : UIViewController
 
@@ -23,8 +24,6 @@ typedef NS_ENUM(NSInteger, GoalContributedViewTouchState)
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet GoalContributedView *gcv;
-@property (weak, nonatomic) IBOutlet UIButton *btnAddFunds;
-@property (weak, nonatomic) IBOutlet UIButton *btnRemoveFunds;
-@property (weak, nonatomic) IBOutlet UIButton *btnViewContributions;
+@property (weak, nonatomic) IBOutlet SteppedControlPannelView *controlPannel;
 
 @end

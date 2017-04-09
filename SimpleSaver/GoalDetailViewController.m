@@ -19,6 +19,7 @@
 
 // Views
 #import "GoalContributedView.h"
+#import "SteppedControlPannelView.h"
 
 // Util
 #import "Colours.h"
@@ -27,7 +28,7 @@
 #import "Constants.h"
 #import "Skin.h"
 
-@interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent>
+@interface GoalDetailViewController () <GoalContributedViewEvent, GoalSelection, UIScrollViewDelegate, ContributionEvent, SteppedControlPannelDataSource, SteppedControlPannelEvent>
 @property (nonatomic, strong) Goal *goal;
 @property GoalContributedViewTouchState state;
 @property NSArray *availableCharts;
@@ -40,6 +41,9 @@
     [super viewDidLoad];
     [self initUi];
     [self reloadForGoalChange];
+    [self.controlPannel setDelegate:self];
+    [self.controlPannel setDatasource:self];
+    [self.controlPannel reloadDatasource];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -62,13 +66,6 @@
     self.scrollView.showsHorizontalScrollIndicator = false;
     self.scrollView.pagingEnabled = true;
     self.scrollView.delegate = self;
-    
-    self.btnAddFunds.backgroundColor = [Skin defaultGreenColour];
-    self.btnRemoveFunds.backgroundColor = [Skin defaultRedColour];
-    self.btnViewContributions.backgroundColor = [Skin defaultBlueColour];
-    [self.btnAddFunds setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.btnRemoveFunds setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.btnViewContributions setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
 -(void)refreshScrollView
@@ -132,9 +129,6 @@
 -(void) reloadForGoalChange
 {
     self.state = TotalContribution;
-    [self.btnAddFunds addTarget:self action:@selector(presentAddFundsView) forControlEvents:UIControlEventTouchUpInside];
-    [self.btnRemoveFunds addTarget:self action:@selector(presentRemoveFundsView) forControlEvents:UIControlEventTouchUpInside];
-    [self.btnViewContributions addTarget:self action:@selector(presentViewContributionsView) forControlEvents:UIControlEventTouchUpInside];
     
     if (self.goal)
     {
@@ -188,7 +182,7 @@
     {
         UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
         [popOverController setPopoverContentSize:CGSizeMake(MAX_POPOVER_WIDTH, MAX_POPOVER_HEIGHT)];
-        [popOverController presentPopoverFromRect:self.btnAddFunds.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
+        [popOverController presentPopoverFromRect:self.controlPannel.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
     }
 }
 
@@ -401,6 +395,7 @@
 }
 
 #pragma mark ContributionEvent
+
 - (void) contributionWasMade:(ContributionType)contributionType forAmount:(NSNumber *)amount andNotes:(NSString *)notes
 {
     switch (contributionType)
@@ -420,10 +415,56 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_GOAL_UPDATE object:self.goal];
 }
 
-#pragma Rotation
+#pragma mark - Rotation
+
 -(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [self.view setNeedsLayout];
+}
+
+# pragma mark - Control Pannel Datasource
+
+-(NSString *) textforLeftButton
+{
+    return @"View Contributions";
+}
+
+-(NSString *) textforMiddleButton
+{
+    return @"Remove Funds";
+}
+
+-(NSString *) textForRightButton
+{
+    return @"Add Funds";
+}
+
+#pragma mark - Control Panel Delegate
+
+- (void) leftButtonClicked
+{
+    [self presentViewContributionsView];
+}
+- (void) middleButtonClicked
+{
+    [self presentRemoveFundsView];
+}
+- (void) rightButtonClicked
+{
+    [self presentAddFundsView];
+}
+
+- (UIColor *) backgroundColourForLeftButton
+{
+    return [Skin defaultBlueColour];
+}
+- (UIColor *) backgroundColourForMiddleButton
+{
+    return [Skin defaultRedColour];
+}
+- (UIColor *) backgroundColourForRightButton
+{
+    return [Skin defaultGreenColour];
 }
 
 @end

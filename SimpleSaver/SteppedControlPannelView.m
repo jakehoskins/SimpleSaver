@@ -71,9 +71,23 @@
         NSString *middle = [self.datasource textforMiddleButton];
         NSString *right = [self.datasource textForRightButton];
         
+        
         [self.leftButton setTitle:left forState:UIControlStateNormal];
         [self.middleButton setTitle:middle forState:UIControlStateNormal];
         [self.rightButton setTitle:right forState:UIControlStateNormal];
+        
+        if ([self.datasource respondsToSelector:@selector(backgroundColourForLeftButton)])
+        {
+            [self.leftButton setBackgroundColor:[self.datasource backgroundColourForLeftButton]];
+        }
+        if ([self.datasource respondsToSelector:@selector(backgroundColourForMiddleButton)])
+        {
+            [self.middleButton setBackgroundColor:[self.datasource backgroundColourForMiddleButton]];
+        }
+        if ([self.datasource respondsToSelector:@selector(backgroundColourForRightButton)])
+        {
+            [self.rightButton setBackgroundColor:[self.datasource backgroundColourForRightButton]];
+        }
     }
 }
 

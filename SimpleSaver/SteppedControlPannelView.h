@@ -19,6 +19,10 @@
 - (NSString *) textforLeftButton;
 - (NSString *) textforMiddleButton;
 - (NSString *) textForRightButton;
+@optional
+- (UIColor *) backgroundColourForLeftButton;
+- (UIColor *) backgroundColourForMiddleButton;
+- (UIColor *) backgroundColourForRightButton;
 @end
 
 @interface SteppedControlPannelView : UIView
