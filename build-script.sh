@@ -1,1 +1,0 @@
-cd Acknowledge && ./acknowledge

@@ -1,6 +1,0 @@
-framework module Pods_BasePods_SimpleSaver {
-  umbrella header "Pods-BasePods-SimpleSaver-umbrella.h"
-
-  export *
-  module * { export * }
-}
