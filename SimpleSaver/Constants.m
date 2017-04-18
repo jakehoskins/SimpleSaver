@@ -16,6 +16,7 @@ NSString * const NOTIFICATION_GOAL_UPDATE = @"goal_updated";                    
 NSString * const IAP_UNLIMITED_GOALS_KEY = @"~Tu17b^m5J1U5r9O:Y8bDkE!2GvvFZ";       // For NSUserDefaults checking if purchased
 NSString * const SETTINGS_CONFIG_PATH = @"SettingsConfig";
 NSString * const NAVIGATION_BAR_IMAGE = @"simplesaver";
+NSString * const INSTA_BUG_KEY = @"9de075b49ac1a4aef55a6bf7eae00555";
 
 const double MAX_POPOVER_HEIGHT = 480;
 const double MAX_POPOVER_WIDTH = 320;

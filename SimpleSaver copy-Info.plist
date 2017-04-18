@@ -17,9 +17,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires access to photos for in app feedback</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to photos for in app feedback</string>
 	<key>TargetName</key>
 	<string>$(TARGET_NAME)</string>
 	<key>UIApplicationShortcutItems</key>

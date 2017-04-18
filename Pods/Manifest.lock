@@ -7,6 +7,7 @@ PODS:
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
   - InAppSettingsKit (2.8.1)
+  - Instabug (6.3.1)
   - iRate (1.11.7)
   - JKSteppedProgressBar (0.2.1)
   - MBCircularProgressBar (0.3.5)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - Charts
   - Colours
   - InAppSettingsKit
+  - Instabug
   - iRate
   - JKSteppedProgressBar
   - MBCircularProgressBar
@@ -39,6 +41,7 @@ SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   InAppSettingsKit: 94d2fba3ccd700fc4e32c6d09fabcc0af2426744
+  Instabug: 50d668ad559ba483e4b6bec538563e2b9201ac17
   iRate: adae3f183d83c925ac42d7a2e86e89e838963f57
   JKSteppedProgressBar: 17ac37cfd9c7d4054dac3180de19eceba6781f99
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
@@ -49,6 +52,6 @@ SPEC CHECKSUMS:
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
   YLProgressBar: 40a0627522dc1b536e02bf082a1b1ce3085b4668
 
-PODFILE CHECKSUM: f9a97131a379d7eb1c27f75b934b11fbe5a8d7cc
+PODFILE CHECKSUM: 31a6b4b72a1a4fc75b0d35bfe93206a479bc682c
 
 COCOAPODS: 1.2.0

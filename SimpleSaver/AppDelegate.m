@@ -10,6 +10,8 @@
 #import "MKiCloudSync.h"
 #import "iRate.h"
 #import "UserSettings.h"
+#import "Constants.h"
+#import <Instabug/Instabug.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +31,10 @@
     
     // Override point for customization after application launch.
     [AppDelegate initializeIRate];
+    if([UserSettings isUsingDebugSettings])
+    {
+        [Instabug startWithToken:INSTA_BUG_KEY invocationEvent:IBGInvocationEventShake];
+    }
 //    [MKiCloudSync startWithPrefix:@"ss-"];
     return YES;
 }

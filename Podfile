@@ -18,6 +18,7 @@ abstract_target 'BasePods' do
   pod 'SKSplashView'
   pod 'AvePurchaseButton', '~> 1.0'
   pod 'InAppSettingsKit'
+  pod 'Instabug'
 
   target 'SimpleSaverTests' do
     inherit! :search_paths
