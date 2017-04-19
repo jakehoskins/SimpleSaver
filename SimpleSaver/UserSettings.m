@@ -17,7 +17,7 @@ static NSString * const NS_UD_DARK_SKIN_ENABLED = @"NS_UD_DARK_SKIN_ENABLED";
 // Override these to check if we are on production target
 static NSString * const NS_UD_RESET_FAKES_ON_LOAD = @"NS_UD_RESET_FAKES_ON_LOAD";
 static NSString * const NS_UD_DEBUG_SHOULD_STUB_DATA = @"NS_UD_DEBUG_SHOULD_STUB_DATA";
-static NSString * const NS_UD_DEBUG_NUM_STUBS = @"NS_UD_DEBUG_NUM_STUBS";
+NSString * const NS_UD_DEBUG_NUM_STUBS = @"NS_UD_DEBUG_NUM_STUBS";
 static NSString * const NS_UD_DEBUG_SHOULD_ADHERE_IAP = @"NS_UD_DEBUG_NUM_STUBSNS_UD_DEBUG_SHOULD_ADHERE_IAP";
 static NSString * const NS_UD_DEBUG_SHOULD_SHOW_IAP = @"NS_UD_DEBUG_SHOULD_SHOW_IAP";
 

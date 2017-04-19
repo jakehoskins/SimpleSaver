@@ -36,6 +36,10 @@
         [Instabug startWithToken:INSTA_BUG_KEY invocationEvent:IBGInvocationEventShake];
     }
 //    [MKiCloudSync startWithPrefix:@"ss-"];
+    
+    // Default values arent adhered to we probably need to do this for all defaults if bugs start cropping
+    id userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults registerDefaults: @{NS_UD_DEBUG_NUM_STUBS: @"10"}];
     return YES;
 }
 

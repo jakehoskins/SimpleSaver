@@ -63,6 +63,7 @@
     {
         [self setupMockDataForSize:[[UserSettings getInstance] numberOfStubs]];
     }
+        
     
     
     [self setupNavigationBarImage];

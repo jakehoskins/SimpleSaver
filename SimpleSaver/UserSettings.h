@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+extern NSString * const NS_UD_DEBUG_NUM_STUBS;
 
 @interface UserSettings : NSObject
 
