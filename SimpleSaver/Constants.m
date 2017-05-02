@@ -14,6 +14,7 @@ NSString * const BACKGROUND_IMAGE = @"background";
 NSString * const NOTIFICATION_NEW_GOAL_SELECTED = @"new_goal_selected";             // Tell our detail views to change goal context
 NSString * const NOTIFICATION_GOAL_UPDATE = @"goal_updated";                        // If goal has been edited update master table
 NSString * const IAP_UNLIMITED_GOALS_KEY = @"~Tu17b^m5J1U5r9O:Y8bDkE!2GvvFZ";       // For NSUserDefaults checking if purchased
+NSString * const IAP_DARK_THEME_KEY = @"<7=.XP/jkPm(':k[3qW^.Zs{nFJr-N*";
 NSString * const SETTINGS_CONFIG_PATH = @"SettingsConfig";
 NSString * const NAVIGATION_BAR_IMAGE = @"simplesaver";
 NSString * const INSTA_BUG_KEY = @"9de075b49ac1a4aef55a6bf7eae00555";
@@ -41,11 +42,27 @@ const double MAX_POPOVER_WIDTH = 320;
     [[NSUserDefaults standardUserDefaults] setBool:hasPaid forKey:IAP_UNLIMITED_GOALS_KEY];
 }
 
++(void) writeToDarkTheme:(BOOL)hasPaid
+{
+    [[NSUserDefaults standardUserDefaults] setBool:hasPaid forKey:IAP_DARK_THEME_KEY];
+}
+
+
 +(BOOL) hasPurchasedUnlimitedGoals
 {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:IAP_UNLIMITED_GOALS_KEY] == nil) return [[UserSettings getInstance] shouldAdhereToIap];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:IAP_UNLIMITED_GOALS_KEY]) return true;
+    
+    return [[UserSettings getInstance] shouldAdhereToIap];
+}
+
+
++(BOOL) hasPurchasedDarkTheme
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:IAP_DARK_THEME_KEY] == nil) return [[UserSettings getInstance] shouldAdhereToIap];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:IAP_DARK_THEME_KEY]) return true;
     
     return [[UserSettings getInstance] shouldAdhereToIap];
 }

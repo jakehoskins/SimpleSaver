@@ -32,7 +32,7 @@
     _busyIndexes = [NSMutableIndexSet new];
     
     // Initiate the product catalog
-    [self getProductInfo:[NSSet setWithObjects:UNLIMITED_GOALS_PRODUCT_ID, nil]];
+    [self getProductInfo:[NSSet setWithObjects:UNLIMITED_GOALS_PRODUCT_ID, DARK_THEME_PRODUCT_ID, nil]];
     
     // Add observations for transaction
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
@@ -98,18 +98,32 @@
     SKProduct *product = [_productCatalog objectAtIndex:indexPath.row];
     
   
-        AvePurchaseButton* button = [[AvePurchaseButton alloc] initWithFrame:CGRectZero];
-        [button addTarget:self action:@selector(purchaseButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        cell.accessoryView = button;
+    AvePurchaseButton* button = [[AvePurchaseButton alloc] initWithFrame:CGRectZero];
+    [button addTarget:self action:@selector(purchaseButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    cell.accessoryView = button;
     
     [title setText:[product localizedTitle]];
     [description setText:[product localizedDescription]];
-
+    
+    
     button.buttonState = AvePurchaseButtonStateNormal;
-    if (![Constants hasPurchasedUnlimitedGoals]) {
+    BOOL hasPaid = false;
+    
+    if ([product.productIdentifier isEqualToString:UNLIMITED_GOALS_PRODUCT_ID])
+    {
+        hasPaid = [Constants hasPurchasedUnlimitedGoals];
+    }
+    else if([product.productIdentifier isEqualToString:DARK_THEME_PRODUCT_ID])
+    {
+        hasPaid = [Constants hasPurchasedDarkTheme];
+    }
+    
+    if (!hasPaid)
+    {
         button.normalTitle = [self getPrice:product];
         
-    } else {
+    } else
+    {
         button.normalTitle = @"Purchased";
         [button setEnabled:false];
     }
@@ -230,8 +244,13 @@
             //called when the user successfully restores a purchase
             NSLog(@"Transaction state -> Restored");
             
-            if ([transaction.payment.productIdentifier isEqualToString: UNLIMITED_GOALS_PRODUCT_ID]) {
+            if ([transaction.payment.productIdentifier isEqualToString: UNLIMITED_GOALS_PRODUCT_ID])
+            {
                 [Constants writeToUnlimtedGoals:true];
+            }
+            else if([transaction.payment.productIdentifier isEqualToString:DARK_THEME_PRODUCT_ID])
+            {
+                [Constants writeToDarkTheme:true];
             }
             
             [_activity stopAnimating];

@@ -23,6 +23,8 @@ extern const double MAX_POPOVER_WIDTH;
 +(NSArray *)getGoalIconURLSet;
 +(NSString *)getDefaultGoalIcon;
 +(void) writeToUnlimtedGoals:(BOOL) hasPaid;
++(void) writeToDarkTheme:(BOOL) hasPaid;
 +(BOOL) hasPurchasedUnlimitedGoals;
++(BOOL) hasPurchasedDarkTheme;
 
 @end

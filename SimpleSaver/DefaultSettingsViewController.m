@@ -39,7 +39,7 @@
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // @ todo change to hasPurchasedDarkSkin
-    return ([Constants hasPurchasedUnlimitedGoals] || [UserSettings isUsingDebugSettings])
+    return ([Constants hasPurchasedDarkTheme] || [UserSettings isUsingDebugSettings])
     ?  [super tableView:tableView numberOfRowsInSection:section]
     : [super tableView:tableView numberOfRowsInSection:section] - 1;
 }

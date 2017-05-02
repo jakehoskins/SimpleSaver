@@ -12,6 +12,7 @@
 
 #define CELL_IAP @"store-cell"
 #define UNLIMITED_GOALS_PRODUCT_ID @"com.jakehoskins.simplesaver.iap.unlimitedgoals"
+#define DARK_THEME_PRODUCT_ID @"com.jakehoskins.simplesaver.iap.darktheme"
 
 @interface IAPPurchaseTableViewController : UITableViewController <SKProductsRequestDelegate, SKPaymentTransactionObserver>
 @property NSMutableArray *productCatalog;                                  // Name, Description, Price //
